@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/pages/work.dart';
 import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/container.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
-      body: ListView(children: [getContainerPage()]),
+      body: ListView(children: [getWorkPage()]),
     );
   }
 }
