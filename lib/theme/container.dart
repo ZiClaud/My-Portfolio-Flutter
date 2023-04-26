@@ -395,7 +395,8 @@ Widget _defaultContainer2() {
       imageURL: "",
       title: "PROJECT TITLE",
       description: "Lorem ipsum dolor sit amet, consectetur",
-      descriptionBold: "adipiscing elit. Ultrices lorem non feugiat egestas amet.",
+      descriptionBold:
+          "adipiscing elit. Ultrices lorem non feugiat egestas amet.",
       category: "Category",
       link: "link");
 }

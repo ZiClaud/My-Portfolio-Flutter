@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/pages/about_me.dart';
+import 'package:my_portfolio/pages/footer.dart';
+import 'package:my_portfolio/pages/home.dart';
+import 'package:my_portfolio/pages/skills.dart';
 import 'package:my_portfolio/pages/work.dart';
 import 'package:my_portfolio/theme/colors.dart';
 
@@ -38,7 +42,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
-      body: ListView(children: [getWorkPage()]),
+      body: ListView(children: [
+        getHomePage(),
+        getSkillsPage(),
+        getWorkPage(),
+        getAboutMePage(),
+        getFooterPage(),
+      ]),
     );
   }
 }

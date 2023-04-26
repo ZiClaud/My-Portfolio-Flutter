@@ -1,0 +1,153 @@
+import 'package:flutter/material.dart';
+import 'package:my_portfolio/theme/safe_google_font.dart';
+
+Widget getSkillsPage() {
+  return Container(
+    // skillsi5G (132:231)
+    padding:
+        const EdgeInsets.fromLTRB(112 * fem, 80 * fem, 112 * fem, 130 * fem),
+    width: double.infinity,
+    height: 583.9 * fem,
+    decoration: const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment(0, -1),
+        end: Alignment(0, 1),
+        colors: <Color>[
+          Color(0xff010208),
+          Color(0xff010206),
+          Color(0xff040008),
+          Color(0xff010101),
+          Color(0xff010101),
+          Color(0xff010101),
+          Color(0xff010101)
+        ],
+        stops: <double>[0.164, 0.205, 0.248, 0.305, 0.341, 0.362, 1],
+      ),
+    ),
+    child: Container(
+      // skillsFzJ (132:232)
+      padding: const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 16 * fem),
+      width: double.infinity,
+      height: double.infinity,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            // someofmyskillsamg (132:234)
+            margin:
+                const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 96 * fem),
+            child: RichText(
+              text: TextSpan(
+                style: SafeGoogleFont(
+                  'Work Sans',
+                  fontSize: 40 * ffem,
+                  fontWeight: FontWeight.w300,
+                  height: 1.5 * ffem / fem,
+                  color: const Color(0xffe3e4e6),
+                ),
+                children: [
+                  TextSpan(
+                    text: 'Some of my',
+                    style: SafeGoogleFont(
+                      'Work Sans',
+                      fontSize: 40 * ffem,
+                      fontWeight: FontWeight.w300,
+                      height: 1.5 * ffem / fem,
+                      color: const Color(0x8ce3e4e6),
+                    ),
+                  ),
+                  TextSpan(
+                    text: ' ',
+                    style: SafeGoogleFont(
+                      'Work Sans',
+                      fontSize: 40 * ffem,
+                      fontWeight: FontWeight.w300,
+                      height: 1.5 * ffem / fem,
+                      color: const Color(0xffe3e4e6),
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'Skills',
+                    style: SafeGoogleFont(
+                      'Work Sans',
+                      fontSize: 40 * ffem,
+                      fontWeight: FontWeight.w600,
+                      height: 1.5 * ffem / fem,
+                      color: const Color(0xffe3e4e6),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            // logospCA (132:235)
+            width: double.infinity,
+            height: 201.9 * fem,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  // autogroupottgk5p (DmfgcNmGCt6MR7J4FRoTTg)
+                  padding: const EdgeInsets.fromLTRB(
+                      0 * fem, 0.03 * fem, 64 * fem, 0.03 * fem),
+                  height: double.infinity,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      _image(imageURL: 'Flutter'),
+                      // TODO: Put flutter image
+                      const SizedBox(
+                        width: 64 * fem,
+                      ),
+                      _image(imageURL: 'SQL'),
+                      // TODO: Put SQL image
+                      const SizedBox(
+                        width: 64 * fem,
+                      ),
+                      _image(
+                          imageURL:
+                              'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png'),
+                      // TODO: Put Python image
+                      const SizedBox(
+                        width: 64 * fem,
+                      ),
+                      _image(imageURL: 'Java'),
+                      // TODO: Put Java image
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget _image({required String imageURL}) {
+  return Container(
+    margin: const EdgeInsets.fromLTRB(0 * fem, 0.92 * fem, 0 * fem, 0.92 * fem),
+    child: TextButton(
+      onPressed: () {},
+      style: TextButton.styleFrom(
+        padding: EdgeInsets.zero,
+      ),
+      child: SizedBox(
+        height: double.infinity,
+        child: Center(
+          // fluttercoloredoZt (I133:307;133:301)
+          child: SizedBox(
+            width: 200 * fem,
+            height: 200 * fem,
+            child: Image.network(
+              imageURL,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
