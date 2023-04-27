@@ -5,6 +5,7 @@ import 'package:my_portfolio/pages/home.dart';
 import 'package:my_portfolio/pages/skills.dart';
 import 'package:my_portfolio/pages/work.dart';
 import 'package:my_portfolio/theme/colors.dart';
+import 'package:my_portfolio/theme/safe_google_font.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,14 +41,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    setFEMeFFEM(context);
     return Scaffold(
       backgroundColor: backgroundColor,
       body: ListView(children: [
-        getHomePage(),
-        getSkillsPage(),
-        getWorkPage(),
-        getAboutMePage(),
-        getFooterPage(),
+        Center(child: getHomePage()),
+        Center(child: getSkillsPage()),
+        Center(child: getWorkPage()),
+        Center(child: getAboutMePage()),
+        Center(child: getFooterPage()),
       ]),
     );
   }

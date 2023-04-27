@@ -1,5 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
+
+/// Title
+Widget titleBox({required String title1, required String title2}) {
+  return Container(
+    // someofmyskillsamg (132:234)
+    margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 96 * fem),
+    child: RichText(
+      text: TextSpan(
+        style: h2Light(color: neutral1Color),
+        children: [
+          TextSpan(
+            text: title1,
+            style: h2Light(color: neutral2Color),
+          ),
+          TextSpan(
+            text: title2,
+            style: h2Bold(color: neutral1Color),
+          ),
+        ],
+      ),
+    ),
+  );
+}
 
 /// Light
 Text myText(String text, TextStyle textStyle) {

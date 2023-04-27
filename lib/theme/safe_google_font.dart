@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
-const double fem = 1; // TODO: Remove const and get it from context
-const double ffem = 1; // TODO: Remove const and get it from context
+double fem = 1;
+double ffem = 1;
 
+void setFEMeFFEM(BuildContext context){
+  fem = MediaQuery.of(context).size.width / 1536;
+  ffem = MediaQuery.of(context).size.width / 1536;
+}
 
 // TODO: Delete SafeGoogleFont import everywhere - it just needs to be in typography.dart
 /// SafeGoogleFont - TextStyle

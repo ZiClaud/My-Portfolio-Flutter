@@ -4,6 +4,25 @@ import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 import 'package:my_portfolio/theme/typography.dart';
 
+/// Most important widget
+Widget sectionContainer(List<Widget> widgets) {
+  //TODO maybe put "Center" in here
+  return Container(
+    // homeHaA (77:258)
+    padding: EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
+    width: double.infinity,
+    decoration: BoxDecoration(
+      gradient: backgroundColorGradient,
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        for (Widget widget in widgets) widget,
+      ],
+    ),
+  );
+}
+
 Widget container1(
     {required Image image,
     required String title,
@@ -13,16 +32,15 @@ Widget container1(
     String? link}) {
   return Container(
     // coverleftalignedVuL (39:449)
-    margin: const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 16 * fem),
-    padding: const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 41 * fem, 0 * fem),
+    margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 16 * fem),
+    padding: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 41 * fem, 0 * fem),
     width: double.infinity,
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Container(
           // col1Cok (39:435)
-          margin:
-              const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 32 * fem, 0 * fem),
+          margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 32 * fem, 0 * fem),
           width: 591 * fem,
           height: 500 * fem,
           child: image,
@@ -35,15 +53,15 @@ Widget container1(
             children: [
               Container(
 // content4LA (39:439)
-                margin: const EdgeInsets.fromLTRB(
-                    0 * fem, 0 * fem, 0 * fem, 32 * fem),
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 32 * fem),
                 width: double.infinity,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
 // titledescriptionCBU (39:440)
-                      margin: const EdgeInsets.fromLTRB(
+                      margin: EdgeInsets.fromLTRB(
                           0 * fem, 0 * fem, 0 * fem, 24 * fem),
                       width: double.infinity,
                       child: Column(
@@ -51,7 +69,7 @@ Widget container1(
                         children: [
                           Container(
 // projecttitleXUe (39:441)
-                            margin: const EdgeInsets.fromLTRB(
+                            margin: EdgeInsets.fromLTRB(
                                 0 * fem, 0 * fem, 0 * fem, 16 * fem),
                             child: Text(
                               title,
@@ -67,7 +85,7 @@ Widget container1(
                           ),
                           Container(
 // descriptionoh4 (39:442)
-                            constraints: const BoxConstraints(
+                            constraints: BoxConstraints(
                               maxWidth: 550 * fem,
                             ),
                             child: RichText(
@@ -111,15 +129,15 @@ Widget container1(
               ),
               Container(
 // buttonmpE (39:805)
-                margin: const EdgeInsets.fromLTRB(
-                    0 * fem, 0 * fem, 387 * fem, 0 * fem),
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 387 * fem, 0 * fem),
                 child: TextButton(
                   onPressed: () {},
                   style: TextButton.styleFrom(
                     padding: EdgeInsets.zero,
                   ),
                   child: Container(
-                    padding: const EdgeInsets.fromLTRB(
+                    padding: EdgeInsets.fromLTRB(
                         16 * fem, 8 * fem, 25 * fem, 8 * fem),
                     width: double.infinity,
                     decoration: BoxDecoration(
@@ -131,7 +149,7 @@ Widget container1(
                       children: [
                         Container(
 // textpXc (I39:805;39:784)
-                          margin: const EdgeInsets.fromLTRB(
+                          margin: EdgeInsets.fromLTRB(
                               0 * fem, 0 * fem, 15 * fem, 0 * fem),
                           child: Text(
                             'VIEW WORK',
@@ -172,23 +190,22 @@ Widget container2(
       children: [
         Container(
           // col2ncr (39:636)
-          margin:
-              const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 73 * fem, 0 * fem),
+          margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 73 * fem, 0 * fem),
           width: 550 * fem,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 // contentXaS (39:637)
-                margin: const EdgeInsets.fromLTRB(
-                    0 * fem, 0 * fem, 0 * fem, 32 * fem),
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 32 * fem),
                 width: double.infinity,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       // titledescriptionrMp (39:638)
-                      margin: const EdgeInsets.fromLTRB(
+                      margin: EdgeInsets.fromLTRB(
                           0 * fem, 0 * fem, 0 * fem, 24 * fem),
                       width: double.infinity,
                       child: Column(
@@ -196,7 +213,7 @@ Widget container2(
                         children: [
                           Container(
                             // projecttitleb4W (39:639)
-                            margin: const EdgeInsets.fromLTRB(
+                            margin: EdgeInsets.fromLTRB(
                                 0 * fem, 0 * fem, 0 * fem, 16 * fem),
                             child: Text(
                               title,
@@ -212,7 +229,7 @@ Widget container2(
                           ),
                           Container(
                             // descriptionJjc (39:640)
-                            constraints: const BoxConstraints(
+                            constraints: BoxConstraints(
                               maxWidth: 550 * fem,
                             ),
                             child: RichText(
@@ -250,15 +267,15 @@ Widget container2(
               ),
               Container(
 // button9nA (39:860)
-                margin: const EdgeInsets.fromLTRB(
-                    0 * fem, 0 * fem, 387 * fem, 0 * fem),
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 387 * fem, 0 * fem),
                 child: TextButton(
                   onPressed: () {},
                   style: TextButton.styleFrom(
                     padding: EdgeInsets.zero,
                   ),
                   child: Container(
-                    padding: const EdgeInsets.fromLTRB(
+                    padding: EdgeInsets.fromLTRB(
                         16 * fem, 8 * fem, 25 * fem, 8 * fem),
                     width: double.infinity,
                     decoration: BoxDecoration(
@@ -270,7 +287,7 @@ Widget container2(
                       children: [
                         Container(
 // textDn2 (I39:860;39:784)
-                          margin: const EdgeInsets.fromLTRB(
+                          margin: EdgeInsets.fromLTRB(
                               0 * fem, 0 * fem, 15 * fem, 0 * fem),
                           child: Text(
                             'VIEW WORK',
@@ -327,7 +344,7 @@ Widget _defaultContainer2() {
 Widget _getContainerPage() {
   return Container(
     // carddML (39:631)
-    padding: const EdgeInsets.fromLTRB(16 * fem, 16 * fem, 16 * fem, 16 * fem),
+    padding: EdgeInsets.fromLTRB(16 * fem, 16 * fem, 16 * fem, 16 * fem),
     width: double.infinity,
     decoration: BoxDecoration(
       border: Border.all(),

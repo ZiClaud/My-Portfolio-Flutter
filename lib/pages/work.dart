@@ -7,7 +7,7 @@ import '../theme/container.dart';
 Widget getWorkPage() {
   return Container(
     // carddML (39:631)
-    padding: const EdgeInsets.fromLTRB(16 * fem, 16 * fem, 16 * fem, 16 * fem),
+    padding: EdgeInsets.fromLTRB(16 * fem, 16 * fem, 16 * fem, 16 * fem),
     width: double.infinity,
     decoration: BoxDecoration(
       border: Border.all(),

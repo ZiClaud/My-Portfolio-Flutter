@@ -6,11 +6,11 @@ import 'package:my_portfolio/theme/safe_google_font.dart';
 Widget getFooterPage() {
   return Container(
     // footerxav (77:378)
-    padding: const EdgeInsets.fromLTRB(
+    padding:  EdgeInsets.fromLTRB(
         127.5 * fem, 100.1 * fem, 127.5 * fem, 60.9 * fem),
     width: double.infinity,
     height: 571 * fem,
-    decoration: const BoxDecoration(gradient: backgroundColorGradient),
+    decoration:  BoxDecoration(gradient: backgroundColorGradient),
     child: SizedBox(
       // contentgvE (146:204)
       width: 1006.5 * fem,
@@ -20,9 +20,9 @@ Widget getFooterPage() {
         children: [
           Container(
             // socialmediaDvA (146:205)
-            margin: const EdgeInsets.fromLTRB(
+            margin:  EdgeInsets.fromLTRB(
                 0 * fem, 0 * fem, 286.5 * fem, 0 * fem),
-            padding: const EdgeInsets.fromLTRB(
+            padding:  EdgeInsets.fromLTRB(
                 37.5 * fem, 37.5 * fem, 37.5 * fem, 47.25 * fem),
             width: 378 * fem,
             height: double.infinity,
@@ -31,7 +31,7 @@ Widget getFooterPage() {
               children: [
                 Container(
                   // autogroupad3qXfx (DmffNQqB2QYYnQaAdKAd3Q)
-                  margin: const EdgeInsets.fromLTRB(
+                  margin:  EdgeInsets.fromLTRB(
                       0 * fem, 0 * fem, 0 * fem, 42 * fem),
                   width: double.infinity,
                   child: Row(
@@ -39,7 +39,7 @@ Widget getFooterPage() {
                     children: [
                       Container(
                         // github55sE2 (146:206)
-                        margin: const EdgeInsets.fromLTRB(
+                        margin:  EdgeInsets.fromLTRB(
                             0 * fem, 0 * fem, 93 * fem, 83.25 * fem),
                         width: 100 * fem,
                         height: 100 * fem,
@@ -56,7 +56,7 @@ Widget getFooterPage() {
                 ),
                 Container(
                   // mail557eA (146:207)
-                  margin: const EdgeInsets.fromLTRB(
+                  margin: EdgeInsets.fromLTRB(
                       0 * fem, 0 * fem, 92 * fem, 0 * fem),
                   width: 100 * fem,
                   height: 100 * fem,
@@ -67,7 +67,7 @@ Widget getFooterPage() {
           ),
           Container(
             // titledescriptionqKG (146:209)
-            margin: const EdgeInsets.fromLTRB(
+            margin:  EdgeInsets.fromLTRB(
                 0 * fem, 122.9 * fem, 0 * fem, 167.1 * fem),
             height: double.infinity,
             child: Column(
@@ -75,7 +75,7 @@ Widget getFooterPage() {
               children: [
                 Container(
                   // getintouchh6a (146:211)
-                  margin: const EdgeInsets.fromLTRB(
+                  margin:  EdgeInsets.fromLTRB(
                       0 * fem, 0 * fem, 0 * fem, 4 * fem),
                   child: RichText(
                     textAlign: TextAlign.center,

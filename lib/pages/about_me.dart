@@ -6,11 +6,11 @@ import 'package:my_portfolio/theme/safe_google_font.dart';
 Widget getAboutMePage() {
   return Container(
     // aboutmeRW2 (77:362)
-    padding: const EdgeInsets.fromLTRB(
+    padding:  EdgeInsets.fromLTRB(
         107 * fem, 107.5 * fem, 107 * fem, 107.5 * fem),
     width: double.infinity,
     height: 996 * fem,
-    decoration: const BoxDecoration(gradient: backgroundColorGradient),
+    decoration:  BoxDecoration(gradient: backgroundColorGradient),
     child: SizedBox(
       // wrapperMgW (77:363)
       width: double.infinity,
@@ -20,7 +20,7 @@ Widget getAboutMePage() {
         children: [
           Container(
             // titledescriptionhVU (77:364)
-            margin: const EdgeInsets.fromLTRB(
+            margin:  EdgeInsets.fromLTRB(
                 0 * fem, 244.5 * fem, 73 * fem, 244.5 * fem),
             height: double.infinity,
             child: Column(
@@ -28,7 +28,7 @@ Widget getAboutMePage() {
               children: [
                 Container(
                   // projecttitleEEW (77:365)
-                  margin: const EdgeInsets.fromLTRB(
+                  margin:  EdgeInsets.fromLTRB(
                       0 * fem, 0 * fem, 0 * fem, 16 * fem),
                   child: Text(
                     'A BIT ABOUT ME',
@@ -44,7 +44,7 @@ Widget getAboutMePage() {
                 ),
                 Container(
                   // descriptioniQa (77:366)
-                  constraints: const BoxConstraints(
+                  constraints:  BoxConstraints(
                     maxWidth: 557 * fem,
                   ),
                   child: RichText(
@@ -114,7 +114,7 @@ Widget getAboutMePage() {
               children: [
                 Container(
                   // coverE3U (77:368)
-                  margin: const EdgeInsets.fromLTRB(
+                  margin:  EdgeInsets.fromLTRB(
                       0 * fem, 0 * fem, 32 * fem, 0 * fem),
                   width: 282 * fem,
                   height: 374 * fem,
@@ -128,7 +128,7 @@ Widget getAboutMePage() {
                     children: [
                       Container(
                         // covers6S (77:370)
-                        margin: const EdgeInsets.fromLTRB(
+                        margin:  EdgeInsets.fromLTRB(
                             0 * fem, 0 * fem, 0 * fem, 32 * fem),
                         width: 282 * fem,
                         height: 374 * fem,
