@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:my_portfolio/theme/safe_google_font.dart';
 
 const Color primaryColor = Color(0xFF3688FF);
 const Color backgroundColor = Color(0xFF010208);
@@ -33,6 +32,7 @@ Background color - Gradient
 #010101     100%
  */
 
+/*
 Widget getColorPage() {
   return Container(
     // colorrF4 (54:960)
@@ -205,3 +205,4 @@ Widget getColorPage() {
     ),
   );
 }
+ */

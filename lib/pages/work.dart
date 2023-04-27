@@ -26,8 +26,8 @@ Widget getWorkPage() {
 Widget _iremi = container1(
   image: invisibleWorkImg,
   title: "Iremi App",
-  description: "description",
-  descriptionBold: "descriptionBold",
+  description: "I've created an app, that helps the user to find some breathing exercises and ",
+  descriptionBold: "it's amazing",
   category: "Mobile App",
   link: "link",
 );
@@ -35,8 +35,8 @@ Widget _iremi = container1(
 Widget _jeiom = container2(
   image: jeiomImg,
   title: "JEIOM App",
-  description: "description",
-  descriptionBold: "descriptionBold",
+  description: "App created in occasion of the event ",
+  descriptionBold: " JEIOM 2023",
   category: "Mobile App",
   link: "link",
 );

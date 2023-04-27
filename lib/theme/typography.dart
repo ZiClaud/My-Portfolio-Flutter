@@ -1,141 +1,197 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
-Widget light = Container(
-  // lightPjY (54:902)
-  margin: const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 80 * fem),
-  width: double.infinity,
-  child: Text(
-    'Light',
+/// Light
+Text myText(String text, TextStyle textStyle) {
+  return Text(
+    text,
     textAlign: TextAlign.center,
-    style: SafeGoogleFont(
-      'Work Sans',
-      fontSize: 56 * ffem,
-      fontWeight: FontWeight.w300,
-      height: 1.5 * ffem / fem,
-      letterSpacing: -1.12 * fem,
-      color: whiteColor,
-    ),
-  ),
-);
+    style: textStyle,
+  );
+}
 
-Widget h1Light = SizedBox(
-  // h1QuY (54:904)
-  width: double.infinity,
-  child: Text(
-    'H1',
-    textAlign: TextAlign.center,
-    style: SafeGoogleFont(
-      'Work Sans',
-      fontSize: 56 * ffem,
-      fontWeight: FontWeight.w300,
-      height: 1.5 * ffem / fem,
-      letterSpacing: -1.12 * fem,
-      color: whiteColor,
-    ),
-  ),
-);
+TextStyle light({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 56 * ffem,
+    fontWeight: FontWeight.w300,
+    height: 1.5 * ffem / fem,
+    letterSpacing: -1.12 * fem,
+    color: color,
+  );
+}
 
-Widget h2Light = SizedBox(
-  // h2Vg6 (54:905)
-  width: double.infinity,
-  child: Text(
-    'H2',
-    textAlign: TextAlign.center,
-    style: SafeGoogleFont(
-      'Work Sans',
-      fontSize: 40 * ffem,
-      fontWeight: FontWeight.w300,
-      height: 1.5 * ffem / fem,
-      color: whiteColor,
-    ),
-  ),
-);
+TextStyle h1Light({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 56 * ffem,
+    fontWeight: FontWeight.w300,
+    height: 1.5 * ffem / fem,
+    letterSpacing: -1.12 * fem,
+    color: color,
+  );
+}
 
-Widget h3Light = SizedBox(
-  // h3bUE (54:906)
-  width: double.infinity,
-  child: Text(
-    'H3',
-    textAlign: TextAlign.center,
-    style: SafeGoogleFont(
-      'Work Sans',
-      fontSize: 32 * ffem,
-      fontWeight: FontWeight.w300,
-      height: 1.5 * ffem / fem,
-      color: whiteColor,
-    ),
-  ),
-);
+TextStyle h2Light({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 40 * ffem,
+    fontWeight: FontWeight.w300,
+    height: 1.5 * ffem / fem,
+    color: color,
+  );
+}
 
-Widget h4Light = SizedBox(
-  // h4WbC (54:907)
-  width: double.infinity,
-  child: Text(
-    'H4',
-    textAlign: TextAlign.center,
-    style: SafeGoogleFont(
-      'Work Sans',
-      fontSize: 24 * ffem,
-      fontWeight: FontWeight.w300,
-      height: 1.5 * ffem / fem,
-      letterSpacing: 1.44 * fem,
-      color: whiteColor,
-    ),
-  ),
-);
+TextStyle h3Light({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 32 * ffem,
+    fontWeight: FontWeight.w300,
+    height: 1.5 * ffem / fem,
+    color: color,
+  );
+}
 
-Widget h5Light = SizedBox(
-  // h5EXC (54:908)
-  width: double.infinity,
-  child: Text(
-    'H5',
-    textAlign: TextAlign.center,
-    style: SafeGoogleFont(
-      'Work Sans',
-      fontSize: 16 * ffem,
-      fontWeight: FontWeight.w300,
-      height: 1.5 * ffem / fem,
-      letterSpacing: 0.64 * fem,
-      color: whiteColor,
-    ),
-  ),
-);
+TextStyle h4Light({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 24 * ffem,
+    fontWeight: FontWeight.w300,
+    height: 1.5 * ffem / fem,
+    letterSpacing: 1.44 * fem,
+    color: color,
+  );
+}
 
-Widget body1TextLight = SizedBox(
-  // body1mX8 (54:909)
-  width: double.infinity,
-  child: Text(
-    'Body 1',
-    textAlign: TextAlign.center,
-    style: SafeGoogleFont(
-      'Work Sans',
-      fontSize: 18 * ffem,
-      fontWeight: FontWeight.w300,
-      height: 1.5 * ffem / fem,
-      color: whiteColor,
-    ),
-  ),
-);
+TextStyle h5Light({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 16 * ffem,
+    fontWeight: FontWeight.w300,
+    height: 1.5 * ffem / fem,
+    letterSpacing: 0.64 * fem,
+    color: color,
+  );
+}
 
-Widget buttonTextLight = SizedBox(
-  // buttonJX4 (54:910)
-  width: double.infinity,
-  child: Text(
-    'BUTTON',
-    textAlign: TextAlign.center,
-    style: SafeGoogleFont(
-      'Work Sans',
-      fontSize: 16 * ffem,
-      fontWeight: FontWeight.w400,
-      height: 1.5 * ffem / fem,
-      letterSpacing: 0.64 * fem,
-      color: whiteColor,
-    ),
-  ),
-);
+TextStyle body1TextLight({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 18 * ffem,
+    fontWeight: FontWeight.w300,
+    height: 1.5 * ffem / fem,
+    color: color,
+  );
+}
 
+TextStyle buttonTextLight({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 16 * ffem,
+    fontWeight: FontWeight.w400,
+    height: 1.5 * ffem / fem,
+    letterSpacing: 0.64 * fem,
+    color: color,
+  );
+}
+
+/// Bold
+TextStyle semibold({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 56 * ffem,
+    fontWeight: FontWeight.w600,
+    height: 1.5 * ffem / fem,
+    letterSpacing: -1.12 * fem,
+    color: color,
+  );
+}
+
+TextStyle h1Bold({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 56 * ffem,
+    fontWeight: FontWeight.w600,
+    height: 1.5 * ffem / fem,
+    letterSpacing: -1.12 * fem,
+    color: color,
+  );
+}
+
+TextStyle h2Bold({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 40 * ffem,
+    fontWeight: FontWeight.w600,
+    height: 1.5 * ffem / fem,
+    color: color,
+  );
+}
+
+TextStyle h3Bold({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 32 * ffem,
+    fontWeight: FontWeight.w600,
+    height: 1.5 * ffem / fem,
+    color: color,
+  );
+}
+
+TextStyle h4Bold({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 24 * ffem,
+    fontWeight: FontWeight.w600,
+    height: 1.5 * ffem / fem,
+    letterSpacing: 1.44 * fem,
+    color: color,
+  );
+}
+
+TextStyle h5Bold({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 16 * ffem,
+    fontWeight: FontWeight.w600,
+    height: 1.5 * ffem / fem,
+    letterSpacing: 0.64 * fem,
+    color: color,
+  );
+}
+
+TextStyle body1TextBold({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 18 * ffem,
+    fontWeight: FontWeight.w600,
+    height: 1.5 * ffem / fem,
+    color: color,
+  );
+}
+
+TextStyle buttonTextBold({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 16 * ffem,
+    fontWeight: FontWeight.w600,
+    height: 1.5 * ffem / fem,
+    letterSpacing: 0.64 * fem,
+    color: color,
+  );
+}
+
+TextStyle label({required Color color}) {
+  return SafeGoogleFont(
+    'Work Sans',
+    fontSize: 14 * ffem,
+    fontWeight: FontWeight.w600,
+    height: 1.5 * ffem / fem,
+    color: color,
+  );
+}
+
+/*
 Widget getTypographyPage() {
   return Container(
     // typographyDwY (54:899)
@@ -505,3 +561,4 @@ Widget getTypographyPage() {
     ),
   );
 }
+ */

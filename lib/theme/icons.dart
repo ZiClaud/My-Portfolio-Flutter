@@ -100,6 +100,7 @@ Image arrowRightImg = Image.network(
   alignment: Alignment.center,
 );
 
+/*
 /// Other stuff - TODO: Delete?
 Widget _flutterColoredIconWeb({required String url}) {
   return Center(
@@ -144,3 +145,4 @@ Widget _gitHubIcon = TextButton(
     ),
   ),
 );
+*/

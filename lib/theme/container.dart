@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
+import 'package:my_portfolio/theme/typography.dart';
 
 Widget container1(
     {required Image image,
@@ -20,7 +21,8 @@ Widget container1(
       children: [
         Container(
           // col1Cok (39:435)
-          margin: const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 32 * fem, 0 * fem),
+          margin:
+              const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 32 * fem, 0 * fem),
           width: 591 * fem,
           height: 500 * fem,
           child: image,
@@ -80,33 +82,11 @@ Widget container1(
                                 children: [
                                   TextSpan(
                                     text: description,
-                                    style: SafeGoogleFont(
-                                      'Work Sans',
-                                      fontSize: 32 * ffem,
-                                      fontWeight: FontWeight.w300,
-                                      height: 1.5 * ffem / fem,
-                                      color: neutral2Color,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: ' ',
-                                    style: SafeGoogleFont(
-                                      'Work Sans',
-                                      fontSize: 32 * ffem,
-                                      fontWeight: FontWeight.w300,
-                                      height: 1.5 * ffem / fem,
-                                      color: neutral1Color,
-                                    ),
+                                    style: h3Bold(color: neutral2Color),
                                   ),
                                   TextSpan(
                                     text: descriptionBold,
-                                    style: SafeGoogleFont(
-                                      'Work Sans',
-                                      fontSize: 32 * ffem,
-                                      fontWeight: FontWeight.w600,
-                                      height: 1.5 * ffem / fem,
-                                      color: neutral1Color,
-                                    ),
+                                    style: h3Bold(color: neutral1Color),
                                   ),
                                 ],
                               ),
@@ -155,14 +135,7 @@ Widget container1(
                               0 * fem, 0 * fem, 15 * fem, 0 * fem),
                           child: Text(
                             'VIEW WORK',
-                            style: SafeGoogleFont(
-                              'Work Sans',
-                              fontSize: 16 * ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5 * ffem / fem,
-                              letterSpacing: 0.64 * fem,
-                              color: neutral1Color,
-                            ),
+                            style: buttonTextLight(color: neutral1Color),
                           ),
                         ),
                         SizedBox(
@@ -244,43 +217,15 @@ Widget container2(
                             ),
                             child: RichText(
                               text: TextSpan(
-                                style: SafeGoogleFont(
-                                  'Work Sans',
-                                  fontSize: 32 * ffem,
-                                  fontWeight: FontWeight.w400,
-                                  height: 1.5 * ffem / fem,
-                                  color: neutral1Color,
-                                ),
+                                style: h3Light(color: neutral1Color),
                                 children: [
                                   TextSpan(
                                     text: description,
-                                    style: SafeGoogleFont(
-                                      'Work Sans',
-                                      fontSize: 32 * ffem,
-                                      fontWeight: FontWeight.w300,
-                                      height: 1.5 * ffem / fem,
-                                      color: neutral2Color,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: ' ',
-                                    style: SafeGoogleFont(
-                                      'Work Sans',
-                                      fontSize: 32 * ffem,
-                                      fontWeight: FontWeight.w300,
-                                      height: 1.5 * ffem / fem,
-                                      color: neutral1Color,
-                                    ),
+                                    style: h3Bold(color: neutral2Color),
                                   ),
                                   TextSpan(
                                     text: descriptionBold,
-                                    style: SafeGoogleFont(
-                                      'Work Sans',
-                                      fontSize: 32 * ffem,
-                                      fontWeight: FontWeight.w600,
-                                      height: 1.5 * ffem / fem,
-                                      color: neutral1Color,
-                                    ),
+                                    style: h3Bold(color: neutral1Color),
                                   ),
                                 ],
                               ),
@@ -329,14 +274,7 @@ Widget container2(
                               0 * fem, 0 * fem, 15 * fem, 0 * fem),
                           child: Text(
                             'VIEW WORK',
-                            style: SafeGoogleFont(
-                              'Work Sans',
-                              fontSize: 16 * ffem,
-                              fontWeight: FontWeight.w400,
-                              height: 1.5 * ffem / fem,
-                              letterSpacing: 0.64 * fem,
-                              color: neutral1Color,
-                            ),
+                            style: buttonTextLight(color: neutral1Color),
                           ),
                         ),
                         SizedBox(
@@ -364,7 +302,7 @@ Widget container2(
   );
 }
 
-//////////////////////////////
+/*
 Widget _defaultContainer1() {
   return container1(
       image: invisibleWorkImg,
@@ -404,3 +342,4 @@ Widget _getContainerPage() {
     ),
   );
 }
+*/
