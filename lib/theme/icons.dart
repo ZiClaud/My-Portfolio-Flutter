@@ -11,7 +11,8 @@ Image skillImg({required String path}) {
   );
 }
 
-Image invisibleSkillImg = skillImg(path: invisiblePath); /// Used for testing
+// Used for testing
+Image invisibleSkillImg = skillImg(path: invisiblePath);
 
 Image flutterImg = skillImg(path: "../assets/images/flutterimg.png");
 Image sqlImg = skillImg(path: "../assets/images/sqlimg.png");
@@ -27,10 +28,37 @@ Image workImg({required String path}) {
   );
 }
 
-Image invisibleWorkImg = workImg(path: invisiblePath); /// Used for testing
+// Used for testing
+Image invisibleWorkImg = workImg(path: invisiblePath);
 
 Image iremiImg = workImg(path: "../assets/images/invisible.png"); //TODO: Change
 Image jeiomImg = workImg(path: "../assets/images/jeiom.png");
+
+/// About me section
+Image aboutMeImage({required String path}) {
+  return Image(
+    image: AssetImage(path),
+    width: 282 * fem,
+    height: 374 * fem,
+    fit: BoxFit.cover,
+  );
+}
+
+Image aboutMeImageUrl({required String url}) {
+  return Image.network(
+    url,
+    width: 282 * fem,
+    height: 374 * fem,
+    fit: BoxFit.cover,
+  );
+}
+
+// Used for testing
+Image invisibleAboutMeImg = aboutMeImage(path: invisiblePath);
+
+Image aboutMe1Img = aboutMeImageUrl(url: "https://assets.telegraphindia.com/telegraph/2022/Feb/1644870612_design.jpg");
+Image aboutMe2Img = aboutMeImageUrl(url: "https://i.guim.co.uk/img/media/759f700c9f1d288f76f86a1dc44e37d1cf05e57a/0_124_5100_3059/master/5100.jpg?width=465&quality=85&dpr=1&s=none");
+Image aboutMe3Img = aboutMeImageUrl(url: "https://cdn.fuelrocks.com/1665122987550.jpg");
 
 /// Footer Icons
 Image footerImg({required String path}) {
@@ -42,14 +70,12 @@ Image footerImg({required String path}) {
   );
 }
 
-Image invisibleFooterImg = footerImg(path: invisiblePath); /// Used for testing
+// Used for testing
+Image invisibleFooterImg = footerImg(path: invisiblePath);
 
 Image gitHubImg = footerImg(path: "../assets/images/github_img.png");
 Image mailImg = footerImg(path: "../assets/images/mail_img.png");
 Image linkedinImg = footerImg(path: "../assets/images/linkedin_img.png");
-
-/// About me section
-// TODO
 
 /// Other icons - arrows and logos
 Image logoImg = Image(
@@ -66,14 +92,15 @@ Image arrowDownImg = Image.network(
   color: Colors.white,
 );
 
-Image arrowRightImg = Image(
-  image: AssetImage(invisiblePath), // TODO: Change
-  width: 100 * fem,
-  height: 100 * fem,
+Image arrowRightImg = Image.network(
+  "https://cdn.iconscout.com/icon/free/png-256/right-arrow-1780566-1514442.png",
+  width: 12 * fem,
+  height: 19 * fem,
   color: Colors.white,
+  alignment: Alignment.center,
 );
 
-/// Other stuff
+/// Other stuff - TODO: Delete?
 Widget _flutterColoredIconWeb({required String url}) {
   return Center(
     child: SizedBox(

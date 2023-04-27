@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
+import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
 Widget getAboutMePage() {
@@ -116,12 +117,8 @@ Widget getAboutMePage() {
                   margin: const EdgeInsets.fromLTRB(
                       0 * fem, 0 * fem, 32 * fem, 0 * fem),
                   width: 282 * fem,
-                  height: 408 * fem,
-                  child: Image.network(
-                    "[Image url]",
-                    width: 282 * fem,
-                    height: 408 * fem,
-                  ),
+                  height: 374 * fem,
+                  child: aboutMe1Img,
                 ),
                 SizedBox(
                   // verticalvS6 (77:369)
@@ -135,21 +132,13 @@ Widget getAboutMePage() {
                             0 * fem, 0 * fem, 0 * fem, 32 * fem),
                         width: 282 * fem,
                         height: 374 * fem,
-                        child: Image.network(
-                          "[Image url]",
-                          width: 282 * fem,
-                          height: 374 * fem,
-                        ),
+                        child: aboutMe2Img,
                       ),
                       SizedBox(
                         // coveryvA (77:371)
                         width: 282 * fem,
-                        height: 375 * fem,
-                        child: Image.network(
-                          "[Image url]",
-                          width: 282 * fem,
-                          height: 375 * fem,
-                        ),
+                        height: 374 * fem,
+                        child: aboutMe3Img,
                       ),
                     ],
                   ),

@@ -167,13 +167,9 @@ Widget container1(
                         ),
                         SizedBox(
 // iconWfL (I39:805;39:785)
-                          width: 7 * fem,
-                          height: 14 * fem,
-                          child: Image.network(
-                            "[Image url]", // TODO: Right arrow Icon
-                            width: 7 * fem,
-                            height: 14 * fem,
-                          ),
+                          width: 12 * fem,
+                          height: 19 * fem,
+                          child: arrowRightImg,
                         ),
                       ],
                     ),
@@ -345,13 +341,9 @@ Widget container2(
                         ),
                         SizedBox(
 // icon8tz (I39:860;39:785)
-                          width: 7 * fem,
-                          height: 14 * fem,
-                          child: Image.network(
-                            "[Image url]", // TODO: Fill with arrow URL
-                            width: 7 * fem,
-                            height: 14 * fem,
-                          ),
+                          width: 12 * fem,
+                          height: 19 * fem,
+                          child: arrowRightImg,
                         ),
                       ],
                     ),
