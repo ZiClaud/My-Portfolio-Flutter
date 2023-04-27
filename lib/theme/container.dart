@@ -375,7 +375,7 @@ Widget container2(
 //////////////////////////////
 Widget _defaultContainer1() {
   return container1(
-      image: invisibleImg,
+      image: invisibleWorkImg,
       title: "title",
       description: "description",
       descriptionBold: "descriptionBold",

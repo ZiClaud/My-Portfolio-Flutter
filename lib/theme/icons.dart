@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
+String invisiblePath = "../assets/images/invisible.png";
+
 /// SKILLS
-Image skillsImg({required String path}){
+Image skillImg({required String path}) {
   return Image(
     image: AssetImage(path),
     fit: BoxFit.cover,
   );
 }
 
-Image flutterImg = skillsImg(path: "../assets/images/flutterimg.png");
+Image invisibleSkillImg = skillImg(path: invisiblePath); /// Used for testing
 
-Image sqlImg = skillsImg(path: "../assets/images/sqlimg.png");
-
-Image pythonImg = skillsImg(path: "../assets/images/pythonimg.png");
-
-Image javaImg = skillsImg(path: "../assets/images/javaimg.png");
+Image flutterImg = skillImg(path: "../assets/images/flutterimg.png");
+Image sqlImg = skillImg(path: "../assets/images/sqlimg.png");
+Image pythonImg = skillImg(path: "../assets/images/pythonimg.png");
+Image javaImg = skillImg(path: "../assets/images/javaimg.png");
 
 /// WORKS
-Image workImg({required String path}){
+Image workImg({required String path}) {
   return Image(
     image: AssetImage(path),
     width: 591 * fem,
@@ -26,18 +27,51 @@ Image workImg({required String path}){
   );
 }
 
-Image iremiImg = workImg(path: "../assets/images/iremi.png");
+Image invisibleWorkImg = workImg(path: invisiblePath); /// Used for testing
 
+Image iremiImg = workImg(path: "../assets/images/invisible.png"); //TODO: Change
 Image jeiomImg = workImg(path: "../assets/images/jeiom.png");
 
-Image invisibleImg = workImg(path: "../assets/images/error.png");
+/// Footer Icons
+Image footerImg({required String path}) {
+  return Image(
+    image: AssetImage(path),
+    width: 100 * fem,
+    height: 100 * fem,
+    color: Colors.white,
+  );
+}
 
+Image invisibleFooterImg = footerImg(path: invisiblePath); /// Used for testing
 
-/// Cotact me Icons
+Image gitHubImg = footerImg(path: "../assets/images/github_img.png");
+Image mailImg = footerImg(path: "../assets/images/mail_img.png");
+Image linkedinImg = footerImg(path: "../assets/images/linkedin_img.png");
+
+/// About me section
 // TODO
 
 /// Other icons - arrows and logos
-// TODO
+Image logoImg = Image(
+  image: AssetImage(invisiblePath), // TODO: Change
+  width: 100 * fem,
+  height: 100 * fem,
+  color: Colors.white,
+);
+
+Image arrowDownImg = Image.network(
+  "https://cdn-icons-png.flaticon.com/512/5093/5093064.png",
+  width: 20 * fem,
+  height: 10 * fem,
+  color: Colors.white,
+);
+
+Image arrowRightImg = Image(
+  image: AssetImage(invisiblePath), // TODO: Change
+  width: 100 * fem,
+  height: 100 * fem,
+  color: Colors.white,
+);
 
 /// Other stuff
 Widget _flutterColoredIconWeb({required String url}) {

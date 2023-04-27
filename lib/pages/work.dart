@@ -24,7 +24,7 @@ Widget getWorkPage() {
 }
 
 Widget _iremi = container1(
-  image: invisibleImg,
+  image: invisibleWorkImg,
   title: "Iremi App",
   description: "description",
   descriptionBold: "descriptionBold",

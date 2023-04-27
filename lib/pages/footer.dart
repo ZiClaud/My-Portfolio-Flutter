@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
+import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
 Widget getFooterPage() {
   return Container(
     // footerxav (77:378)
     padding: const EdgeInsets.fromLTRB(
-        127.5 * fem, 105.1 * fem, 127.5 * fem, 60.9 * fem),
+        127.5 * fem, 100.1 * fem, 127.5 * fem, 60.9 * fem),
     width: double.infinity,
     height: 571 * fem,
     decoration: const BoxDecoration(gradient: backgroundColorGradient),
@@ -31,7 +32,7 @@ Widget getFooterPage() {
                 Container(
                   // autogroupad3qXfx (DmffNQqB2QYYnQaAdKAd3Q)
                   margin: const EdgeInsets.fromLTRB(
-                      0 * fem, 0 * fem, 0 * fem, 48 * fem),
+                      0 * fem, 0 * fem, 0 * fem, 42 * fem),
                   width: double.infinity,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -40,23 +41,15 @@ Widget getFooterPage() {
                         // github55sE2 (146:206)
                         margin: const EdgeInsets.fromLTRB(
                             0 * fem, 0 * fem, 93 * fem, 83.25 * fem),
-                        width: 105 * fem,
-                        height: 105 * fem,
-                        child: Image.network(
-                          "[Image url]",
-                          width: 105 * fem,
-                          height: 105 * fem,
-                        ),
+                        width: 100 * fem,
+                        height: 100 * fem,
+                        child: gitHubImg,
                       ),
                       SizedBox(
                         // linkedin55n66 (146:208)
-                        width: 105 * fem,
-                        height: 94.5 * fem,
-                        child: Image.network(
-                          "[Image url]",
-                          width: 105 * fem,
-                          height: 94.5 * fem,
-                        ),
+                        width: 100 * fem,
+                        height: 100 * fem,
+                        child: linkedinImg,
                       ),
                     ],
                   ),
@@ -65,13 +58,9 @@ Widget getFooterPage() {
                   // mail557eA (146:207)
                   margin: const EdgeInsets.fromLTRB(
                       0 * fem, 0 * fem, 92 * fem, 0 * fem),
-                  width: 105 * fem,
-                  height: 84 * fem,
-                  child: Image.network(
-                    "[Image url]",
-                    width: 105 * fem,
-                    height: 84 * fem,
-                  ),
+                  width: 100 * fem,
+                  height: 100 * fem,
+                  child: mailImg,
                 ),
               ],
             ),
