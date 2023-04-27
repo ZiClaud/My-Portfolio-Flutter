@@ -99,7 +99,7 @@ Widget getFooterPage() {
                         fontWeight: FontWeight.w300,
                         height: 1.5 * ffem / fem,
                         letterSpacing: -1.12 * fem,
-                        color: const Color(0xffffffff),
+                        color: whiteColor,
                       ),
                       children: [
                         TextSpan(
@@ -119,7 +119,7 @@ Widget getFooterPage() {
                             fontWeight: FontWeight.w300,
                             height: 1.5 * ffem / fem,
                             letterSpacing: -1.12 * fem,
-                            color: const Color(0xffffffff),
+                            color: whiteColor,
                           ),
                         ),
                         TextSpan(

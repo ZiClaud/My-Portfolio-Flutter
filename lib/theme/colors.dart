@@ -5,6 +5,7 @@ const Color primaryColor = Color(0xFF3688FF);
 const Color backgroundColor = Color(0xFF010208);
 const Color neutral1Color = Color(0xFFE3E4E6);
 const Color neutral2Color = Color(0x8CE3E4E6);
+const Color whiteColor = Color(0xFFFFFFFF);
 
 const LinearGradient backgroundColorGradient = LinearGradient(
   begin: Alignment(0, -1),
@@ -81,7 +82,7 @@ Widget getColorPage() {
                   fontWeight: FontWeight.w600,
                   height: 1.5 * ffem / fem,
                   letterSpacing: 2.4 * fem,
-                  color: const Color(0xffffffff),
+                  color: whiteColor,
                 ),
               ),
             ],
@@ -120,7 +121,7 @@ Widget getColorPage() {
                   fontWeight: FontWeight.w600,
                   height: 1.5 * ffem / fem,
                   letterSpacing: 2.4 * fem,
-                  color: const Color(0xffffffff),
+                  color: whiteColor,
                 ),
               ),
             ],
@@ -158,7 +159,7 @@ Widget getColorPage() {
                   fontWeight: FontWeight.w600,
                   height: 1.5 * ffem / fem,
                   letterSpacing: 2.4 * fem,
-                  color: const Color(0xffffffff),
+                  color: whiteColor,
                 ),
               ),
             ],
@@ -194,7 +195,7 @@ Widget getColorPage() {
                   fontWeight: FontWeight.w600,
                   height: 1.5 * ffem / fem,
                   letterSpacing: 2.4 * fem,
-                  color: const Color(0xffffffff),
+                  color: whiteColor,
                 ),
               ),
             ],

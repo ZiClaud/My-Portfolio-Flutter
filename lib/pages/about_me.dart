@@ -53,7 +53,7 @@ Widget getAboutMePage() {
                         fontSize: 32 * ffem,
                         fontWeight: FontWeight.w400,
                         height: 1.5 * ffem / fem,
-                        color: const Color(0xffffffff),
+                        color: whiteColor,
                       ),
                       children: [
                         TextSpan(
@@ -85,7 +85,7 @@ Widget getAboutMePage() {
                             fontSize: 32 * ffem,
                             fontWeight: FontWeight.w600,
                             height: 1.5 * ffem / fem,
-                            color: const Color(0xffffffff),
+                            color: whiteColor,
                           ),
                         ),
                         TextSpan(
