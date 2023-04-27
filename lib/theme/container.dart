@@ -5,7 +5,7 @@ import 'package:my_portfolio/theme/safe_google_font.dart';
 import 'package:my_portfolio/theme/typography.dart';
 
 /// Most important widget
-Widget sectionContainer(List<Widget> widgets) {
+Widget sectionContainerColumn(List<Widget> widgets) {
   //TODO maybe put "Center" in here
   return Container(
     // homeHaA (77:258)
@@ -19,6 +19,28 @@ Widget sectionContainer(List<Widget> widgets) {
       children: [
         for (Widget widget in widgets) widget,
       ],
+    ),
+  );
+}
+
+Widget sectionContainerRow(List<Widget> widgets) {
+  return Container(
+    // aboutmeRW2 (77:362)
+    padding:
+    EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
+    width: double.infinity,
+    height: 996 * fem,
+    decoration: BoxDecoration(gradient: backgroundColorGradient),
+    child: SizedBox(
+      // wrapperMgW (77:363)
+      width: double.infinity,
+      height: double.infinity,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          for (Widget widget in widgets) widget,
+        ],
+      ),
     ),
   );
 }

@@ -6,7 +6,7 @@ import 'package:my_portfolio/theme/safe_google_font.dart';
 import 'package:my_portfolio/theme/typography.dart';
 
 Widget getHomePage() {
-  return sectionContainer(_homePageWidgets());
+  return sectionContainerColumn(_homePageWidgets());
   /*
   TODO: REMOVE
 
@@ -107,7 +107,6 @@ Widget _headerWidget() {
 
 Widget _titleAndJobWidget() {
   return Container(
-    // claudiodimaiosoftwaredeveloper (132:216)
     margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 249 * fem),
     constraints: BoxConstraints(
       maxWidth: 493 * fem,
@@ -133,7 +132,6 @@ Widget _titleAndJobWidget() {
 
 Widget _arrowDownWidget() {
   return SizedBox(
-    // iconchevrondownKWA (132:217)
     width: 20 * fem,
     height: 10 * fem,
     child: arrowDownImg,
@@ -141,10 +139,9 @@ Widget _arrowDownWidget() {
 }
 
 List<Widget> _homePageWidgets() {
-  List<Widget> stuff = [];
-  stuff.add(_headerWidget());
-  stuff.add(_titleAndJobWidget());
-  stuff.add(_arrowDownWidget());
-
-  return stuff;
+  return [
+    _headerWidget(),
+    _titleAndJobWidget(),
+    _arrowDownWidget(),
+  ];
 }
