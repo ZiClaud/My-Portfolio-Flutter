@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
 import '../theme/container.dart';
@@ -23,7 +24,7 @@ Widget getWorkPage() {
 }
 
 Widget _iremi = container1(
-  imageURL: "",
+  image: invisibleImg,
   title: "Iremi App",
   description: "description",
   descriptionBold: "descriptionBold",
@@ -32,7 +33,7 @@ Widget _iremi = container1(
 );
 
 Widget _jeiom = container2(
-  imageURL: "",
+  image: jeiomImg,
   title: "JEIOM App",
   description: "description",
   descriptionBold: "descriptionBold",

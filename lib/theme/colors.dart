@@ -47,7 +47,7 @@ Widget getColorPage() {
         Container(
           // primaryXc6 (54:961)
           margin:
-          const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 80 * fem, 0 * fem),
+              const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 80 * fem, 0 * fem),
           width: 200 * fem,
           height: 315 * fem,
           child: Column(
@@ -91,7 +91,7 @@ Widget getColorPage() {
         Container(
           // background1Qn (54:964)
           margin:
-          const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 80 * fem, 0 * fem),
+              const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 80 * fem, 0 * fem),
           width: 200 * fem,
           height: 315 * fem,
           child: Column(
@@ -130,7 +130,7 @@ Widget getColorPage() {
         Container(
           // neutral1K46 (54:967)
           margin:
-          const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 79 * fem, 0 * fem),
+              const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 79 * fem, 0 * fem),
           height: 315 * fem,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

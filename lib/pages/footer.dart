@@ -9,9 +9,7 @@ Widget getFooterPage() {
         127.5 * fem, 105.1 * fem, 127.5 * fem, 60.9 * fem),
     width: double.infinity,
     height: 571 * fem,
-    decoration: const BoxDecoration(
-      gradient: backgroundColorGradient
-    ),
+    decoration: const BoxDecoration(gradient: backgroundColorGradient),
     child: SizedBox(
       // contentgvE (146:204)
       width: 1006.5 * fem,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
 import '../theme/colors.dart';
@@ -10,9 +11,7 @@ Widget getSkillsPage() {
         const EdgeInsets.fromLTRB(112 * fem, 80 * fem, 112 * fem, 130 * fem),
     width: double.infinity,
     height: 583.9 * fem,
-    decoration: const BoxDecoration(
-      gradient: backgroundColorGradient
-    ),
+    decoration: const BoxDecoration(gradient: backgroundColorGradient),
     child: Container(
       // skillsFzJ (132:232)
       padding: const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 16 * fem),
@@ -84,24 +83,22 @@ Widget getSkillsPage() {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      _image(imageURL: 'Flutter'),
+                      _image(image: flutterImg),
                       // TODO: Put flutter image
                       const SizedBox(
                         width: 64 * fem,
                       ),
-                      _image(imageURL: 'SQL'),
+                      _image(image: sqlImg),
                       // TODO: Put SQL image
                       const SizedBox(
                         width: 64 * fem,
                       ),
-                      _image(
-                          imageURL:
-                              'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png'),
+                      _image(image: pythonImg),
                       // TODO: Put Python image
                       const SizedBox(
                         width: 64 * fem,
                       ),
-                      _image(imageURL: 'Java'),
+                      _image(image: javaImg),
                       // TODO: Put Java image
                     ],
                   ),
@@ -115,7 +112,7 @@ Widget getSkillsPage() {
   );
 }
 
-Widget _image({required String imageURL}) {
+Widget _imageUrl({required String imageURL}) {
   return Container(
     margin: const EdgeInsets.fromLTRB(0 * fem, 0.92 * fem, 0 * fem, 0.92 * fem),
     child: TextButton(
@@ -134,6 +131,29 @@ Widget _image({required String imageURL}) {
               imageURL,
               fit: BoxFit.cover,
             ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+Widget _image({required Image image}) {
+  return Container(
+    margin: const EdgeInsets.fromLTRB(0 * fem, 0.92 * fem, 0 * fem, 0.92 * fem),
+    child: TextButton(
+      onPressed: () {},
+      style: TextButton.styleFrom(
+        padding: EdgeInsets.zero,
+      ),
+      child: SizedBox(
+        height: double.infinity,
+        child: Center(
+          // fluttercoloredoZt (I133:307;133:301)
+          child: SizedBox(
+            width: 200 * fem,
+            height: 200 * fem,
+            child: image,
           ),
         ),
       ),

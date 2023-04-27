@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
+import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
 Widget container1(
-    {required String imageURL,
+    {required Image image,
     required String title,
     required String description,
     required String descriptionBold,
@@ -19,15 +20,10 @@ Widget container1(
       children: [
         Container(
           // col1Cok (39:435)
-          margin:
-              const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 32 * fem, 0 * fem),
+          margin: const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 32 * fem, 0 * fem),
           width: 591 * fem,
           height: 500 * fem,
-          child: Image.network(
-            imageURL,
-            width: 591 * fem,
-            height: 500 * fem,
-          ),
+          child: image,
         ),
         SizedBox(
 // col2KNa (39:438)
@@ -193,7 +189,7 @@ Widget container1(
 }
 
 Widget container2(
-    {required String imageURL,
+    {required Image image,
     required String title,
     required String description,
     required String descriptionBold,
@@ -369,11 +365,7 @@ Widget container2(
 // col1GVQ (39:633)
           width: 591 * fem,
           height: 500 * fem,
-          child: Image.network(
-            imageURL,
-            width: 591 * fem,
-            height: 500 * fem,
-          ),
+          child: image,
         ),
       ],
     ),
@@ -383,7 +375,7 @@ Widget container2(
 //////////////////////////////
 Widget _defaultContainer1() {
   return container1(
-      imageURL: "",
+      image: invisibleImg,
       title: "title",
       description: "description",
       descriptionBold: "descriptionBold",
@@ -393,7 +385,7 @@ Widget _defaultContainer1() {
 
 Widget _defaultContainer2() {
   return container2(
-      imageURL: "",
+      image: jeiomImg,
       title: "PROJECT TITLE",
       description: "Lorem ipsum dolor sit amet, consectetur",
       descriptionBold:
