@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 const double fem = 1; // TODO: Remove const and get it from context
 const double ffem = 1; // TODO: Remove const and get it from context
 
+
+// TODO: Delete SafeGoogleFont import everywhere - it just needs to be in typography.dart
 /// SafeGoogleFont - TextStyle
 TextStyle SafeGoogleFont(String fontFamily,
     {double? fontSize,
