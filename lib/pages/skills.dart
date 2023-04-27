@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
+import '../theme/colors.dart';
+
 Widget getSkillsPage() {
   return Container(
     // skillsi5G (132:231)
@@ -9,20 +11,7 @@ Widget getSkillsPage() {
     width: double.infinity,
     height: 583.9 * fem,
     decoration: const BoxDecoration(
-      gradient: LinearGradient(
-        begin: Alignment(0, -1),
-        end: Alignment(0, 1),
-        colors: <Color>[
-          Color(0xff010208),
-          Color(0xff010206),
-          Color(0xff040008),
-          Color(0xff010101),
-          Color(0xff010101),
-          Color(0xff010101),
-          Color(0xff010101)
-        ],
-        stops: <double>[0.164, 0.205, 0.248, 0.305, 0.341, 0.362, 1],
-      ),
+      gradient: backgroundColorGradient
     ),
     child: Container(
       // skillsFzJ (132:232)
@@ -43,7 +32,7 @@ Widget getSkillsPage() {
                   fontSize: 40 * ffem,
                   fontWeight: FontWeight.w300,
                   height: 1.5 * ffem / fem,
-                  color: const Color(0xffe3e4e6),
+                  color: neutral1Color,
                 ),
                 children: [
                   TextSpan(
@@ -53,7 +42,7 @@ Widget getSkillsPage() {
                       fontSize: 40 * ffem,
                       fontWeight: FontWeight.w300,
                       height: 1.5 * ffem / fem,
-                      color: const Color(0x8ce3e4e6),
+                      color: neutral2Color,
                     ),
                   ),
                   TextSpan(
@@ -63,7 +52,7 @@ Widget getSkillsPage() {
                       fontSize: 40 * ffem,
                       fontWeight: FontWeight.w300,
                       height: 1.5 * ffem / fem,
-                      color: const Color(0xffe3e4e6),
+                      color: neutral1Color,
                     ),
                   ),
                   TextSpan(
@@ -73,7 +62,7 @@ Widget getSkillsPage() {
                       fontSize: 40 * ffem,
                       fontWeight: FontWeight.w600,
                       height: 1.5 * ffem / fem,
-                      color: const Color(0xffe3e4e6),
+                      color: neutral1Color,
                     ),
                   ),
                 ],

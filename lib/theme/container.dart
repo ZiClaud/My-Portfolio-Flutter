@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
 Widget container1(
@@ -62,7 +63,7 @@ Widget container1(
                                 fontWeight: FontWeight.w600,
                                 height: 1.5 * ffem / fem,
                                 letterSpacing: 0.64 * fem,
-                                color: const Color(0xffe3e4e6),
+                                color: neutral1Color,
                               ),
                             ),
                           ),
@@ -78,7 +79,7 @@ Widget container1(
                                   fontSize: 32 * ffem,
                                   fontWeight: FontWeight.w400,
                                   height: 1.5 * ffem / fem,
-                                  color: const Color(0xffe3e4e6),
+                                  color: neutral1Color,
                                 ),
                                 children: [
                                   TextSpan(
@@ -88,7 +89,7 @@ Widget container1(
                                       fontSize: 32 * ffem,
                                       fontWeight: FontWeight.w300,
                                       height: 1.5 * ffem / fem,
-                                      color: const Color(0x8ce3e4e6),
+                                      color: neutral2Color,
                                     ),
                                   ),
                                   TextSpan(
@@ -98,7 +99,7 @@ Widget container1(
                                       fontSize: 32 * ffem,
                                       fontWeight: FontWeight.w300,
                                       height: 1.5 * ffem / fem,
-                                      color: const Color(0xffe3e4e6),
+                                      color: neutral1Color,
                                     ),
                                   ),
                                   TextSpan(
@@ -108,7 +109,7 @@ Widget container1(
                                       fontSize: 32 * ffem,
                                       fontWeight: FontWeight.w600,
                                       height: 1.5 * ffem / fem,
-                                      color: const Color(0xffe3e4e6),
+                                      color: neutral1Color,
                                     ),
                                   ),
                                 ],
@@ -126,7 +127,7 @@ Widget container1(
                         fontSize: 18 * ffem,
                         fontWeight: FontWeight.w300,
                         height: 1.5 * ffem / fem,
-                        color: const Color(0xffe3e4e6),
+                        color: neutral1Color,
                       ),
                     ),
                   ],
@@ -146,7 +147,7 @@ Widget container1(
                         16 * fem, 8 * fem, 25 * fem, 8 * fem),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      border: Border.all(color: const Color(0x8ce3e4e6)),
+                      border: Border.all(color: neutral2Color),
                       borderRadius: BorderRadius.circular(100 * fem),
                     ),
                     child: Row(
@@ -164,7 +165,7 @@ Widget container1(
                               fontWeight: FontWeight.w400,
                               height: 1.5 * ffem / fem,
                               letterSpacing: 0.64 * fem,
-                              color: const Color(0xffe3e4e6),
+                              color: neutral1Color,
                             ),
                           ),
                         ),
@@ -240,7 +241,7 @@ Widget container2(
                                 fontWeight: FontWeight.w600,
                                 height: 1.5 * ffem / fem,
                                 letterSpacing: 0.64 * fem,
-                                color: const Color(0xffe3e4e6),
+                                color: neutral1Color,
                               ),
                             ),
                           ),
@@ -256,7 +257,7 @@ Widget container2(
                                   fontSize: 32 * ffem,
                                   fontWeight: FontWeight.w400,
                                   height: 1.5 * ffem / fem,
-                                  color: const Color(0xffe3e4e6),
+                                  color: neutral1Color,
                                 ),
                                 children: [
                                   TextSpan(
@@ -266,7 +267,7 @@ Widget container2(
                                       fontSize: 32 * ffem,
                                       fontWeight: FontWeight.w300,
                                       height: 1.5 * ffem / fem,
-                                      color: const Color(0x8ce3e4e6),
+                                      color: neutral2Color,
                                     ),
                                   ),
                                   TextSpan(
@@ -276,7 +277,7 @@ Widget container2(
                                       fontSize: 32 * ffem,
                                       fontWeight: FontWeight.w300,
                                       height: 1.5 * ffem / fem,
-                                      color: const Color(0xffe3e4e6),
+                                      color: neutral1Color,
                                     ),
                                   ),
                                   TextSpan(
@@ -286,7 +287,7 @@ Widget container2(
                                       fontSize: 32 * ffem,
                                       fontWeight: FontWeight.w600,
                                       height: 1.5 * ffem / fem,
-                                      color: const Color(0xffe3e4e6),
+                                      color: neutral1Color,
                                     ),
                                   ),
                                 ],
@@ -304,7 +305,7 @@ Widget container2(
                         fontSize: 18 * ffem,
                         fontWeight: FontWeight.w300,
                         height: 1.5 * ffem / fem,
-                        color: const Color(0xffe3e4e6),
+                        color: neutral1Color,
                       ),
                     ),
                   ],
@@ -324,7 +325,7 @@ Widget container2(
                         16 * fem, 8 * fem, 25 * fem, 8 * fem),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      border: Border.all(color: const Color(0x8ce3e4e6)),
+                      border: Border.all(color: neutral2Color),
                       borderRadius: BorderRadius.circular(100 * fem),
                     ),
                     child: Row(
@@ -342,7 +343,7 @@ Widget container2(
                               fontWeight: FontWeight.w400,
                               height: 1.5 * ffem / fem,
                               letterSpacing: 0.64 * fem,
-                              color: const Color(0xffe3e4e6),
+                              color: neutral1Color,
                             ),
                           ),
                         ),

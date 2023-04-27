@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
 Widget getFooterPage() {
@@ -9,20 +10,7 @@ Widget getFooterPage() {
     width: double.infinity,
     height: 571 * fem,
     decoration: const BoxDecoration(
-      gradient: LinearGradient(
-        begin: Alignment(0, -1),
-        end: Alignment(0, 1),
-        colors: <Color>[
-          Color(0xff010208),
-          Color(0xff010206),
-          Color(0xff040008),
-          Color(0xff010101),
-          Color(0xff010101),
-          Color(0xff010101),
-          Color(0xff010101)
-        ],
-        stops: <double>[0.164, 0.205, 0.248, 0.305, 0.341, 0.362, 1],
-      ),
+      gradient: backgroundColorGradient
     ),
     child: SizedBox(
       // contentgvE (146:204)
@@ -116,14 +104,12 @@ Widget getFooterPage() {
                       children: [
                         TextSpan(
                           text: 'Get',
-                          style: SafeGoogleFont(
-                            'Work Sans',
-                            fontSize: 56 * ffem,
-                            fontWeight: FontWeight.w300,
-                            height: 1.5 * ffem / fem,
-                            letterSpacing: -1.12 * fem,
-                            color: const Color(0x8ce3e4e6),
-                          ),
+                          style: SafeGoogleFont('Work Sans',
+                              fontSize: 56 * ffem,
+                              fontWeight: FontWeight.w300,
+                              height: 1.5 * ffem / fem,
+                              letterSpacing: -1.12 * fem,
+                              color: neutral2Color),
                         ),
                         TextSpan(
                           text: ' ',
@@ -144,7 +130,7 @@ Widget getFooterPage() {
                             fontWeight: FontWeight.w600,
                             height: 1.5 * ffem / fem,
                             letterSpacing: -1.12 * fem,
-                            color: const Color(0xffe3e4e6),
+                            color: neutral1Color,
                           ),
                         ),
                       ],
@@ -160,7 +146,7 @@ Widget getFooterPage() {
                     fontSize: 18 * ffem,
                     fontWeight: FontWeight.w300,
                     height: 1.5 * ffem / fem,
-                    color: const Color(0xffe3e4e6),
+                    color: neutral1Color,
                   ),
                 ),
               ],

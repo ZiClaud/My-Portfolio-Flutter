@@ -6,7 +6,7 @@ const Color backgroundColor = Color(0xFF010208);
 const Color neutral1Color = Color(0xFFE3E4E6);
 const Color neutral2Color = Color(0x8CE3E4E6);
 
-const LinearGradient _backgroundColorGradient = LinearGradient(
+const LinearGradient backgroundColorGradient = LinearGradient(
   begin: Alignment(0, -1),
   end: Alignment(0, 1),
   colors: <Color>[
@@ -46,7 +46,7 @@ Widget getColorPage() {
         Container(
           // primaryXc6 (54:961)
           margin:
-              const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 80 * fem, 0 * fem),
+          const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 80 * fem, 0 * fem),
           width: 200 * fem,
           height: 315 * fem,
           child: Column(
@@ -90,7 +90,7 @@ Widget getColorPage() {
         Container(
           // background1Qn (54:964)
           margin:
-              const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 80 * fem, 0 * fem),
+          const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 80 * fem, 0 * fem),
           width: 200 * fem,
           height: 315 * fem,
           child: Column(
@@ -108,7 +108,7 @@ Widget getColorPage() {
                     topRight: Radius.circular(100 * fem),
                     bottomRight: Radius.circular(100 * fem),
                   ),
-                  gradient: _backgroundColorGradient,
+                  gradient: backgroundColorGradient,
                 ),
               ),
               Text(
@@ -129,7 +129,7 @@ Widget getColorPage() {
         Container(
           // neutral1K46 (54:967)
           margin:
-              const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 79 * fem, 0 * fem),
+          const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 79 * fem, 0 * fem),
           height: 315 * fem,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -141,7 +141,7 @@ Widget getColorPage() {
                 width: 200 * fem,
                 height: 200 * fem,
                 decoration: const BoxDecoration(
-                  color: Color(0xffe3e4e6),
+                  color: neutral1Color,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(100 * fem),
                     topRight: Radius.circular(100 * fem),
@@ -177,7 +177,7 @@ Widget getColorPage() {
                 width: 200 * fem,
                 height: 200 * fem,
                 decoration: const BoxDecoration(
-                  color: Color(0x8ce3e4e6),
+                  color: neutral2Color,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(100 * fem),
                     topRight: Radius.circular(100 * fem),

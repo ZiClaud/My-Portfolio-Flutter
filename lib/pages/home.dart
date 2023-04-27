@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
 Widget getHomePage(){
@@ -7,12 +8,7 @@ Widget getHomePage(){
     padding:  const EdgeInsets.fromLTRB(112*fem, 24*fem, 112*fem, 57*fem),
     width:  double.infinity,
     decoration:  const BoxDecoration (
-      gradient:  LinearGradient (
-        begin:  Alignment(0, -1),
-        end:  Alignment(0, 1),
-        colors:  <Color>[Color(0xff010208), Color(0xff010206), Color(0xff040008), Color(0xff010101), Color(0xff010101), Color(0xff010101), Color(0xff010101)],
-        stops:  <double>[0.164, 0.205, 0.248, 0.305, 0.341, 0.362, 1],
-      ),
+      gradient:  backgroundColorGradient,
     ),
     child:
     Column(
@@ -81,7 +77,7 @@ Widget getHomePage(){
                             fontSize:  14*ffem,
                             fontWeight:  FontWeight.w600,
                             height:  1.5*ffem/fem,
-                            color:  const Color(0xffe3e4e6),
+                            color:  neutral1Color,
                           ),
                         ),
                       ),
@@ -106,7 +102,7 @@ Widget getHomePage(){
                             fontSize:  14*ffem,
                             fontWeight:  FontWeight.w600,
                             height:  1.5*ffem/fem,
-                            color:  const Color(0xffe3e4e6),
+                            color:  neutral1Color,
                           ),
                         ),
                       ),
@@ -134,7 +130,7 @@ Widget getHomePage(){
                 fontWeight:  FontWeight.w600,
                 height:  1.5*ffem/fem,
                 letterSpacing:  -1.12*fem,
-                color:  const Color(0xffe3e4e6),
+                color:  neutral1Color,
               ),
               children:  [
                 TextSpan(
@@ -145,7 +141,7 @@ Widget getHomePage(){
                     fontWeight:  FontWeight.w600,
                     height:  1.5*ffem/fem,
                     letterSpacing:  -1.12*fem,
-                    color:  const Color(0xffe3e4e6),
+                    color:  neutral1Color,
                   ),
                 ),
                 TextSpan(
@@ -156,7 +152,7 @@ Widget getHomePage(){
                     fontWeight:  FontWeight.w300,
                     height:  1.5*ffem/fem,
                     letterSpacing:  -1.12*fem,
-                    color:  const Color(0x8ce3e4e6),
+                    color:  neutral2Color,
                   ),
                 ),
               ],
@@ -185,12 +181,7 @@ Widget getHomePageNoHeader() {
     padding:  const EdgeInsets.fromLTRB(112*fem, 24*fem, 112*fem, 57*fem),
     width:  double.infinity,
     decoration:  const BoxDecoration (
-      gradient:  LinearGradient (
-        begin:  Alignment(0, -1),
-        end:  Alignment(0, 1),
-        colors:  <Color>[Color(0xff010208), Color(0xff010206), Color(0xff040008), Color(0xff010101), Color(0xff010101), Color(0xff010101), Color(0xff010101)],
-        stops:  <double>[0.164, 0.205, 0.248, 0.305, 0.341, 0.362, 1],
-      ),
+      gradient:  backgroundColorGradient,
     ),
     child:
     Column(
@@ -213,7 +204,7 @@ Widget getHomePageNoHeader() {
                 fontWeight:  FontWeight.w600,
                 height:  1.5*ffem/fem,
                 letterSpacing:  -1.12*fem,
-                color:  const Color(0xffe3e4e6),
+                color:  neutral1Color,
               ),
               children:  [
                 TextSpan(
@@ -224,7 +215,7 @@ Widget getHomePageNoHeader() {
                     fontWeight:  FontWeight.w600,
                     height:  1.5*ffem/fem,
                     letterSpacing:  -1.12*fem,
-                    color:  const Color(0xffe3e4e6),
+                    color:  neutral1Color,
                   ),
                 ),
                 TextSpan(
@@ -235,7 +226,7 @@ Widget getHomePageNoHeader() {
                     fontWeight:  FontWeight.w300,
                     height:  1.5*ffem/fem,
                     letterSpacing:  -1.12*fem,
-                    color:  const Color(0x8ce3e4e6),
+                    color: neutral2Color,
                   ),
                 ),
               ],
