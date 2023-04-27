@@ -43,7 +43,7 @@ TextStyle _SafeGoogleFont(String fontFamily,
 }
 
 /// Light
-Text myText(String text, TextStyle textStyle) {
+Text _myText(String text, TextStyle textStyle) {
   return Text(
     text,
     textAlign: TextAlign.center,
