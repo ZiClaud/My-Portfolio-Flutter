@@ -73,12 +73,7 @@ Widget container1(
                                 0 * fem, 0 * fem, 0 * fem, 16 * fem),
                             child: Text(
                               title,
-                              style: SafeGoogleFont(
-                                'Work Sans',
-                                fontSize: 16 * ffem,
-                                fontWeight: FontWeight.w600,
-                                height: 1.5 * ffem / fem,
-                                letterSpacing: 0.64 * fem,
+                              style: h5Bold(
                                 color: neutral1Color,
                               ),
                             ),
@@ -90,13 +85,7 @@ Widget container1(
                             ),
                             child: RichText(
                               text: TextSpan(
-                                style: SafeGoogleFont(
-                                  'Work Sans',
-                                  fontSize: 32 * ffem,
-                                  fontWeight: FontWeight.w400,
-                                  height: 1.5 * ffem / fem,
-                                  color: neutral1Color,
-                                ),
+                                style: h3LightBig(color: neutral1Color),
                                 children: [
                                   TextSpan(
                                     text: description,
@@ -116,13 +105,7 @@ Widget container1(
                     Text(
 // categoryEZQ (39:443)
                       category,
-                      style: SafeGoogleFont(
-                        'Work Sans',
-                        fontSize: 18 * ffem,
-                        fontWeight: FontWeight.w300,
-                        height: 1.5 * ffem / fem,
-                        color: neutral1Color,
-                      ),
+                      style: body1TextLight(color: neutral1Color),
                     ),
                   ],
                 ),
@@ -217,14 +200,7 @@ Widget container2(
                                 0 * fem, 0 * fem, 0 * fem, 16 * fem),
                             child: Text(
                               title,
-                              style: SafeGoogleFont(
-                                'Work Sans',
-                                fontSize: 16 * ffem,
-                                fontWeight: FontWeight.w600,
-                                height: 1.5 * ffem / fem,
-                                letterSpacing: 0.64 * fem,
-                                color: neutral1Color,
-                              ),
+                              style: h5Bold(color: neutral1Color),
                             ),
                           ),
                           Container(
@@ -254,13 +230,7 @@ Widget container2(
                     Text(
                       // category1R4 (39:641)
                       category,
-                      style: SafeGoogleFont(
-                        'Work Sans',
-                        fontSize: 18 * ffem,
-                        fontWeight: FontWeight.w300,
-                        height: 1.5 * ffem / fem,
-                        color: neutral1Color,
-                      ),
+                      style: body1TextLight(color: neutral1Color),
                     ),
                   ],
                 ),

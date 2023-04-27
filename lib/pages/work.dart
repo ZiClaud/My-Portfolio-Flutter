@@ -26,7 +26,8 @@ Widget getWorkPage() {
 Widget _iremi = container1(
   image: invisibleWorkImg,
   title: "Iremi App",
-  description: "I've created an app, that helps the user to find some breathing exercises and ",
+  description:
+      "I've created an app, that helps the user to find some breathing exercises and ",
   descriptionBold: "it's amazing",
   category: "Mobile App",
   link: "link",

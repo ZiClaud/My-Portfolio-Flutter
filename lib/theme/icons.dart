@@ -56,9 +56,14 @@ Image aboutMeImageUrl({required String url}) {
 // Used for testing
 Image invisibleAboutMeImg = aboutMeImage(path: invisiblePath);
 
-Image aboutMe1Img = aboutMeImageUrl(url: "https://assets.telegraphindia.com/telegraph/2022/Feb/1644870612_design.jpg");
-Image aboutMe2Img = aboutMeImageUrl(url: "https://i.guim.co.uk/img/media/759f700c9f1d288f76f86a1dc44e37d1cf05e57a/0_124_5100_3059/master/5100.jpg?width=465&quality=85&dpr=1&s=none");
-Image aboutMe3Img = aboutMeImageUrl(url: "https://cdn.fuelrocks.com/1665122987550.jpg");
+Image aboutMe1Img = aboutMeImageUrl(
+    url:
+        "https://assets.telegraphindia.com/telegraph/2022/Feb/1644870612_design.jpg");
+Image aboutMe2Img = aboutMeImageUrl(
+    url:
+        "https://i.guim.co.uk/img/media/759f700c9f1d288f76f86a1dc44e37d1cf05e57a/0_124_5100_3059/master/5100.jpg?width=465&quality=85&dpr=1&s=none");
+Image aboutMe3Img =
+    aboutMeImageUrl(url: "https://cdn.fuelrocks.com/1665122987550.jpg");
 
 /// Footer Icons
 Image footerImg({required String path}) {

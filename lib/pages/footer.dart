@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
+import 'package:my_portfolio/theme/typography.dart';
 
 Widget getFooterPage() {
   return Container(
     // footerxav (77:378)
-    padding:  EdgeInsets.fromLTRB(
-        127.5 * fem, 100.1 * fem, 127.5 * fem, 60.9 * fem),
+    padding:
+        EdgeInsets.fromLTRB(127.5 * fem, 100.1 * fem, 127.5 * fem, 60.9 * fem),
     width: double.infinity,
     height: 571 * fem,
-    decoration:  BoxDecoration(gradient: backgroundColorGradient),
+    decoration: BoxDecoration(gradient: backgroundColorGradient),
     child: SizedBox(
       // contentgvE (146:204)
       width: 1006.5 * fem,
@@ -20,9 +21,8 @@ Widget getFooterPage() {
         children: [
           Container(
             // socialmediaDvA (146:205)
-            margin:  EdgeInsets.fromLTRB(
-                0 * fem, 0 * fem, 286.5 * fem, 0 * fem),
-            padding:  EdgeInsets.fromLTRB(
+            margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 286.5 * fem, 0 * fem),
+            padding: EdgeInsets.fromLTRB(
                 37.5 * fem, 37.5 * fem, 37.5 * fem, 47.25 * fem),
             width: 378 * fem,
             height: double.infinity,
@@ -31,15 +31,15 @@ Widget getFooterPage() {
               children: [
                 Container(
                   // autogroupad3qXfx (DmffNQqB2QYYnQaAdKAd3Q)
-                  margin:  EdgeInsets.fromLTRB(
-                      0 * fem, 0 * fem, 0 * fem, 42 * fem),
+                  margin:
+                      EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 42 * fem),
                   width: double.infinity,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Container(
                         // github55sE2 (146:206)
-                        margin:  EdgeInsets.fromLTRB(
+                        margin: EdgeInsets.fromLTRB(
                             0 * fem, 0 * fem, 93 * fem, 83.25 * fem),
                         width: 100 * fem,
                         height: 100 * fem,
@@ -56,8 +56,8 @@ Widget getFooterPage() {
                 ),
                 Container(
                   // mail557eA (146:207)
-                  margin: EdgeInsets.fromLTRB(
-                      0 * fem, 0 * fem, 92 * fem, 0 * fem),
+                  margin:
+                      EdgeInsets.fromLTRB(0 * fem, 0 * fem, 92 * fem, 0 * fem),
                   width: 100 * fem,
                   height: 100 * fem,
                   child: mailImg,
@@ -67,58 +67,28 @@ Widget getFooterPage() {
           ),
           Container(
             // titledescriptionqKG (146:209)
-            margin:  EdgeInsets.fromLTRB(
-                0 * fem, 122.9 * fem, 0 * fem, 167.1 * fem),
+            margin:
+                EdgeInsets.fromLTRB(0 * fem, 122.9 * fem, 0 * fem, 167.1 * fem),
             height: double.infinity,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   // getintouchh6a (146:211)
-                  margin:  EdgeInsets.fromLTRB(
-                      0 * fem, 0 * fem, 0 * fem, 4 * fem),
+                  margin:
+                      EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 4 * fem),
                   child: RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
-                      style: SafeGoogleFont(
-                        'Work Sans',
-                        fontSize: 56 * ffem,
-                        fontWeight: FontWeight.w300,
-                        height: 1.5 * ffem / fem,
-                        letterSpacing: -1.12 * fem,
-                        color: whiteColor,
-                      ),
+                      style: h1Light(color: whiteColor),
                       children: [
                         TextSpan(
-                          text: 'Get',
-                          style: SafeGoogleFont('Work Sans',
-                              fontSize: 56 * ffem,
-                              fontWeight: FontWeight.w300,
-                              height: 1.5 * ffem / fem,
-                              letterSpacing: -1.12 * fem,
-                              color: neutral2Color),
-                        ),
-                        TextSpan(
-                          text: ' ',
-                          style: SafeGoogleFont(
-                            'Work Sans',
-                            fontSize: 56 * ffem,
-                            fontWeight: FontWeight.w300,
-                            height: 1.5 * ffem / fem,
-                            letterSpacing: -1.12 * fem,
-                            color: whiteColor,
-                          ),
+                          text: 'Get ',
+                          style: h1Light(color: neutral2Color),
                         ),
                         TextSpan(
                           text: 'in Touch.',
-                          style: SafeGoogleFont(
-                            'Work Sans',
-                            fontSize: 56 * ffem,
-                            fontWeight: FontWeight.w600,
-                            height: 1.5 * ffem / fem,
-                            letterSpacing: -1.12 * fem,
-                            color: neutral1Color,
-                          ),
+                          style: h1Bold(color: neutral1Color),
                         ),
                       ],
                     ),
@@ -128,13 +98,7 @@ Widget getFooterPage() {
                   // descriptionXtE (146:212)
                   'So that we can talk more about...',
                   textAlign: TextAlign.center,
-                  style: SafeGoogleFont(
-                    'Work Sans',
-                    fontSize: 18 * ffem,
-                    fontWeight: FontWeight.w300,
-                    height: 1.5 * ffem / fem,
-                    color: neutral1Color,
-                  ),
+                  style: body1TextLight(color: neutral1Color),
                 ),
               ],
             ),

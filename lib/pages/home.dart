@@ -3,6 +3,7 @@ import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/container.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
+import 'package:my_portfolio/theme/typography.dart';
 
 Widget getHomePage() {
   return sectionContainer(_homePageWidgets());
@@ -59,13 +60,7 @@ Widget _headerWidget() {
                 height: double.infinity,
                 child: Text(
                   'HOME',
-                  style: SafeGoogleFont(
-                    'Work Sans',
-                    fontSize: 14 * ffem,
-                    fontWeight: FontWeight.w600,
-                    height: 1.5 * ffem / fem,
-                    color: primaryColor,
-                  ),
+                  style: label(color: primaryColor),
                 ),
               ),
               SizedBox(
@@ -81,13 +76,7 @@ Widget _headerWidget() {
                   height: double.infinity,
                   child: Text(
                     'WORK',
-                    style: SafeGoogleFont(
-                      'Work Sans',
-                      fontSize: 14 * ffem,
-                      fontWeight: FontWeight.w600,
-                      height: 1.5 * ffem / fem,
-                      color: neutral1Color,
-                    ),
+                    style: label(color: neutral1Color),
                   ),
                 ),
               ),
@@ -104,13 +93,7 @@ Widget _headerWidget() {
                   height: double.infinity,
                   child: Text(
                     'ABOUT',
-                    style: SafeGoogleFont(
-                      'Work Sans',
-                      fontSize: 14 * ffem,
-                      fontWeight: FontWeight.w600,
-                      height: 1.5 * ffem / fem,
-                      color: neutral1Color,
-                    ),
+                    style: label(color: neutral1Color),
                   ),
                 ),
               ),
@@ -132,36 +115,15 @@ Widget _titleAndJobWidget() {
     child: RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-        style: SafeGoogleFont(
-          'Work Sans',
-          fontSize: 56 * ffem,
-          fontWeight: FontWeight.w600,
-          height: 1.5 * ffem / fem,
-          letterSpacing: -1.12 * fem,
-          color: neutral1Color,
-        ),
+        style: h1Bold(color: neutral1Color),
         children: [
           TextSpan(
             text: 'Claudio Di Maio\n',
-            style: SafeGoogleFont(
-              'Work Sans',
-              fontSize: 56 * ffem,
-              fontWeight: FontWeight.w600,
-              height: 1.5 * ffem / fem,
-              letterSpacing: -1.12 * fem,
-              color: neutral1Color,
-            ),
+            style: h1Bold(color: neutral1Color),
           ),
           TextSpan(
             text: 'Software Developer',
-            style: SafeGoogleFont(
-              'Work Sans',
-              fontSize: 56 * ffem,
-              fontWeight: FontWeight.w300,
-              height: 1.5 * ffem / fem,
-              letterSpacing: -1.12 * fem,
-              color: neutral2Color,
-            ),
+            style: h1Light(color: neutral2Color),
           ),
         ],
       ),
