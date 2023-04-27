@@ -96,7 +96,7 @@ Widget getFooterPage() {
                 ),
                 Text(
                   // descriptionXtE (146:212)
-                  'So that we can talk more about...',
+                  'So that we can start working together!',
                   textAlign: TextAlign.center,
                   style: body1TextLight(color: neutral1Color),
                 ),
