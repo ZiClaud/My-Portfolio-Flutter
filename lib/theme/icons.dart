@@ -4,20 +4,50 @@ import 'package:my_portfolio/theme/safe_google_font.dart';
 String invisiblePath = "../assets/images/invisible.png";
 
 /// SKILLS
-Image skillImg({required String path}) {
+Image skillImg({required String path, Color? color}) {
   return Image(
     image: AssetImage(path),
     fit: BoxFit.cover,
+    color: color,
   );
 }
 
 // Used for testing
 Image invisibleSkillImg = skillImg(path: invisiblePath);
 
-Image flutterImg = skillImg(path: "../assets/images/flutterimg.png");
-Image sqlImg = skillImg(path: "../assets/images/sqlimg.png");
-Image pythonImg = skillImg(path: "../assets/images/pythonimg.png");
-Image javaImg = skillImg(path: "../assets/images/javaimg.png");
+Image flutterImg({required bool isHovering}) {
+  if (isHovering) {
+    return skillImg(path: "../assets/images/flutterimg.png");
+  } else {
+    return skillImg(
+        path: "../assets/images/flutterimg.png", color: Colors.white);
+  }
+}
+
+Image sqlImg({required bool isHovering}) {
+  if (isHovering) {
+    return skillImg(path: "../assets/images/sqlimg.png");
+  } else {
+    return skillImg(path: "../assets/images/sqlimg.png", color: Colors.white);
+  }
+}
+
+Image pythonImg({required bool isHovering}) {
+  if (isHovering) {
+    return skillImg(path: "../assets/images/pythonimg.png");
+  } else {
+    return skillImg(
+        path: "../assets/images/pythonimg.png", color: Colors.white);
+  }
+}
+
+Image javaImg({required bool isHovering}) {
+  if (isHovering) {
+    return skillImg(path: "../assets/images/javaimg.png");
+  } else {
+    return skillImg(path: "../assets/images/javaimg.png", color: Colors.white);
+  }
+}
 
 /// WORKS
 Image workImg({required String path}) {

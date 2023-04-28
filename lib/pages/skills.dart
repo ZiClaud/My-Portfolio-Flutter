@@ -6,14 +6,12 @@ import 'package:my_portfolio/theme/typography.dart';
 
 Widget getSkillsPage() {
   return Container(
-    // skillsi5G (132:231)
     padding: EdgeInsets.fromLTRB(112 * fem, 80 * fem, 112 * fem, 130 * fem),
     width: double.infinity,
     height: 583.9 * fem,
-    decoration: BoxDecoration(gradient: backgroundColorGradient),
-    child: Container(
+    decoration: const BoxDecoration(gradient: backgroundColorGradient),
+    child: SizedBox(
       // skillsFzJ (132:232)
-      padding: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 16 * fem),
       width: double.infinity,
       height: double.infinity,
       child: Column(
@@ -29,46 +27,59 @@ Widget getSkillsPage() {
 
 Widget _skillsBox() {
   return SizedBox(
-    // logospCA (132:235)
     width: double.infinity,
     height: 201.9 * fem,
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        _image(image: flutterImg),
-//                SizedBox(width: 64 * fem),
-        _image(image: sqlImg),
-//                SizedBox(width: 64 * fem),
-        _image(image: pythonImg),
-//                SizedBox(width: 64 * fem),
-        _image(image: javaImg),
+        _skillsImage(image: flutterImg),
+        _skillsImage(image: sqlImg),
+        _skillsImage(image: pythonImg),
+        _skillsImage(image: javaImg),
       ],
     ),
   );
 }
 
-Widget _image({required Image image}) {
-  return Container(
-    margin: EdgeInsets.fromLTRB(0 * fem, 0.92 * fem, 0 * fem, 0.92 * fem),
-    child: TextButton(
-      onPressed: () {},
-      // TODO: change image color on hover
-      // TODO: onHover: () {},
-      style: TextButton.styleFrom(
-        padding: EdgeInsets.zero,
-      ),
-      child: SizedBox(
-        height: double.infinity,
-        child: Center(
-          // fluttercoloredoZt (I133:307;133:301)
+Widget _skillsImage(
+    {required Image Function({required bool isHovering}) image}) {
+  bool isHovering = false;
+  return StatefulBuilder(
+    builder: (BuildContext context, StateSetter setState) {
+      return MouseRegion(
+        onEnter: (_) {
+          setState(() {
+            isHovering = true;
+          });
+        },
+        onExit: (_) {
+          setState(() {
+            isHovering = false;
+          });
+        },
+        child: TextButton(
+          onPressed: () {
+            //TODO: stuff
+            setState(() {
+              isHovering = !isHovering;
+            });
+          },
+          style: TextButton.styleFrom(
+            padding: EdgeInsets.zero,
+          ),
           child: SizedBox(
-            width: 200 * fem,
-            height: 200 * fem,
-            child: image,
+            height: double.infinity,
+            child: Center(
+              child: SizedBox(
+                width: 200 * fem,
+                height: 200 * fem,
+                child: image(isHovering: isHovering),
+              ),
+            ),
           ),
         ),
-      ),
-    ),
+      );
+    },
   );
 }
