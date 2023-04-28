@@ -6,7 +6,7 @@ import 'package:my_portfolio/theme/safe_google_font.dart';
 import 'package:my_portfolio/theme/typography.dart';
 
 Widget getAboutMePage() {
-  return sectionContainerRow(_aboutMeWidgets());
+  return sectionContainerRow(_aboutMeWidgets(), isAboutMe: true);
 }
 
 List<Widget> _aboutMeWidgets() {

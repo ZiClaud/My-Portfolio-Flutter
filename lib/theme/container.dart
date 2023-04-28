@@ -11,7 +11,7 @@ Widget sectionContainerColumn(List<Widget> widgets) {
     // homeHaA (77:258)
     padding: EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
     width: double.infinity,
-    decoration: BoxDecoration(
+    decoration: const BoxDecoration(
       gradient: backgroundColorGradient,
     ),
     child: Column(
@@ -23,20 +23,31 @@ Widget sectionContainerColumn(List<Widget> widgets) {
   );
 }
 
-Widget sectionContainerRow(List<Widget> widgets) {
+Widget sectionContainerRow(List<Widget> widgets,
+    {bool? isAboutMe, bool? isFooter}) {
+  // TODO: Improve this part of the code
+  if (isAboutMe != null && isAboutMe) {
+    return _sectionContainerRow(widgets, 996);
+  } else if (isFooter != null && isFooter) {
+    return _sectionContainerRow(widgets, 425);
+  } else {
+    return _sectionContainerRow(widgets, 996);
+  }
+}
+
+Widget _sectionContainerRow(List<Widget> widgets, double height) {
   return Container(
-    // aboutmeRW2 (77:362)
-    padding:
-    EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
+    padding: EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
     width: double.infinity,
-    height: 996 * fem,
-    decoration: BoxDecoration(gradient: backgroundColorGradient),
+    height: height * fem,
+    decoration: const BoxDecoration(gradient: backgroundColorGradient),
     child: SizedBox(
       // wrapperMgW (77:363)
       width: double.infinity,
       height: double.infinity,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           for (Widget widget in widgets) widget,
         ],

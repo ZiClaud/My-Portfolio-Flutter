@@ -6,56 +6,33 @@ import 'package:my_portfolio/theme/safe_google_font.dart';
 import 'package:my_portfolio/theme/typography.dart';
 
 Widget getFooterPage() {
-  return sectionContainerRow(_footerWidgets());
-/*
-  TODO: REMOVE
-
-  return Container(
-    // footerxav (77:378)
-    padding:
-        EdgeInsets.fromLTRB(127.5 * fem, 100.1 * fem, 127.5 * fem, 60.9 * fem),
-    width: double.infinity,
-    height: 571 * fem,
-    decoration: BoxDecoration(gradient: backgroundColorGradient),
-    child: SizedBox(
-      // contentgvE (146:204)
-      width: 1006.5 * fem,
-      height: double.infinity,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [_leftImages(), _rightText()],
-      ),
-    ),
-  );
- */
+  return sectionContainerRow(_footerWidgets(), isFooter: true);
 }
 
 List<Widget> _footerWidgets() {
   return [
-    _leftImages(),
-    _rightText(),
+    _leftImages(350),
+    _rightText(350),
   ];
 }
 
-Widget _leftImages() {
-  return Container(
-    margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 286.5 * fem, 0 * fem),
-    padding:
-        EdgeInsets.fromLTRB(37.5 * fem, 37.5 * fem, 37.5 * fem, 47.25 * fem),
-    width: 378 * fem,
-    height: double.infinity,
+Widget _leftImages(double squareSize) {
+  return SizedBox(
+    width: squareSize * fem,
+    height: squareSize * fem,
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          // autogroupad3qXfx (DmffNQqB2QYYnQaAdKAd3Q)
+          /// Position of [Mail?]
           margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 42 * fem),
           width: double.infinity,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Container(
-                // github55sE2 (146:206)
+                /// Position of [Github?]
                 margin: EdgeInsets.fromLTRB(
                     0 * fem, 0 * fem, 93 * fem, 83.25 * fem),
                 width: 100 * fem,
@@ -63,7 +40,6 @@ Widget _leftImages() {
                 child: gitHubImg,
               ),
               SizedBox(
-                // linkedin55n66 (146:208)
                 width: 100 * fem,
                 height: 100 * fem,
                 child: linkedinImg,
@@ -72,7 +48,7 @@ Widget _leftImages() {
           ),
         ),
         Container(
-          // mail557eA (146:207)
+          /// Position of [Github?]
           margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 92 * fem, 0 * fem),
           width: 100 * fem,
           height: 100 * fem,
@@ -83,12 +59,13 @@ Widget _leftImages() {
   );
 }
 
-Widget _rightText() {
-  return Container(
-    margin: EdgeInsets.fromLTRB(0 * fem, 122.9 * fem, 0 * fem, 167.1 * fem),
-    height: double.infinity,
+Widget _rightText(double squareSize) {
+  return SizedBox(
+    height: squareSize * fem,
+    width: squareSize * fem,
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           // getintouchh6a (146:211)
