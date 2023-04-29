@@ -5,8 +5,8 @@ import 'package:my_portfolio/theme/safe_google_font.dart';
 /// Title
 Widget titleBox({required String title1, required String title2}) {
   return Container(
-    // someofmyskillsamg (132:234)
-    margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 96 * fem),
+    margin: EdgeInsets.fromLTRB(38 * fem, 0 * fem, 38 * fem, 38 * fem),
+    width: double.infinity,
     child: RichText(
       text: TextSpan(
         style: h2Light(color: neutral1Color),

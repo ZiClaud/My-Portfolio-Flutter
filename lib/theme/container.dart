@@ -95,11 +95,11 @@ Widget sectionContainerColumn(List<Widget> widgets) {
 }
 
 Widget sectionContainerRow(List<Widget> widgets,
-    {bool? isAboutMe, bool? isFooter}) {
+    {bool isAboutMe = false, bool isFooter = false}) {
   // TODO: Improve this part of the code
-  if (isAboutMe != null && isAboutMe) {
+  if (isAboutMe) {
     return _sectionContainerRow(widgets, 996);
-  } else if (isFooter != null && isFooter) {
+  } else if (isFooter) {
     return _sectionContainerRow(widgets, 425);
   } else {
     return _sectionContainerRow(widgets, 996);

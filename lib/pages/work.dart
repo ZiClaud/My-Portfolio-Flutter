@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/container.dart';
 import 'package:my_portfolio/theme/icons.dart';
+import 'package:my_portfolio/theme/typography.dart';
 
 Widget getWorkPage() {
   return sectionContainerColumn(_workWidgets());
@@ -8,6 +9,7 @@ Widget getWorkPage() {
 
 List<Widget> _workWidgets() {
   return [
+    titleBox(title1: 'My best ', title2: 'Works'),
     _iremi(),
     _jeiom(),
   ];
