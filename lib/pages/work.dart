@@ -19,8 +19,8 @@ Widget _iremi() {
     //invisibleWorkImg,
     title: "Iremi App",
     description:
-        "I've created an app, that helps the user to find some breathing exercises and ",
-    descriptionBold: "it's amazing\n\n",
+        "I developed this app entirely on my own, and it offers users a range of breathing exercises that are specifically designed to ",
+    descriptionBold: "promote relaxation and mindfulness.",
     category: "Mobile App",
     link: "link",
   );
@@ -30,8 +30,8 @@ Widget _jeiom() {
   return container2(
     image: jeiomImg,
     title: "JEIOM App",
-    description: "App created in occasion of the event ",
-    descriptionBold: " JEIOM 2023\n\n\n",
+    description: "I was part of a team that developed this app for the JEIOM 2023 event. Our goal was to create a platform that would enable users to ",
+    descriptionBold: "organize their schedules for the event in a single, user-friendly interface.",
     category: "Mobile App",
     link: "link",
   );
