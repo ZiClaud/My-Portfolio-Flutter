@@ -4,12 +4,13 @@ import 'package:my_portfolio/theme/safe_google_font.dart';
 import 'colors.dart';
 
 /// Testing
-String invisiblePath = "../assets/images/invisible.png";
+String _invisiblePath = "../assets/images/invisible.png";
+String _semiInvisiblePath = "../assets/images/semi_invisible.png";
 
-Image invisibleSkillImg = skillImg(path: invisiblePath);
-Image invisibleWorkImg = workImg(path: invisiblePath);
-Image invisibleAboutMeImg = aboutMeImage(path: invisiblePath);
-Image invisibleFooterImg = footerImg(path: invisiblePath, color: null);
+Image _invisibleSkillImg = skillImg(path: _invisiblePath, isHovering: false);
+Image _invisibleWorkImg = workImg(path: _invisiblePath);
+Image _invisibleAboutMeImg = aboutMeImage(path: _invisiblePath);
+Image _invisibleFooterImg = footerImg(path: _invisiblePath, isHovering: false);
 
 /// Logo
 Image logoImage() {
@@ -20,7 +21,12 @@ Image logoImage() {
 }
 
 /// SKILLS
-Image skillImg({required String path, Color? color}) {
+Image skillImg({required String path, required bool isHovering}) {
+  Color? color;
+  if (!isHovering) {
+    color = Colors.white;
+  }
+
   return Image(
     image: AssetImage(path),
     fit: BoxFit.cover,
@@ -29,37 +35,23 @@ Image skillImg({required String path, Color? color}) {
 }
 
 Image flutterImg({required bool isHovering}) {
-  if (isHovering) {
-    return skillImg(path: "../assets/images/flutterimg.png");
-  } else {
-    return skillImg(
-        path: "../assets/images/flutterimg.png", color: Colors.white);
-  }
+  String path = "../assets/images/flutterimg.png";
+  return skillImg(path: path, isHovering: isHovering);
 }
 
 Image sqlImg({required bool isHovering}) {
-  if (isHovering) {
-    return skillImg(path: "../assets/images/sqlimg.png");
-  } else {
-    return skillImg(path: "../assets/images/sqlimg.png", color: Colors.white);
-  }
+  String path = "../assets/images/sqlimg.png";
+  return skillImg(path: path, isHovering: isHovering);
 }
 
 Image pythonImg({required bool isHovering}) {
-  if (isHovering) {
-    return skillImg(path: "../assets/images/pythonimg.png");
-  } else {
-    return skillImg(
-        path: "../assets/images/pythonimg.png", color: Colors.white);
-  }
+  String path = "../assets/images/pythonimg.png";
+  return skillImg(path: path, isHovering: isHovering);
 }
 
 Image javaImg({required bool isHovering}) {
-  if (isHovering) {
-    return skillImg(path: "../assets/images/javaimg.png");
-  } else {
-    return skillImg(path: "../assets/images/javaimg.png", color: Colors.white);
-  }
+  String path = "../assets/images/javaimg.png";
+  return skillImg(path: path, isHovering: isHovering);
 }
 
 /// WORKS
@@ -68,10 +60,12 @@ Image workImg({required String path}) {
     image: AssetImage(path),
     width: 591 * fem,
     height: 500 * fem,
+    fit: BoxFit.cover,
   );
 }
 
-Image iremiImg = workImg(path: "../assets/images/invisible.png"); //TODO: Change
+Image iremiImg =
+    workImg(path: _semiInvisiblePath); //TODO: Change
 Image jeiomImg = workImg(path: "../assets/images/jeiom.png");
 
 /// About me section
@@ -93,17 +87,24 @@ Image aboutMeImageUrl({required String url}) {
   );
 }
 
-Image aboutMe1Img = aboutMeImageUrl(
+Image aboutMeDesignImg = aboutMeImageUrl(
     url:
         "https://assets.telegraphindia.com/telegraph/2022/Feb/1644870612_design.jpg");
-Image aboutMe2Img = aboutMeImageUrl(
+Image aboutMeChessImg = aboutMeImageUrl(
     url:
-        "https://i.guim.co.uk/img/media/759f700c9f1d288f76f86a1dc44e37d1cf05e57a/0_124_5100_3059/master/5100.jpg?width=465&quality=85&dpr=1&s=none");
-Image aboutMe3Img =
+        "https://media.cnn.com/api/v1/images/stellar/prod/230104173032-02-chess-stock.jpg?c=original");
+Image aboutMeMusicImg =
     aboutMeImageUrl(url: "https://cdn.fuelrocks.com/1665122987550.jpg");
 
 /// Footer Icons
-Image footerImg({required String path, required Color? color}) {
+Image footerImg({required String path, required bool isHovering}) {
+  Color? color;
+  if (isHovering) {
+    color = primaryColor;
+  } else {
+    color = Colors.white;
+  }
+
   return Image(
     image: AssetImage(path),
     width: 100 * fem,
@@ -114,34 +115,22 @@ Image footerImg({required String path, required Color? color}) {
 
 Image gitHubImg({required bool isHovering}) {
   String path = "../assets/images/github_img.png";
-  if (isHovering) {
-    return footerImg(path: path, color: primaryColor);
-  } else {
-    return footerImg(path: path, color: Colors.white);
-  }
+  return footerImg(path: path, isHovering: isHovering);
 }
 
 Image mailImg({required bool isHovering}) {
   String path = "../assets/images/mail_img.png";
-  if (isHovering) {
-    return footerImg(path: path, color: primaryColor);
-  } else {
-    return footerImg(path: path, color: Colors.white);
-  }
+  return footerImg(path: path, isHovering: isHovering);
 }
 
 Image linkedinImg({required bool isHovering}) {
   String path = "../assets/images/linkedin_img.png";
-  if (isHovering) {
-    return footerImg(path: path, color: primaryColor);
-  } else {
-    return footerImg(path: path, color: Colors.white);
-  }
+  return footerImg(path: path, isHovering: isHovering);
 }
 
 /// Other icons - arrows and logos
 Image logoImg = Image(
-  image: AssetImage(invisiblePath), // TODO: Change
+  image: AssetImage(_invisiblePath), // TODO: Change
   width: 100 * fem,
   height: 100 * fem,
   color: Colors.white,

@@ -53,7 +53,7 @@ Widget _leftAboutMe() {
                 ),
                 TextSpan(
                   text:
-                      'Besides programming, I am also deeply interested in music, design, and chess.',
+                      'Besides programming, I am also deeply interested in design, music, and chess.',
                   style: h3Light(color: neutral2Color),
                 ),
               ],
@@ -77,7 +77,7 @@ Widget _rightImages() {
           margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 32 * fem, 0 * fem),
           width: 282 * fem,
           height: 374 * fem,
-          child: aboutMe1Img,
+          child: aboutMeMusicImg,
         ),
         SizedBox(
           // verticalvS6 (77:369)
@@ -91,13 +91,13 @@ Widget _rightImages() {
                     EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 32 * fem),
                 width: 282 * fem,
                 height: 374 * fem,
-                child: aboutMe2Img,
+                child: aboutMeDesignImg,
               ),
               SizedBox(
                 // coveryvA (77:371)
                 width: 282 * fem,
                 height: 374 * fem,
-                child: aboutMe3Img,
+                child: aboutMeChessImg,
               ),
             ],
           ),

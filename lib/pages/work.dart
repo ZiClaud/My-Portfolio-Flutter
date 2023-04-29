@@ -15,7 +15,7 @@ List<Widget> _workWidgets() {
 
 Widget _iremi() {
   return container1(
-    image: jeiomImg,
+    image: iremiImg,
     //invisibleWorkImg,
     title: "Iremi App",
     description:
