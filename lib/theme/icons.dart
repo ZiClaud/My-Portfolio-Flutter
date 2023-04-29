@@ -11,6 +11,14 @@ Image invisibleWorkImg = workImg(path: invisiblePath);
 Image invisibleAboutMeImg = aboutMeImage(path: invisiblePath);
 Image invisibleFooterImg = footerImg(path: invisiblePath, color: null);
 
+/// Logo
+Image logoImage() {
+  return const Image(
+    image: AssetImage("../assets/images/ZC_Logo_white.png"),
+    fit: BoxFit.contain,
+  );
+}
+
 /// SKILLS
 Image skillImg({required String path, Color? color}) {
   return Image(

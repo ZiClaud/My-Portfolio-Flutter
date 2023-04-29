@@ -7,25 +7,6 @@ import 'package:my_portfolio/theme/typography.dart';
 
 Widget getHomePage() {
   return sectionContainerColumn(_homePageWidgets());
-  /*
-  TODO: REMOVE
-
-  return Container(
-    // homeHaA (77:258)
-    padding: EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
-    width: double.infinity,
-    decoration: BoxDecoration(
-      gradient: backgroundColorGradient,
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        _homePageStuff()[0],
-        _homePageStuff()[1],
-      ],
-    ),
-  );
-  */
 }
 
 Widget _headerWidget() {
@@ -39,66 +20,23 @@ Widget _headerWidget() {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          // logo7Si (I132:214;10:1132)
           margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 921.8 * fem, 1.5 * fem),
-          width: 95.2 * fem,
-          height: 28 * fem,
-          child: Image.network(
-            invisiblePath, //TODO: Put my logo?
-            width: 95.2 * fem,
-            height: 28 * fem,
-          ),
+          width: 48 * fem,
+          height: 48 * fem,
+          child: logoImage(),
         ),
-        SizedBox(
-          // navitemsbcn (I132:214;10:1122)
-          height: double.infinity,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                // listitemdefaultJn6 (I132:214;10:1123)
-                height: double.infinity,
-                child: Text(
-                  'HOME',
-                  style: label(color: primaryColor),
-                ),
-              ),
-              SizedBox(
-                width: 32 * fem,
-              ),
-              TextButton(
-                // listitemdefaultiqp (I132:214;10:1124)
-                onPressed: () {},
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                ),
-                child: SizedBox(
-                  height: double.infinity,
-                  child: Text(
-                    'WORK',
-                    style: label(color: neutral1Color),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 32 * fem,
-              ),
-              TextButton(
-                // listitemdefault14E (I132:214;10:1125)
-                onPressed: () {},
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                ),
-                child: SizedBox(
-                  height: double.infinity,
-                  child: Text(
-                    'ABOUT',
-                    style: label(color: neutral1Color),
-                  ),
-                ),
-              ),
-            ],
-          ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            clickableText(text: "HOME", onPressed: () {}),
+            // TODO: onPressed function
+            SizedBox(width: 32 * fem),
+            clickableText(text: "WORK", onPressed: () {}),
+            // TODO: onPressed function
+            SizedBox(width: 32 * fem),
+            clickableText(text: "ABOUT", onPressed: () {}),
+            // TODO: onPressed function
+          ],
         ),
       ],
     ),

@@ -43,13 +43,18 @@ Widget _leftAboutMe() {
               children: [
                 TextSpan(
                   text:
-                      'I am a software developer who is passionate about creating ',
+                      'As a software developer, I am driven to create digital experiences that are both ',
                   style: h3Light(color: neutral2Color),
                 ),
                 TextSpan(
                   text:
-                      'beautiful and joyful digital experiences. Besides programming, I love music, design and travelling.',
+                      'visually striking and intuitive to navigate. ',
                   style: h3Bold(color: neutral1Color),
+                ),
+                TextSpan(
+                  text:
+                      'Besides programming, I am also deeply interested in music, design, and chess.',
+                  style: h3Light(color: neutral2Color),
                 ),
               ],
             ),

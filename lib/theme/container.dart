@@ -36,6 +36,45 @@ Widget clickableImage(
   );
 }
 
+Widget clickableText(
+    {required String text, required void Function() onPressed}) {
+  bool isHovering = false;
+  bool isClicked = false;
+  return StatefulBuilder(
+    builder: (BuildContext context, StateSetter setState) {
+      return MouseRegion(
+        onEnter: (_) {
+          setState(() {
+            isHovering = true;
+          });
+        },
+        onExit: (_) {
+          setState(() {
+            isHovering = false;
+          });
+        },
+        child: TextButton(
+          onPressed: () {
+            onPressed;
+            setState(() {
+              isClicked = true;
+            });
+          },
+          style: TextButton.styleFrom(
+            padding: EdgeInsets.zero,
+          ),
+          child: Text(
+            text,
+            style: label(
+              color: isClicked ? primaryColor : isHovering ? neutral2Color : neutral1Color,
+            ),
+          ),
+        ),
+      );
+    },
+  );
+}
+
 /// Most important widget
 Widget sectionContainerColumn(List<Widget> widgets) {
   //TODO maybe put "Center" in here
