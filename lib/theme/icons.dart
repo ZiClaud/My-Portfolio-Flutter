@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 
+import 'colors.dart';
+
+/// Testing
 String invisiblePath = "../assets/images/invisible.png";
+
+Image invisibleSkillImg = skillImg(path: invisiblePath);
+Image invisibleWorkImg = workImg(path: invisiblePath);
+Image invisibleAboutMeImg = aboutMeImage(path: invisiblePath);
+Image invisibleFooterImg = footerImg(path: invisiblePath, color: null);
 
 /// SKILLS
 Image skillImg({required String path, Color? color}) {
@@ -11,9 +19,6 @@ Image skillImg({required String path, Color? color}) {
     color: color,
   );
 }
-
-// Used for testing
-Image invisibleSkillImg = skillImg(path: invisiblePath);
 
 Image flutterImg({required bool isHovering}) {
   if (isHovering) {
@@ -58,9 +63,6 @@ Image workImg({required String path}) {
   );
 }
 
-// Used for testing
-Image invisibleWorkImg = workImg(path: invisiblePath);
-
 Image iremiImg = workImg(path: "../assets/images/invisible.png"); //TODO: Change
 Image jeiomImg = workImg(path: "../assets/images/jeiom.png");
 
@@ -83,9 +85,6 @@ Image aboutMeImageUrl({required String url}) {
   );
 }
 
-// Used for testing
-Image invisibleAboutMeImg = aboutMeImage(path: invisiblePath);
-
 Image aboutMe1Img = aboutMeImageUrl(
     url:
         "https://assets.telegraphindia.com/telegraph/2022/Feb/1644870612_design.jpg");
@@ -96,21 +95,41 @@ Image aboutMe3Img =
     aboutMeImageUrl(url: "https://cdn.fuelrocks.com/1665122987550.jpg");
 
 /// Footer Icons
-Image footerImg({required String path}) {
+Image footerImg({required String path, required Color? color}) {
   return Image(
     image: AssetImage(path),
     width: 100 * fem,
     height: 100 * fem,
-    color: Colors.white,
+    color: color,
   );
 }
 
-// Used for testing
-Image invisibleFooterImg = footerImg(path: invisiblePath);
+Image gitHubImg({required bool isHovering}) {
+  String path = "../assets/images/github_img.png";
+  if (isHovering) {
+    return footerImg(path: path, color: primaryColor);
+  } else {
+    return footerImg(path: path, color: Colors.white);
+  }
+}
 
-Image gitHubImg = footerImg(path: "../assets/images/github_img.png");
-Image mailImg = footerImg(path: "../assets/images/mail_img.png");
-Image linkedinImg = footerImg(path: "../assets/images/linkedin_img.png");
+Image mailImg({required bool isHovering}) {
+  String path = "../assets/images/mail_img.png";
+  if (isHovering) {
+    return footerImg(path: path, color: primaryColor);
+  } else {
+    return footerImg(path: path, color: Colors.white);
+  }
+}
+
+Image linkedinImg({required bool isHovering}) {
+  String path = "../assets/images/linkedin_img.png";
+  if (isHovering) {
+    return footerImg(path: path, color: primaryColor);
+  } else {
+    return footerImg(path: path, color: Colors.white);
+  }
+}
 
 /// Other icons - arrows and logos
 Image logoImg = Image(

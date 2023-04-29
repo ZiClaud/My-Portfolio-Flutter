@@ -37,12 +37,16 @@ Widget _leftImages(double squareSize) {
                     0 * fem, 0 * fem, 93 * fem, 83.25 * fem),
                 width: 100 * fem,
                 height: 100 * fem,
-                child: gitHubImg,
+                child: clickableImage(
+                    image: gitHubImg,
+                    onPressed: () {}), // TODO: Add onPressed function
               ),
               SizedBox(
                 width: 100 * fem,
                 height: 100 * fem,
-                child: linkedinImg,
+                child: clickableImage(
+                    image: linkedinImg,
+                    onPressed: () {}), // TODO: Add onPressed function
               ),
             ],
           ),
@@ -52,7 +56,8 @@ Widget _leftImages(double squareSize) {
           margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 92 * fem, 0 * fem),
           width: 100 * fem,
           height: 100 * fem,
-          child: mailImg,
+          child: clickableImage(
+              image: mailImg, onPressed: () {}), // TODO: Add onPressed function
         ),
       ],
     ),

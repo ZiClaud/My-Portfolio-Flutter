@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
+import 'package:my_portfolio/theme/container.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 import 'package:my_portfolio/theme/typography.dart';
@@ -33,53 +34,15 @@ Widget _skillsBox() {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        _skillsImage(image: flutterImg),
-        _skillsImage(image: sqlImg),
-        _skillsImage(image: pythonImg),
-        _skillsImage(image: javaImg),
+        clickableImage(image: flutterImg, onPressed: () {}),
+        // TODO: onPressed function
+        clickableImage(image: sqlImg, onPressed: () {}),
+        // TODO: onPressed function
+        clickableImage(image: pythonImg, onPressed: () {}),
+        // TODO: onPressed function
+        clickableImage(image: javaImg, onPressed: () {}),
+        // TODO: onPressed function
       ],
     ),
-  );
-}
-
-Widget _skillsImage(
-    {required Image Function({required bool isHovering}) image}) {
-  bool isHovering = false;
-  return StatefulBuilder(
-    builder: (BuildContext context, StateSetter setState) {
-      return MouseRegion(
-        onEnter: (_) {
-          setState(() {
-            isHovering = true;
-          });
-        },
-        onExit: (_) {
-          setState(() {
-            isHovering = false;
-          });
-        },
-        child: TextButton(
-          onPressed: () {
-            //TODO: stuff
-            setState(() {
-              isHovering = !isHovering;
-            });
-          },
-          style: TextButton.styleFrom(
-            padding: EdgeInsets.zero,
-          ),
-          child: SizedBox(
-            height: double.infinity,
-            child: Center(
-              child: SizedBox(
-                width: 200 * fem,
-                height: 200 * fem,
-                child: image(isHovering: isHovering),
-              ),
-            ),
-          ),
-        ),
-      );
-    },
   );
 }
