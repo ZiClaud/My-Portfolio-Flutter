@@ -57,7 +57,7 @@ Widget clickableText(
           onPressed: () {
             onPressed;
             setState(() {
-              isClicked = true;
+              isClicked = !isClicked;
             });
           },
           style: TextButton.styleFrom(
