@@ -22,7 +22,7 @@ Widget _iremi() {
     title: "Iremi App",
     description:
         "I developed this app entirely on my own, and it offers users a range of breathing exercises that are specifically designed to ",
-    descriptionBold: "promote relaxation and mindfulness.",
+    descriptionBold: "promote relaxation and mindfulness.\n",
     category: "Mobile App",
     link: "link",
   );

@@ -4,6 +4,7 @@ import 'package:my_portfolio/theme/container.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/utils/utils.dart';
 
 Widget getFooterPage() {
   return sectionContainerRow(_footerWidgets(), isFooter: true);
@@ -25,39 +26,51 @@ Widget _leftImages(double squareSize) {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          /// Position of [Mail?]
+          /// Position of everything
           margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 42 * fem),
           width: double.infinity,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Container(
-                /// Position of [Github?]
+                /// Position of Github
                 margin: EdgeInsets.fromLTRB(
                     0 * fem, 0 * fem, 93 * fem, 83.25 * fem),
                 width: 100 * fem,
                 height: 100 * fem,
                 child: clickableImage(
-                    image: gitHubImg,
-                    onPressed: () {}), // TODO: Add onPressed function
+                  image: gitHubImg,
+                  onPressed: () {
+                    launchMyUrl('https://github.com/ZiClaud');
+                  },
+                ),
               ),
               SizedBox(
+                /// Position of Linkedin
                 width: 100 * fem,
                 height: 100 * fem,
                 child: clickableImage(
-                    image: linkedinImg,
-                    onPressed: () {}), // TODO: Add onPressed function
+                  image: linkedinImg,
+                  onPressed: () {
+                    launchMyUrl('https://www.linkedin.com/in/claudio-di-maio/');
+                  },
+                ),
               ),
             ],
           ),
         ),
         Container(
-          /// Position of [Github?]
+          /// Position of Mail
           margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 92 * fem, 0 * fem),
           width: 100 * fem,
           height: 100 * fem,
           child: clickableImage(
-              image: mailImg, onPressed: () {}), // TODO: Add onPressed function
+            image: mailImg,
+            onPressed: () {
+              // TODO: Fix
+              sendEmail("claudiodimaiozc@gmail.com");
+            },
+          ),
         ),
       ],
     ),

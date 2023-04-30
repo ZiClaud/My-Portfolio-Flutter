@@ -66,7 +66,11 @@ Widget clickableText(
           child: Text(
             text,
             style: label(
-              color: isClicked ? primaryColor : isHovering ? neutral2Color : neutral1Color,
+              color: isClicked
+                  ? primaryColor
+                  : isHovering
+                      ? neutral2Color
+                      : neutral1Color,
             ),
           ),
         ),
