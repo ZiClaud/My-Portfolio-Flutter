@@ -152,13 +152,13 @@ Widget workContainerImageText(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         /// Image
-        _workImage(image),
+        _workImagePart(image),
 
         /// Space between image and text
         const SizedBox(width: 32),
 
         /// Text part
-        _workText(
+        _workTextPart(
           title: title,
           description: description,
           descriptionBold: descriptionBold,
@@ -183,7 +183,7 @@ Widget workContainerTextImage(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         /// Text part
-        _workText(
+        _workTextPart(
           title: title,
           description: description,
           descriptionBold: descriptionBold,
@@ -195,13 +195,13 @@ Widget workContainerTextImage(
         const SizedBox(width: 32),
 
         /// Image
-        _workImage(image),
+        _workImagePart(image),
       ],
     ),
   );
 }
 
-Widget _workImage(Image image) {
+Widget _workImagePart(Image image) {
   return SizedBox(
     width: 600 * fem,
     height: 500 * fem,
@@ -209,114 +209,98 @@ Widget _workImage(Image image) {
   );
 }
 
-Widget _workText(
-    {required String title,
-    required String description,
-    required String descriptionBold,
-    required String category,
-    String? link}) {
+Widget _workTextPart({
+  required String title,
+  required String description,
+  required String descriptionBold,
+  required String category,
+  String? link,
+}) {
   return SizedBox(
     width: 550 * fem,
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 32 * fem),
-          width: double.infinity,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-// titledescriptionCBU (39:440)
-                margin:
-                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 24 * fem),
-                width: double.infinity,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-// projecttitleXUe (39:441)
-                      margin: EdgeInsets.fromLTRB(
-                          0 * fem, 0 * fem, 0 * fem, 16 * fem),
-                      child: Text(
-                        title,
-                        style: h5Bold(
-                          color: neutral1Color,
-                        ),
-                      ),
-                    ),
-                    Container(
-// descriptionoh4 (39:442)
-                      constraints: BoxConstraints(
-                        maxWidth: 550 * fem,
-                      ),
-                      child: RichText(
-                        text: TextSpan(
-                          style: h3LightBig(color: neutral1Color),
-                          children: [
-                            TextSpan(
-                              text: description,
-                              style: h3Bold(color: neutral2Color),
-                            ),
-                            TextSpan(
-                              text: descriptionBold,
-                              style: h3Bold(color: neutral1Color),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Text(
-// categoryEZQ (39:443)
-                category,
-                style: body1TextLight(color: neutral1Color),
-              ),
-            ],
-          ),
-        ),
-        Container(
-// buttonmpE (39:805)
-          margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 387 * fem, 0 * fem),
-          child: TextButton(
-            onPressed: () {},
-            style: TextButton.styleFrom(
-              padding: EdgeInsets.zero,
-            ),
-            child: Container(
-              padding:
-                  EdgeInsets.fromLTRB(16 * fem, 8 * fem, 25 * fem, 8 * fem),
-              width: double.infinity,
-              decoration: BoxDecoration(
-                border: Border.all(color: neutral2Color),
-                borderRadius: BorderRadius.circular(100 * fem),
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-// textpXc (I39:805;39:784)
-                    margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 15 * fem, 0 * fem),
-                    child: Text(
-                      'VIEW WORK',
-                      style: buttonTextLight(color: neutral1Color),
-                    ),
-                  ),
-                  SizedBox(
-// iconWfL (I39:805;39:785)
-                    width: 12 * fem,
-                    height: 19 * fem,
-                    child: arrowRightImg,
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
+        _workText(
+            title: title,
+            description: description,
+            descriptionBold: descriptionBold,
+            category: category),
+        _workBottomButton(link),
       ],
+    ),
+  );
+}
+
+Widget _workText({
+  required String title,
+  required String description,
+  required String descriptionBold,
+  required String category,
+}) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        title,
+        style: h5Bold(color: neutral1Color),
+      ),
+      RichText(
+        text: TextSpan(
+          style: h3LightBig(color: neutral1Color),
+          children: [
+            TextSpan(
+              text: description,
+              style: h3Bold(color: neutral2Color),
+            ),
+            TextSpan(
+              text: descriptionBold,
+              style: h3Bold(color: neutral1Color),
+            ),
+          ],
+        ),
+      ),
+      Text(
+        category,
+        style: body1TextLight(color: neutral1Color),
+      ),
+    ],
+  );
+}
+
+Widget _workBottomButton(String? link) {
+  // TODO: Add on hover effect
+  return TextButton(
+    onPressed: () {
+      //TODO: launch(link!);
+    },
+    style: TextButton.styleFrom(
+      // TODO: remove?
+      padding: EdgeInsets.zero,
+    ),
+    child: Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: neutral2Color),
+        borderRadius: BorderRadius.circular(100 * fem),
+      ),
+      child: SizedBox(
+        width: 150 * fem,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'VIEW WORK',
+                style: buttonTextLight(color: neutral1Color),
+              ),
+            ),
+            Container(
+              child: arrowRightImg,
+            ),
+          ],
+        ),
+      ),
     ),
   );
 }

@@ -145,10 +145,11 @@ Image arrowDownImg = Image.network(
 
 Image arrowRightImg = Image.network(
   "https://cdn.iconscout.com/icon/free/png-256/right-arrow-1780566-1514442.png",
-  width: 12 * fem,
-  height: 19 * fem,
+  width: 13 * fem,
+  height: 20 * fem,
   color: Colors.white,
   alignment: Alignment.center,
+  fit: BoxFit.cover,
 );
 
 /*
