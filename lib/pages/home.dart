@@ -9,32 +9,40 @@ Widget getHomePage() {
   return sectionContainerColumn(_homePageWidgets());
 }
 
+List<Widget> _homePageWidgets() {
+  return [
+    _headerWidget(),
+    _titleAndJobWidget(),
+    _arrowDownWidget(),
+  ];
+}
+
 Widget _headerWidget() {
-  return Container(
-    // headerQoC (132:214)
-    margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 244 * fem),
-    padding: EdgeInsets.fromLTRB(0 * fem, 9 * fem, 0 * fem, 7.5 * fem),
+  return SizedBox(
     width: double.infinity,
     height: 48 * fem,
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Container(
-          margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 921.8 * fem, 1.5 * fem),
+        SizedBox(
           width: 48 * fem,
           height: 48 * fem,
           child: logoImage(),
         ),
+        const Spacer(),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            clickableText(text: "HOME", onPressed: () {}),
+            clickableText(text: "SKILLS", onPressed: () {}),
             // TODO: onPressed function
             SizedBox(width: 32 * fem),
-            clickableText(text: "WORK", onPressed: () {}),
+            clickableText(text: "WORKS", onPressed: () {}),
             // TODO: onPressed function
             SizedBox(width: 32 * fem),
             clickableText(text: "ABOUT", onPressed: () {}),
+            // TODO: onPressed function
+            SizedBox(width: 32 * fem),
+            clickableText(text: "CONTACT", onPressed: () {}),
             // TODO: onPressed function
           ],
         ),
@@ -45,10 +53,7 @@ Widget _headerWidget() {
 
 Widget _titleAndJobWidget() {
   return Container(
-    margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 249 * fem),
-    constraints: BoxConstraints(
-      maxWidth: 493 * fem,
-    ),
+    margin: EdgeInsets.fromLTRB(0 * fem, 249 * fem, 0 * fem, 249 * fem),
     child: RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
@@ -74,12 +79,4 @@ Widget _arrowDownWidget() {
     height: 10 * fem,
     child: arrowDownImg,
   );
-}
-
-List<Widget> _homePageWidgets() {
-  return [
-    _headerWidget(),
-    _titleAndJobWidget(),
-    _arrowDownWidget(),
-  ];
 }

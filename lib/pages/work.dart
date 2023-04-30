@@ -11,12 +11,14 @@ List<Widget> _workWidgets() {
   return [
     titleBox(title1: 'My best ', title2: 'Works'),
     _iremi(),
+    spaceBetween(),
     _jeiom(),
+    spaceBetween(),
   ];
 }
 
 Widget _iremi() {
-  return container1(
+  return workContainerImageText(
     image: iremiImg,
     //invisibleWorkImg,
     title: "Iremi App",
@@ -29,7 +31,7 @@ Widget _iremi() {
 }
 
 Widget _jeiom() {
-  return container2(
+  return workContainerTextImage(
     image: jeiomImg,
     title: "JEIOM App",
     description: "I was part of a team that developed this app for the JEIOM 2023 event. Our goal was to create a platform that would enable users to ",
