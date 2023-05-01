@@ -1,7 +1,11 @@
-import 'dart:html';
-
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:my_portfolio/theme/safe_google_font.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+EdgeInsets defaultPadding() {
+  return EdgeInsets.symmetric(horizontal: 112 * fem);
+}
+
 /*
 Future<void> launchInBrowser(Uri url) async {
   if (!await launchUrl(
@@ -24,8 +28,8 @@ Future<void> launchMyUrl(String urlString) async {
 
 Future<void> _emailLaunchMyUrl(String email) async {
   Uri emailLaunchUri = Uri(
-      scheme: 'mailto',
-      path: email,
+    scheme: 'mailto',
+    path: email,
   );
   if (!await launchUrl(emailLaunchUri)) {
     print('Could not launch $emailLaunchUri');
@@ -39,5 +43,5 @@ void sendEmail(String recipient) {
     path: recipient,
   );
 
-  window.open(emailLaunchUri.toString(), '_blank');
+  //TODO:  (html.)window.open(emailLaunchUri.toString(), '_blank');
 }

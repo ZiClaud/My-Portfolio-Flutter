@@ -4,138 +4,14 @@ import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/safe_google_font.dart';
 import 'package:my_portfolio/theme/typography.dart';
 
-/// WIDGETS
-
-/// Clickable image that changes color when hovered
-Widget clickableImage(
-    {required Image Function({required bool isHovering}) image,
-    required void Function() onPressed}) {
-  bool isHovering = false;
-  return StatefulBuilder(
-    builder: (BuildContext context, StateSetter setState) {
-      return MouseRegion(
-        onEnter: (_) {
-          setState(() {
-            isHovering = true;
-          });
-        },
-        onExit: (_) {
-          setState(() {
-            isHovering = false;
-          });
-        },
-        child: TextButton(
-          onPressed: onPressed,
-          style: TextButton.styleFrom(
-            padding: EdgeInsets.zero,
-          ),
-          child: image(isHovering: isHovering),
-        ),
-      );
-    },
-  );
-}
-
-Widget clickableText(
-    {required String text, required void Function() onPressed}) {
-  bool isHovering = false;
-  return StatefulBuilder(
-    builder: (BuildContext context, StateSetter setState) {
-      return MouseRegion(
-        onEnter: (_) {
-          setState(() {
-            isHovering = true;
-          });
-        },
-        onExit: (_) {
-          setState(() {
-            isHovering = false;
-          });
-        },
-        child: TextButton(
-          onPressed: onPressed,
-          style: TextButton.styleFrom(
-            padding: EdgeInsets.zero,
-          ),
-          child: Text(
-            text,
-            style: label(
-              color: isHovering ? primaryColor : neutral1Color,
-            ),
-          ),
-        ),
-      );
-    },
-  );
-}
-
-/// Most important widget
-Widget sectionContainerColumn(List<Widget> widgets) {
-  //TODO maybe put "Center" in here
-  return Container(
-    padding: EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
-    width: double.infinity,
-    decoration: const BoxDecoration(
-      gradient: backgroundColorGradient,
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        for (Widget widget in widgets) widget,
-      ],
-    ),
-  );
-}
-
-Widget sectionContainerRow(List<Widget> widgets,
-    {bool isAboutMe = false, bool isFooter = false}) {
-  // TODO: Improve this part of the code
-  if (isAboutMe) {
-    return _sectionContainerRow(widgets, 996);
-  } else if (isFooter) {
-    return _sectionContainerRow(widgets, 425);
-  } else {
-    return _sectionContainerRow(widgets, 996);
-  }
-}
-
-Widget _sectionContainerRow(List<Widget> widgets, double height) {
-  return Container(
-    padding: EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
-    width: double.infinity,
-    height: height * fem,
-    decoration: const BoxDecoration(gradient: backgroundColorGradient),
-    child: SizedBox(
-      // wrapperMgW (77:363)
-      width: double.infinity,
-      height: double.infinity,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          for (Widget widget in widgets) widget,
-        ],
-      ),
-    ),
-  );
-}
-
-/// Space between sections/containers
-Widget spaceBetween() {
-  return SizedBox(
-    height: 32 * fem,
-    width: 32 * fem,
-  );
-}
-
 /// Work containers
 Widget workContainerImageText(
     {required Image image,
-    required String title,
-    required String description,
-    required String descriptionBold,
-    required String category,
-    String? link}) {
+      required String title,
+      required String description,
+      required String descriptionBold,
+      required String category,
+      String? link}) {
   return SizedBox(
     width: double.infinity,
     child: Row(
@@ -162,11 +38,11 @@ Widget workContainerImageText(
 
 Widget workContainerTextImage(
     {required Image image,
-    required String title,
-    required String description,
-    required String descriptionBold,
-    required String category,
-    required String link}) {
+      required String title,
+      required String description,
+      required String descriptionBold,
+      required String category,
+      required String link}) {
   return SizedBox(
     width: double.infinity,
     child: Row(
@@ -207,7 +83,8 @@ Widget _workTextPart({
   String? link,
 }) {
   return SizedBox(
-    width: 550 * fem,
+    width: 600 * fem,
+    // TODO: Change 600 to 550 if we don't want it to be perfectly centered
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -262,7 +139,7 @@ Widget _workBottomButton(String? link) {
       //TODO: launch(link!);
     },
     style: TextButton.styleFrom(
-      // TODO: remove?
+      // This moves the button to the left
       padding: EdgeInsets.zero,
     ),
     child: Container(
