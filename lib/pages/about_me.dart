@@ -8,6 +8,7 @@ Widget getAboutMePage() {
 
 List<Widget> _aboutMeWidgets() {
   return [
+//    getAboutMePage2(),
     leftAboutMeText(),
     rightAboutMeImages(),
   ];

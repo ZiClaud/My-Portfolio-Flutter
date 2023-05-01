@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/safe_google_font.dart';
+import 'package:my_portfolio/utils/media_query.dart';
 
 /// Section containers
+Widget sectionContainerFill(Widget widget) {
+  return Container(
+    constraints: BoxConstraints(minHeight: getScreenHeight()),
+    child: widget,
+  );
+}
+
 Widget sectionContainerColumn(List<Widget> widgets) {
   return Container(
     padding: EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
@@ -34,7 +41,7 @@ Widget sectionContainerRow(List<Widget> widgets,
 
 Widget _sectionContainerRow(List<Widget> widgets, double height) {
   return Container(
-    padding: EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
+    padding: EdgeInsets.fromLTRB(112 * fem, 0 * fem, 112 * fem, 0 * fem),
     width: double.infinity,
     height: height * fem,
     decoration: const BoxDecoration(gradient: backgroundColorGradient),

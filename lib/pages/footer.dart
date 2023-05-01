@@ -3,7 +3,7 @@ import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/widgets/section_containers.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 import 'package:my_portfolio/theme/icons.dart';
-import 'package:my_portfolio/theme/safe_google_font.dart';
+import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/utils.dart';
 
@@ -27,7 +27,7 @@ Widget _leftImages(double squareSize) {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          /// Position of everything
+          /// Position of mail
           margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 42 * fem),
           width: double.infinity,
           child: Row(
@@ -86,28 +86,23 @@ Widget _rightText(double squareSize) {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Container(
-          // getintouchh6a (146:211)
-          margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 4 * fem),
-          child: RichText(
-            textAlign: TextAlign.center,
-            text: TextSpan(
-              style: h1Light(color: whiteColor),
-              children: [
-                TextSpan(
-                  text: 'Get ',
-                  style: h1Light(color: neutral2Color),
-                ),
-                TextSpan(
-                  text: 'in Touch.',
-                  style: h1Bold(color: neutral1Color),
-                ),
-              ],
-            ),
+        RichText(
+          textAlign: TextAlign.center,
+          text: TextSpan(
+            style: h1Light(color: whiteColor),
+            children: [
+              TextSpan(
+                text: 'Get ',
+                style: h1Light(color: neutral2Color),
+              ),
+              TextSpan(
+                text: 'in Touch.',
+                style: h1Bold(color: neutral1Color),
+              ),
+            ],
           ),
         ),
         Text(
-          // descriptionXtE (146:212)
           'So that we can start working together!',
           textAlign: TextAlign.center,
           style: body1TextLight(color: neutral1Color),

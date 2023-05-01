@@ -5,7 +5,7 @@ import 'package:my_portfolio/pages/home.dart';
 import 'package:my_portfolio/pages/skills.dart';
 import 'package:my_portfolio/pages/work.dart';
 import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/safe_google_font.dart';
+import 'package:my_portfolio/utils/media_query.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,14 +35,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     setFEMeFFEM(context);
+    setScreenWidthHeight(context);
     return Scaffold(
       backgroundColor: backgroundColor,
       body: ListView(children: [
-        Center(child: getHomePage()),
-        Center(child: getSkillsPage()),
-        Center(child: getWorkPage()),
-        Center(child: getAboutMePage()),
-        Center(child: getFooterPage()),
+        getHomePage(),
+        getSkillsPage(),
+        getWorkPage(),
+        getAboutMePage(),
+        getFooterPage(), //TODO: sectionContainerFill(getFooterPage())?
       ]),
     );
   }

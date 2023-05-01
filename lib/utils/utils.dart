@@ -1,22 +1,4 @@
-import 'package:flutter/cupertino.dart';
-import 'package:my_portfolio/theme/safe_google_font.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-EdgeInsets defaultPadding() {
-  return EdgeInsets.symmetric(horizontal: 112 * fem);
-}
-
-/*
-Future<void> launchInBrowser(Uri url) async {
-  if (!await launchUrl(
-    url,
-    mode: LaunchMode.externalApplication,
-  )) {
-    print("Could not launch $url");
-    throw Exception('Could not launch $url');
-  }
-}
-*/
 
 Future<void> launchMyUrl(String urlString) async {
   Uri url = Uri.parse(urlString);
@@ -45,3 +27,15 @@ void sendEmail(String recipient) {
 
   //TODO:  (html.)window.open(emailLaunchUri.toString(), '_blank');
 }
+
+/*
+Future<void> launchInBrowser(Uri url) async {
+  if (!await launchUrl(
+    url,
+    mode: LaunchMode.externalApplication,
+  )) {
+    print("Could not launch $url");
+    throw Exception('Could not launch $url');
+  }
+}
+*/

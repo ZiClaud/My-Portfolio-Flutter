@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
-import 'package:my_portfolio/theme/safe_google_font.dart';
+import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/theme/typography.dart';
 
 /// WIDGETS
