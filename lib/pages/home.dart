@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/main.dart';
 import 'package:my_portfolio/theme/colors.dart';
+import 'package:my_portfolio/theme/icons.dart';
+import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/widgets/section_containers.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
-import 'package:my_portfolio/theme/icons.dart';
-import 'package:my_portfolio/utils/media_query.dart';
-import 'package:my_portfolio/theme/typography.dart';
 
 Widget getHomePage() {
   return sectionContainerColumn(_homePageWidgets());
@@ -34,17 +35,25 @@ Widget _headerWidget() {
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            clickableText(text: "SKILLS", onPressed: () {}),
-            // TODO: onPressed function
+            clickableText(
+                text: "SKILLS", onPressed: () => {
+                  // TODO: ScrollToSkillsPage()
+            }),
             SizedBox(width: 32 * fem),
-            clickableText(text: "WORKS", onPressed: () {}),
-            // TODO: onPressed function
+            clickableText(
+                text: "WORKS", onPressed: () => {
+                  // TODO: ScrollToWorkPage()
+            }),
             SizedBox(width: 32 * fem),
-            clickableText(text: "ABOUT", onPressed: () {}),
-            // TODO: onPressed function
+            clickableText(
+                text: "ABOUT", onPressed: () => {
+                  // TODO: ScrollToAboutMePage()
+            }),
             SizedBox(width: 32 * fem),
-            clickableText(text: "CONTACT", onPressed: () {}),
-            // TODO: onPressed function
+            clickableText(
+                text: "CONTACT", onPressed: () => {
+                  // TODO: ScrollToContactPage()
+            }),
           ],
         ),
       ],
