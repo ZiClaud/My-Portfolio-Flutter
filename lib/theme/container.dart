@@ -39,7 +39,6 @@ Widget clickableImage(
 Widget clickableText(
     {required String text, required void Function() onPressed}) {
   bool isHovering = false;
-  bool isClicked = false;
   return StatefulBuilder(
     builder: (BuildContext context, StateSetter setState) {
       return MouseRegion(
@@ -54,23 +53,14 @@ Widget clickableText(
           });
         },
         child: TextButton(
-          onPressed: () {
-            onPressed;
-            setState(() {
-              isClicked = !isClicked;
-            });
-          },
+          onPressed: onPressed,
           style: TextButton.styleFrom(
             padding: EdgeInsets.zero,
           ),
           child: Text(
             text,
             style: label(
-              color: isClicked
-                  ? primaryColor
-                  : isHovering
-                      ? neutral2Color
-                      : neutral1Color,
+              color: isHovering ? primaryColor : neutral1Color,
             ),
           ),
         ),
@@ -221,50 +211,47 @@ Widget _workTextPart({
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _workText(
-            title: title,
-            description: description,
-            descriptionBold: descriptionBold,
-            category: category),
+        _workTextTitle(title),
+        _workTextDescription(description, '$descriptionBold\n'),
+        _workTextCategory(category),
         _workBottomButton(link),
       ],
     ),
   );
 }
 
-Widget _workText({
-  required String title,
-  required String description,
-  required String descriptionBold,
-  required String category,
-}) {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Text(
-        title,
-        style: h5Bold(color: neutral1Color),
-      ),
-      RichText(
-        text: TextSpan(
-          style: h3LightBig(color: neutral1Color),
-          children: [
-            TextSpan(
-              text: description,
-              style: h3Bold(color: neutral2Color),
-            ),
-            TextSpan(
-              text: descriptionBold,
-              style: h3Bold(color: neutral1Color),
-            ),
-          ],
+Widget _workTextTitle(String title) {
+  return Text(
+    title,
+    style: h5Bold(color: neutral1Color),
+  );
+}
+
+Widget _workTextDescription(String description, String descriptionBold) {
+  return RichText(
+    text: TextSpan(
+      style: h3LightBig(color: neutral1Color),
+      children: [
+        TextSpan(
+          text: description,
+          style: h3Bold(color: neutral2Color),
         ),
-      ),
-      Text(
-        category,
-        style: body1TextLight(color: neutral1Color),
-      ),
-    ],
+        TextSpan(
+          text: descriptionBold,
+          style: h3Bold(color: neutral1Color),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget _workTextCategory(String category) {
+  return Padding(
+    padding: EdgeInsets.only(left: 5.0 * fem, bottom: 5.0 * fem),
+    child: Text(
+      category,
+      style: body1TextLight(color: neutral1Color),
+    ),
   );
 }
 
