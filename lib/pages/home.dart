@@ -7,7 +7,7 @@ import 'package:my_portfolio/widgets/section_containers.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
 Widget getHomePage() {
-  return sectionContainerColumn(_homePageWidgets());
+  return SectionContainerColumn(widgets: _homePageWidgets());
 }
 
 List<Widget> _homePageWidgets() {

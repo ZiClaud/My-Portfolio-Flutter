@@ -8,20 +8,17 @@ import 'package:my_portfolio/utils/media_query.dart';
 
 /// Button
 class MyButton extends StatelessWidget {
-  const MyButton({
-    super.key,
-  });
+  final String text;
+  final Function() onPressed;
 
+  const MyButton({super.key, required this.text, required this.onPressed});
+
+  //TODO: Add hover effect
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {
-        //TODO: launch(link!);
-      },
-      style: TextButton.styleFrom(
-        // This moves the button to the left
-        padding: EdgeInsets.zero,
-      ),
+      onPressed: onPressed,
+      style: TextButton.styleFrom(padding: EdgeInsets.zero),
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(color: neutral2Color),
@@ -34,14 +31,9 @@ class MyButton extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'VIEW WORK',
-                style: buttonTextLight(color: neutral1Color),
-              ),
+              Text(text, style: buttonTextLight(color: neutral1Color)),
               Padding(padding: EdgeInsets.only(left: 8.0 * fem)),
-              Container(
-                child: arrowRightImg,
-              ),
+              Container(child: arrowRightImg),
             ],
           ),
         ),

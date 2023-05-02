@@ -6,7 +6,7 @@ import 'package:my_portfolio/widgets/widgets.dart';
 import 'package:my_portfolio/widgets/work_containers.dart';
 
 Widget getWorkPage() {
-  return sectionContainerColumn(_workWidgets());
+  return SectionContainerColumn(widgets: _workWidgets());
 }
 
 List<Widget> _workWidgets() {

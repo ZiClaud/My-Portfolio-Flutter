@@ -133,6 +133,10 @@ Widget _workTextCategory(String category) {
 }
 
 Widget _workBottomButton(String? link) {
-  // TODO: Add on hover effect
-  return const MyButton();
+  return MyButton(
+    text: "VIEW WORK",
+    onPressed: () {
+      //TODO: add onPressed launch(link!);
+    },
+  );
 }
