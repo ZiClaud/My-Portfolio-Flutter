@@ -7,34 +7,53 @@ import 'package:my_portfolio/utils/media_query.dart';
 /// WIDGETS
 
 /// Button
-class MyButton extends StatelessWidget {
+class MyButton extends StatefulWidget {
   final String text;
   final Function() onPressed;
 
   const MyButton({super.key, required this.text, required this.onPressed});
 
-  //TODO: Add hover effect
+  @override
+  State<MyButton> createState() => _MyButtonState();
+}
+
+class _MyButtonState extends State<MyButton> {
+  Color buttonColor = Colors.transparent;
+
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      style: TextButton.styleFrom(padding: EdgeInsets.zero),
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: neutral2Color),
-          borderRadius: BorderRadius.circular(100 * fem),
-        ),
-        child: Padding(
-          padding:
-              EdgeInsets.symmetric(vertical: 8.0 * fem, horizontal: 16.0 * fem),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(text, style: buttonTextLight(color: neutral1Color)),
-              Padding(padding: EdgeInsets.only(left: 8.0 * fem)),
-              Container(child: arrowRightImg),
-            ],
+    return MouseRegion(
+      onEnter: (_) {
+        setState(() {
+          buttonColor = primaryColor;
+        });
+      },
+      onExit:  (_) {
+        setState(() {
+          buttonColor = Colors.transparent;
+        });
+      },
+      child: TextButton(
+        onPressed: widget.onPressed,
+        style: TextButton.styleFrom(padding: EdgeInsets.zero),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: neutral2Color),
+            borderRadius: BorderRadius.circular(100 * fem),
+            color: buttonColor,
+          ),
+          child: Padding(
+            padding:
+                EdgeInsets.symmetric(vertical: 8.0 * fem, horizontal: 16.0 * fem),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(widget.text, style: buttonTextLight(color: neutral1Color)),
+                Padding(padding: EdgeInsets.only(left: 8.0 * fem * fem)),
+                Container(child: arrowRightImg),
+              ],
+            ),
           ),
         ),
       ),
