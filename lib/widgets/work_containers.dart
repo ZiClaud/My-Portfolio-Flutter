@@ -5,66 +5,94 @@ import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
 /// Work containers
-Widget workContainerImageText(
-    {required Widget image,
-    required String title,
-    required String description,
-    required String descriptionBold,
-    required String category,
-    String? link}) {
-  return SizedBox(
-    width: double.infinity,
-    child: Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        /// Image
-        _workImagePart(image),
+class WorkContainerImageText extends StatelessWidget {
+  final Widget image;
+  final String title;
+  final String description;
+  final String descriptionBold;
+  final String category;
+  final String? link;
 
-        /// Space between image and text
-        const SizedBox(width: 32),
+  const WorkContainerImageText({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.description,
+    required this.descriptionBold,
+    required this.category,
+    this.link,
+  });
 
-        /// Text part
-        _workTextPart(
-          title: title,
-          description: description,
-          descriptionBold: descriptionBold,
-          category: category,
-          link: link,
-        ),
-      ],
-    ),
-  );
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          /// Image
+          _workImagePart(image),
+
+          /// Space between image and text
+          const SizedBox(width: 32),
+
+          /// Text part
+          _workTextPart(
+            title: title,
+            description: description,
+            descriptionBold: descriptionBold,
+            category: category,
+            link: link,
+          ),
+        ],
+      ),
+    );
+  }
 }
 
-Widget workContainerTextImage(
-    {required Widget image,
-    required String title,
-    required String description,
-    required String descriptionBold,
-    required String category,
-    required String link}) {
-  return SizedBox(
-    width: double.infinity,
-    child: Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        /// Text part
-        _workTextPart(
-          title: title,
-          description: description,
-          descriptionBold: descriptionBold,
-          category: category,
-          link: link,
-        ),
+class WorkContainerTextImage extends StatelessWidget {
+  final Widget image;
+  final String title;
+  final String description;
+  final String descriptionBold;
+  final String category;
+  final String? link;
 
-        /// Space between image and text
-        const SizedBox(width: 32),
+  const WorkContainerTextImage({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.description,
+    required this.descriptionBold,
+    required this.category,
+    this.link,
+  });
 
-        /// Image
-        _workImagePart(image),
-      ],
-    ),
-  );
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          /// Text part
+          _workTextPart(
+            title: title,
+            description: description,
+            descriptionBold: descriptionBold,
+            category: category,
+            link: link,
+          ),
+
+          /// Space between image and text
+          const SizedBox(width: 32),
+
+          /// Image
+          _workImagePart(image),
+        ],
+      ),
+    );
+  }
 }
 
 Widget _workImagePart(Widget image) {
@@ -91,17 +119,19 @@ Widget _workTextPart({
         _workTextTitle(title),
         _workTextDescription(description, '$descriptionBold\n'),
         _workTextCategory(category),
-        _workBottomButton(link),
+        MyButton(
+          text: "VIEW WORK",
+          onPressed: () {
+            //TODO: add _navigateTo(page/link);
+          },
+        ),
       ],
     ),
   );
 }
 
 Widget _workTextTitle(String title) {
-  return Text(
-    title,
-    style: h5Bold(color: neutral1Color),
-  );
+  return Text(title, style: h5Bold(color: neutral1Color));
 }
 
 Widget _workTextDescription(String description, String descriptionBold) {
@@ -129,14 +159,5 @@ Widget _workTextCategory(String category) {
       category,
       style: body1TextLight(color: neutral1Color),
     ),
-  );
-}
-
-Widget _workBottomButton(String? link) {
-  return MyButton(
-    text: "VIEW WORK",
-    onPressed: () {
-      //TODO: add onPressed launch(link!);
-    },
   );
 }

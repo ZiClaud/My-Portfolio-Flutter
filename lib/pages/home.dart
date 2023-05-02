@@ -90,6 +90,6 @@ Widget _arrowDownWidget() {
   return SizedBox(
     width: 20 * fem,
     height: 10 * fem,
-    child: arrowDownImg,
+    child: const ArrowDownImage(),
   );
 }

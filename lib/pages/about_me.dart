@@ -8,18 +8,17 @@ Widget getAboutMePage() {
 }
 
 List<Widget> _aboutMeWidgets() {
-  return [
-//    getAboutMePage2(),
-    leftAboutMeText(),
-    rightAboutMeImages(),
+  return const [
+    LeftAboutMeText(),
+    RightAboutMeImages(),
   ];
 }
 
-Widget aboutMeDesignImg = aboutMeImageUrl(
+const Widget aboutMeDesignImg = AboutMeImageUrl(
     url:
         "https://assets.telegraphindia.com/telegraph/2022/Feb/1644870612_design.jpg");
-Widget aboutMeChessImg = aboutMeImageUrl(
+const Widget aboutMeChessImg = AboutMeImageUrl(
     url:
         "https://media.cnn.com/api/v1/images/stellar/prod/230104173032-02-chess-stock.jpg?c=original");
-Widget aboutMeMusicImg =
-    aboutMeImageUrl(url: "https://cdn.fuelrocks.com/1665122987550.jpg");
+const Widget aboutMeMusicImg =
+    AboutMeImageUrl(url: "https://cdn.fuelrocks.com/1665122987550.jpg");

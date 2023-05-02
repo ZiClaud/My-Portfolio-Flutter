@@ -28,7 +28,7 @@ class _MyButtonState extends State<MyButton> {
           buttonColor = primaryColor;
         });
       },
-      onExit:  (_) {
+      onExit: (_) {
         setState(() {
           buttonColor = Colors.transparent;
         });
@@ -43,15 +43,15 @@ class _MyButtonState extends State<MyButton> {
             color: buttonColor,
           ),
           child: Padding(
-            padding:
-                EdgeInsets.symmetric(vertical: 8.0 * fem, horizontal: 16.0 * fem),
+            padding: EdgeInsets.symmetric(
+                vertical: 8.0 * fem, horizontal: 16.0 * fem),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(widget.text, style: buttonTextLight(color: neutral1Color)),
                 Padding(padding: EdgeInsets.only(left: 8.0 * fem * fem)),
-                Container(child: arrowRightImg),
+                const ArrowRightImg(),
               ],
             ),
           ),
