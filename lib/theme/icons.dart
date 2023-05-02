@@ -10,10 +10,7 @@ const String _semiInvisiblePath = "../assets/images/semi_invisible.png";
 const Widget _invisibleSkillImg = SkillImg(path: _invisiblePath);
 const Widget _invisibleWorkImg = WorkImg(path: _invisiblePath);
 const Widget _invisibleAboutMeImg = AboutMeImage(path: _invisiblePath);
-Widget _invisibleFooterImg = FooterImg(
-  path: _invisiblePath,
-  onPressed: () {},
-);
+Widget _invisibleFooterImg = FooterImg(path: _invisiblePath, onPressed: () {});
 
 /// SKILLS
 class SkillImg extends StatefulWidget {

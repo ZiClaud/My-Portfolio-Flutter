@@ -35,7 +35,6 @@ Background color - Gradient
 /*
 Widget getColorPage() {
   return Container(
-    // colorrF4 (54:960)
     padding: const EdgeInsets.fromLTRB(80 * fem, 80 * fem, 79 * fem, 80 * fem),
     width: double.infinity,
     decoration: const BoxDecoration(
@@ -45,7 +44,6 @@ Widget getColorPage() {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          // primaryXc6 (54:961)
           margin:
               const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 80 * fem, 0 * fem),
           width: 200 * fem,
@@ -54,7 +52,6 @@ Widget getColorPage() {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                // primarySyx (54:962)
                 margin: const EdgeInsets.fromLTRB(
                     0 * fem, 0 * fem, 0 * fem, 55 * fem),
                 width: double.infinity,
@@ -74,7 +71,6 @@ Widget getColorPage() {
                 ),
               ),
               Text(
-                // primary74W (54:963)
                 'PRIMARY',
                 style: SafeGoogleFont(
                   'Work Sans',
@@ -89,7 +85,6 @@ Widget getColorPage() {
           ),
         ),
         Container(
-          // background1Qn (54:964)
           margin:
               const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 80 * fem, 0 * fem),
           width: 200 * fem,
@@ -98,7 +93,6 @@ Widget getColorPage() {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                // backgroundjLn (54:965)
                 margin: const EdgeInsets.fromLTRB(
                     0 * fem, 0 * fem, 0 * fem, 55 * fem),
                 width: double.infinity,
@@ -113,7 +107,6 @@ Widget getColorPage() {
                 ),
               ),
               Text(
-                // bgAgz (54:966)
                 'BG',
                 style: SafeGoogleFont(
                   'Work Sans',
@@ -128,7 +121,6 @@ Widget getColorPage() {
           ),
         ),
         Container(
-          // neutral1K46 (54:967)
           margin:
               const EdgeInsets.fromLTRB(0 * fem, 0 * fem, 79 * fem, 0 * fem),
           height: 315 * fem,
@@ -136,7 +128,6 @@ Widget getColorPage() {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                // neautral1SuQ (54:968)
                 margin: const EdgeInsets.fromLTRB(
                     0 * fem, 0 * fem, 0 * fem, 55 * fem),
                 width: 200 * fem,
@@ -151,7 +142,6 @@ Widget getColorPage() {
                 ),
               ),
               Text(
-                // neutral1y8e (54:969)
                 'NEUTRAL 1',
                 style: SafeGoogleFont(
                   'Work Sans',
@@ -166,13 +156,11 @@ Widget getColorPage() {
           ),
         ),
         SizedBox(
-          // neutral2WeN (54:970)
           height: 315 * fem,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                // neautral2fnA (54:971)
                 margin: const EdgeInsets.fromLTRB(
                     0 * fem, 0 * fem, 0 * fem, 55 * fem),
                 width: 200 * fem,
@@ -187,7 +175,6 @@ Widget getColorPage() {
                 ),
               ),
               Text(
-                // neutral2zZY (54:972)
                 'NEUTRAL 2',
                 style: SafeGoogleFont(
                   'Work Sans',
