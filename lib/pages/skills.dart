@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/widgets/widgets.dart';
 import 'package:my_portfolio/theme/icons.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/utils/media_query.dart';
 
 Widget getSkillsPage() {
   return Container(
@@ -18,7 +17,7 @@ Widget getSkillsPage() {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          titleBox(title1: 'Some of my ', title2: 'Skills'),
+          const TitleBox(title1: 'Some of my ', title2: 'Skills'),
           _skillsBox(),
         ],
       ),
@@ -34,15 +33,28 @@ Widget _skillsBox() {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        clickableImage(image: flutterImg, onPressed: () {}),
-        // TODO: onPressed function
-        clickableImage(image: sqlImg, onPressed: () {}),
-        // TODO: onPressed function
-        clickableImage(image: pythonImg, onPressed: () {}),
-        // TODO: onPressed function
-        clickableImage(image: javaImg, onPressed: () {}),
-        // TODO: onPressed function
+        _flutterImg(),
+        _sqlImg(),
+        _pythonImg(),
+        _javaImg(),
+        // TODO: Firebase?
       ],
     ),
   );
+}
+
+Widget _flutterImg() {
+  return const SkillImg(path: "../assets/images/flutterimg.png");
+}
+
+Widget _sqlImg() {
+  return const SkillImg(path: "../assets/images/sqlimg.png");
+}
+
+Widget _pythonImg() {
+  return const SkillImg(path: "../assets/images/pythonimg.png");
+}
+
+Widget _javaImg() {
+  return const SkillImg(path: "../assets/images/javaimg.png");
 }

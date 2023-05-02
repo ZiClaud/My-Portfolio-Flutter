@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/icons.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/utils/media_query.dart';
+import 'package:my_portfolio/widgets/widgets.dart';
 
 /// Work containers
 Widget workContainerImageText(
-    {required Image image,
-      required String title,
-      required String description,
-      required String descriptionBold,
-      required String category,
-      String? link}) {
+    {required Widget image,
+    required String title,
+    required String description,
+    required String descriptionBold,
+    required String category,
+    String? link}) {
   return SizedBox(
     width: double.infinity,
     child: Row(
@@ -37,12 +37,12 @@ Widget workContainerImageText(
 }
 
 Widget workContainerTextImage(
-    {required Image image,
-      required String title,
-      required String description,
-      required String descriptionBold,
-      required String category,
-      required String link}) {
+    {required Widget image,
+    required String title,
+    required String description,
+    required String descriptionBold,
+    required String category,
+    required String link}) {
   return SizedBox(
     width: double.infinity,
     child: Row(
@@ -67,7 +67,7 @@ Widget workContainerTextImage(
   );
 }
 
-Widget _workImagePart(Image image) {
+Widget _workImagePart(Widget image) {
   return SizedBox(
     width: 600 * fem,
     height: 500 * fem,
@@ -134,36 +134,5 @@ Widget _workTextCategory(String category) {
 
 Widget _workBottomButton(String? link) {
   // TODO: Add on hover effect
-  return TextButton(
-    onPressed: () {
-      //TODO: launch(link!);
-    },
-    style: TextButton.styleFrom(
-      // This moves the button to the left
-      padding: EdgeInsets.zero,
-    ),
-    child: Container(
-      decoration: BoxDecoration(
-        border: Border.all(color: neutral2Color),
-        borderRadius: BorderRadius.circular(100 * fem),
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 8.0 * fem, horizontal: 16.0 * fem),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-                'VIEW WORK',
-                style: buttonTextLight(color: neutral1Color),
-            ),
-            Padding(padding: EdgeInsets.only(left: 8.0 * fem)),
-            Container(
-              child: arrowRightImg,
-            ),
-          ],
-        ),
-      ),
-    ),
-  );
+  return const MyButton();
 }

@@ -4,72 +4,71 @@ import 'package:my_portfolio/utils/media_query.dart';
 import 'colors.dart';
 
 /// Testing
-String _invisiblePath = "../assets/images/invisible.png";
-String _semiInvisiblePath = "../assets/images/semi_invisible.png";
+const String _invisiblePath = "../assets/images/invisible.png";
+const String _semiInvisiblePath = "../assets/images/semi_invisible.png";
 
-Image _invisibleSkillImg = skillImg(path: _invisiblePath, isHovering: false);
-Image _invisibleWorkImg = workImg(path: _invisiblePath);
-Image _invisibleAboutMeImg = aboutMeImage(path: _invisiblePath);
-Image _invisibleFooterImg = footerImg(path: _invisiblePath, isHovering: false);
-
-/// Logo
-Image logoImage() {
-  return const Image(
-    image: AssetImage("../assets/images/ZC_Logo_white.png"),
-    fit: BoxFit.contain,
-  );
-}
+const Widget _invisibleSkillImg = SkillImg(path: _invisiblePath);
+const Widget _invisibleWorkImg = WorkImg(path: _invisiblePath);
+Widget _invisibleAboutMeImg = aboutMeImage(path: _invisiblePath);
+//const Widget _invisibleFooterImg = FooterImg(path: _invisiblePath, onPressed: () {},);
 
 /// SKILLS
-Image skillImg({required String path, required bool isHovering}) {
-  Color? color;
-  if (!isHovering) {
-    color = Colors.white;
+class SkillImg extends StatefulWidget {
+  final String path;
+
+  const SkillImg({Key? key, required this.path});
+
+  @override
+  State<SkillImg> createState() => _SkillImgState();
+}
+
+class _SkillImgState extends State<SkillImg> {
+  Color? color = Colors.white;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (_) {
+        setState(() {
+          color = null;
+        });
+      },
+      onExit: (_) {
+        setState(() {
+          color = Colors.white;
+        });
+      },
+      child: Image(
+        image: AssetImage(widget.path),
+        fit: BoxFit.cover,
+        color: color,
+      ),
+    );
   }
-
-  return Image(
-    image: AssetImage(path),
-    fit: BoxFit.cover,
-    color: color,
-  );
-}
-
-Image flutterImg({required bool isHovering}) {
-  String path = "../assets/images/flutterimg.png";
-  return skillImg(path: path, isHovering: isHovering);
-}
-
-Image sqlImg({required bool isHovering}) {
-  String path = "../assets/images/sqlimg.png";
-  return skillImg(path: path, isHovering: isHovering);
-}
-
-Image pythonImg({required bool isHovering}) {
-  String path = "../assets/images/pythonimg.png";
-  return skillImg(path: path, isHovering: isHovering);
-}
-
-Image javaImg({required bool isHovering}) {
-  String path = "../assets/images/javaimg.png";
-  return skillImg(path: path, isHovering: isHovering);
 }
 
 /// WORKS
-Image workImg({required String path}) {
-  return Image(
-    image: AssetImage(path),
-    width: 591 * fem,
-    height: 500 * fem,
-    fit: BoxFit.cover,
-  );
+class WorkImg extends StatelessWidget {
+  final String path;
+
+  const WorkImg({super.key, required this.path});
+
+  @override
+  Widget build(BuildContext context) {
+    return Image(
+      image: AssetImage(path),
+      width: 591 * fem,
+      height: 500 * fem,
+      fit: BoxFit.cover,
+    );
+  }
 }
 
-Image iremiImg =
-    workImg(path: _semiInvisiblePath); //TODO: Change
-Image jeiomImg = workImg(path: "../assets/images/jeiom.png");
+const WorkImg iremiImg = WorkImg(path: _semiInvisiblePath); //TODO: Change
+const WorkImg jeiomImg = WorkImg(path: "../assets/images/jeiom.png");
 
 /// About me section
-Image aboutMeImage({required String path}) {
+Widget aboutMeImage({required String path}) {
   return Image(
     image: AssetImage(path),
     width: 282 * fem,
@@ -78,7 +77,7 @@ Image aboutMeImage({required String path}) {
   );
 }
 
-Image aboutMeImageUrl({required String url}) {
+Widget aboutMeImageUrl({required String url}) {
   return Image.network(
     url,
     width: 282 * fem,
@@ -87,54 +86,63 @@ Image aboutMeImageUrl({required String url}) {
   );
 }
 
-Image aboutMeDesignImg = aboutMeImageUrl(
-    url:
-        "https://assets.telegraphindia.com/telegraph/2022/Feb/1644870612_design.jpg");
-Image aboutMeChessImg = aboutMeImageUrl(
-    url:
-        "https://media.cnn.com/api/v1/images/stellar/prod/230104173032-02-chess-stock.jpg?c=original");
-Image aboutMeMusicImg =
-    aboutMeImageUrl(url: "https://cdn.fuelrocks.com/1665122987550.jpg");
-
 /// Footer Icons
-Image footerImg({required String path, required bool isHovering}) {
-  Color? color;
-  if (isHovering) {
-    color = primaryColor;
-  } else {
-    color = Colors.white;
+class FooterImg extends StatefulWidget {
+  final String path;
+  final void Function() onPressed;
+
+  const FooterImg({super.key, required this.path, required this.onPressed});
+
+  @override
+  State<FooterImg> createState() => _FooterImgState();
+}
+
+class _FooterImgState extends State<FooterImg> {
+  Color color = neutral1Color;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (_) {
+        setState(() {
+          color = primaryColor;
+        });
+      },
+      onExit: (_) {
+        setState(() {
+          color = neutral1Color;
+        });
+      },
+      child: TextButton(
+        onPressed: widget.onPressed,
+        style: TextButton.styleFrom(padding: EdgeInsets.zero),
+        child: Image(
+          image: AssetImage(widget.path),
+          fit: BoxFit.cover,
+          color: color,
+        ),
+      ),
+    );
   }
-
-  return Image(
-    image: AssetImage(path),
-    width: 100 * fem,
-    height: 100 * fem,
-    color: color,
-  );
-}
-
-Image gitHubImg({required bool isHovering}) {
-  String path = "../assets/images/github_img.png";
-  return footerImg(path: path, isHovering: isHovering);
-}
-
-Image mailImg({required bool isHovering}) {
-  String path = "../assets/images/mail_img.png";
-  return footerImg(path: path, isHovering: isHovering);
-}
-
-Image linkedinImg({required bool isHovering}) {
-  String path = "../assets/images/linkedin_img.png";
-  return footerImg(path: path, isHovering: isHovering);
 }
 
 /// Other icons - arrows and logos
-Image logoImg = Image(
-  image: AssetImage(_invisiblePath), // TODO: Change
-  width: 100 * fem,
-  height: 100 * fem,
-  color: Colors.white,
-);
+class LogoImage extends StatefulWidget {
+  const LogoImage({Key? key}) : super(key: key);
+
+  @override
+  State<LogoImage> createState() => _LogoImageState();
+}
+
+class _LogoImageState extends State<LogoImage> {
+  @override
+  Widget build(BuildContext context) {
+    return const Image(
+      image: AssetImage("../assets/images/ZC_Logo_white.png"),
+      fit: BoxFit.contain,
+    );
+  }
+}
 
 Image arrowDownImg = Image.network(
   "https://cdn-icons-png.flaticon.com/512/5093/5093064.png",
@@ -151,50 +159,3 @@ Image arrowRightImg = Image.network(
   alignment: Alignment.center,
   fit: BoxFit.cover,
 );
-
-/*
-/// Other stuff - TODO: Delete?
-Widget _flutterColoredIconWeb({required String url}) {
-  return Center(
-    child: SizedBox(
-      width: 200 * fem,
-      height: 200 * fem,
-      child: Image.network(
-        url,
-        fit: BoxFit.cover,
-      ),
-    ),
-  );
-}
-
-Widget _flutterColoredIconProject({required String path}) {
-  return Center(
-    child: SizedBox(
-      width: 200 * fem,
-      height: 200 * fem,
-      child: Image(
-        image: AssetImage(path),
-        width: 105 * fem,
-        height: 105 * fem,
-      ),
-    ),
-  );
-}
-
-Widget _gitHubIcon = TextButton(
-  // mail55MzS (50:639)
-  onPressed: () {},
-  style: TextButton.styleFrom(
-    padding: EdgeInsets.zero,
-  ),
-  child: Container(
-    width: double.infinity,
-    height: 180 * fem,
-    child: Image.network(
-      "[Image url]",
-      width: 180 * fem,
-      height: 180 * fem,
-    ),
-  ),
-);
-*/

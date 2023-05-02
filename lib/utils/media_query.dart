@@ -12,7 +12,6 @@ EdgeInsets defaultPadding() {
   return EdgeInsets.symmetric(horizontal: 112 * fem);
 }
 
-
 double _screenWidth = 0; // TODO: Put to 0
 double _screenHeight = 0; // TODO: put to 0
 

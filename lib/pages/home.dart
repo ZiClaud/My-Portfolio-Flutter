@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/main.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
@@ -29,31 +28,35 @@ Widget _headerWidget() {
         SizedBox(
           width: 48 * fem,
           height: 48 * fem,
-          child: logoImage(),
+          child: const LogoImage(),
         ),
         const Spacer(),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            clickableText(
-                text: "SKILLS", onPressed: () => {
-                  // TODO: ScrollToSkillsPage()
-            }),
-            SizedBox(width: 32 * fem),
-            clickableText(
-                text: "WORKS", onPressed: () => {
-                  // TODO: ScrollToWorkPage()
-            }),
-            SizedBox(width: 32 * fem),
-            clickableText(
-                text: "ABOUT", onPressed: () => {
-                  // TODO: ScrollToAboutMePage()
-            }),
-            SizedBox(width: 32 * fem),
-            clickableText(
-                text: "CONTACT", onPressed: () => {
-                  // TODO: ScrollToContactPage()
-            }),
+            HoveringText(
+                text: "SKILLS",
+                onPressed: () => {
+                      // TODO: ScrollToSkillsPage()
+                    }),
+            const SpaceWidgets(inWidth: true),
+            HoveringText(
+                text: "WORKS",
+                onPressed: () => {
+                      // TODO: ScrollToWorkPage()
+                    }),
+            const SpaceWidgets(inWidth: true),
+            HoveringText(
+                text: "ABOUT",
+                onPressed: () => {
+                      // TODO: ScrollToAboutMePage()
+                    }),
+            const SpaceWidgets(inWidth: true),
+            HoveringText(
+                text: "CONTACT",
+                onPressed: () => {
+                      // TODO: ScrollToContactPage()
+                    }),
           ],
         ),
       ],

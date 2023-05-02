@@ -1,78 +1,122 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/utils/media_query.dart';
 
 /// WIDGETS
 
-/// Clickable image that changes color when hovered
-Widget clickableImage(
-    {required Image Function({required bool isHovering}) image,
-    required void Function() onPressed}) {
-  bool isHovering = false;
-  return StatefulBuilder(
-    builder: (BuildContext context, StateSetter setState) {
-      return MouseRegion(
-        onEnter: (_) {
-          setState(() {
-            isHovering = true;
-          });
-        },
-        onExit: (_) {
-          setState(() {
-            isHovering = false;
-          });
-        },
-        child: TextButton(
-          onPressed: onPressed,
-          style: TextButton.styleFrom(
-            padding: EdgeInsets.zero,
-          ),
-          child: image(isHovering: isHovering),
+/// Button
+class MyButton extends StatelessWidget {
+  const MyButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        //TODO: launch(link!);
+      },
+      style: TextButton.styleFrom(
+        // This moves the button to the left
+        padding: EdgeInsets.zero,
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: neutral2Color),
+          borderRadius: BorderRadius.circular(100 * fem),
         ),
-      );
-    },
-  );
+        child: Padding(
+          padding:
+              EdgeInsets.symmetric(vertical: 8.0 * fem, horizontal: 16.0 * fem),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'VIEW WORK',
+                style: buttonTextLight(color: neutral1Color),
+              ),
+              Padding(padding: EdgeInsets.only(left: 8.0 * fem)),
+              Container(
+                child: arrowRightImg,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
 
-Widget clickableText(
-    {required String text, required void Function() onPressed}) {
+/// Clickable text that changes color on hover, clickable
+class HoveringText extends StatefulWidget {
+  final String text;
+  final void Function() onPressed;
+
+  const HoveringText({super.key, required this.text, required this.onPressed});
+
+  @override
+  State<HoveringText> createState() => _HoveringTextState();
+}
+
+class _HoveringTextState extends State<HoveringText> {
   bool isHovering = false;
-  return StatefulBuilder(
-    builder: (BuildContext context, StateSetter setState) {
-      return MouseRegion(
-        onEnter: (_) {
-          setState(() {
-            isHovering = true;
-          });
-        },
-        onExit: (_) {
-          setState(() {
-            isHovering = false;
-          });
-        },
-        child: TextButton(
-          onPressed: onPressed,
-          style: TextButton.styleFrom(
-            padding: EdgeInsets.zero,
-          ),
-          child: Text(
-            text,
-            style: label(
-              color: isHovering ? primaryColor : neutral1Color,
-            ),
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (_) {
+        setState(() {
+          isHovering = true;
+        });
+      },
+      onExit: (_) {
+        setState(() {
+          isHovering = false;
+        });
+      },
+      child: TextButton(
+        onPressed: widget.onPressed,
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.zero,
+        ),
+        child: Text(
+          widget.text,
+          style: label(
+            color: isHovering ? primaryColor : neutral1Color,
           ),
         ),
-      );
-    },
-  );
+      ),
+    );
+  }
 }
 
 /// Space between sections/containers
-Widget spaceBetween() {
-  return SizedBox(
-    height: 32 * fem,
-    width: 32 * fem,
-  );
+class SpaceWidgets extends StatelessWidget {
+  final bool inHeight;
+  final bool inWidth;
+
+  const SpaceWidgets({
+    super.key,
+    this.inHeight = false,
+    this.inWidth = false,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return (inHeight)
+        ? SizedBox(
+            height: 32 * fem,
+          )
+        : (inWidth)
+            ? SizedBox(
+                width: 32 * fem,
+              )
+            : SizedBox(
+                height: 32 * fem,
+                width: 32 * fem,
+              );
+  }
 }
