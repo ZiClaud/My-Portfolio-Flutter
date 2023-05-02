@@ -35,9 +35,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     setFEMeFFEM(context);
     setScreenWidthHeight(context);
-    return Scaffold(
-      backgroundColor: backgroundColor,
-      body: ListView(children: [
+    return Container( // TODO: Go back to scaffold?
+      decoration: const BoxDecoration(gradient: backgroundColorGradient),
+      width: double.infinity,
+      height: double.infinity,
+      child: ListView(children: [
         getHomePage(),
         getSkillsPage(),
         getWorkPage(),

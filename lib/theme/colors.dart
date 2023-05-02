@@ -1,10 +1,13 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 const Color primaryColor = Color(0xFF3688FF);
 const Color backgroundColor = Color(0xFF010208);
 const Color neutral1Color = Color(0xFFE3E4E6);
 const Color neutral2Color = Color(0x8CE3E4E6);
 const Color whiteColor = Color(0xFFFFFFFF);
+
+const Color backgroundColorLightMode = Colors.blueGrey;
 
 const LinearGradient backgroundColorGradient = LinearGradient(
   begin: Alignment(0, -1),

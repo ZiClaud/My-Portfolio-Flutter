@@ -9,9 +9,7 @@ Widget getSkillsPage() {
     padding: EdgeInsets.fromLTRB(112 * fem, 80 * fem, 112 * fem, 130 * fem),
     width: double.infinity,
     height: 583.9 * fem,
-    decoration: const BoxDecoration(gradient: backgroundColorGradient),
     child: SizedBox(
-      // skillsFzJ (132:232)
       width: double.infinity,
       height: double.infinity,
       child: Column(

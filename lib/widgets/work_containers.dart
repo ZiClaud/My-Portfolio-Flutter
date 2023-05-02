@@ -25,27 +25,24 @@ class WorkContainerImageText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          /// Image
-          _workImagePart(image),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        /// Image
+        _workImagePart(image),
 
-          /// Space between image and text
-          const SizedBox(width: 32),
+        /// Space between image and text
+        const SizedBox(width: 32),
 
-          /// Text part
-          _workTextPart(
-            title: title,
-            description: description,
-            descriptionBold: descriptionBold,
-            category: category,
-            link: link,
-          ),
-        ],
-      ),
+        /// Text part
+        _workTextPart(
+          title: title,
+          description: description,
+          descriptionBold: descriptionBold,
+          category: category,
+          link: link,
+        ),
+      ],
     );
   }
 }
@@ -70,27 +67,24 @@ class WorkContainerTextImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          /// Text part
-          _workTextPart(
-            title: title,
-            description: description,
-            descriptionBold: descriptionBold,
-            category: category,
-            link: link,
-          ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        /// Text part
+        _workTextPart(
+          title: title,
+          description: description,
+          descriptionBold: descriptionBold,
+          category: category,
+          link: link,
+        ),
 
-          /// Space between image and text
-          const SizedBox(width: 32),
+        /// Space between image and text
+        const SizedBox(width: 32),
 
-          /// Image
-          _workImagePart(image),
-        ],
-      ),
+        /// Image
+        _workImagePart(image),
+      ],
     );
   }
 }

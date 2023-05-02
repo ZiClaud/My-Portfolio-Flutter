@@ -28,9 +28,6 @@ class SectionContainerColumn extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
       // TODO: Change with defaultPadding();
       width: double.infinity,
-      decoration: const BoxDecoration(
-        gradient: backgroundColorGradient,
-      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -69,7 +66,6 @@ class SectionContainerRow extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(112 * fem, 0 * fem, 112 * fem, 0 * fem),
       width: double.infinity,
       height: height * fem,
-      decoration: const BoxDecoration(gradient: backgroundColorGradient),
       child: SizedBox(
         width: double.infinity,
         height: double.infinity,
