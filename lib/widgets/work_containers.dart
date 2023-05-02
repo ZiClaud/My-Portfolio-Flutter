@@ -147,18 +147,17 @@ Widget _workBottomButton(String? link) {
         border: Border.all(color: neutral2Color),
         borderRadius: BorderRadius.circular(100 * fem),
       ),
-      child: SizedBox(
-        width: 150 * fem,
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 8.0 * fem, horizontal: 16.0 * fem),
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
+            Text(
                 'VIEW WORK',
                 style: buttonTextLight(color: neutral1Color),
-              ),
             ),
+            Padding(padding: EdgeInsets.only(left: 8.0 * fem)),
             Container(
               child: arrowRightImg,
             ),
