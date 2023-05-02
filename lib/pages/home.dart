@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/main.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
@@ -11,85 +12,100 @@ Widget getHomePage() {
 }
 
 List<Widget> _homePageWidgets() {
-  return [
-    _headerWidget(),
-    _titleAndJobWidget(),
-    _arrowDownWidget(),
+  return const [
+    _HeaderWidget(),
+    _TitleAndJobWidget(),
+    _ArrowDownWidget(),
   ];
 }
 
-Widget _headerWidget() {
-  return SizedBox(
-    width: double.infinity,
-    height: 48 * fem,
-    child: Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        SizedBox(
-          width: 48 * fem,
-          height: 48 * fem,
-          child: const LogoImage(),
-        ),
-        const Spacer(),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            HoveringText(
-                text: "SKILLS",
-                onPressed: () => {
-                      // TODO: ScrollToSkillsPage()
-                    }),
-            const SpaceWidgets(inWidth: true),
-            HoveringText(
-                text: "WORKS",
-                onPressed: () => {
-                      // TODO: ScrollToWorkPage()
-                    }),
-            const SpaceWidgets(inWidth: true),
-            HoveringText(
-                text: "ABOUT",
-                onPressed: () => {
-                      // TODO: ScrollToAboutMePage()
-                    }),
-            const SpaceWidgets(inWidth: true),
-            HoveringText(
-                text: "CONTACT",
-                onPressed: () => {
-                      // TODO: ScrollToContactPage()
-                    }),
-          ],
-        ),
-      ],
-    ),
-  );
-}
+class _HeaderWidget extends StatelessWidget {
+  const _HeaderWidget({Key? key}) : super(key: key);
 
-Widget _titleAndJobWidget() {
-  return Container(
-    margin: EdgeInsets.fromLTRB(0 * fem, 249 * fem, 0 * fem, 249 * fem),
-    child: RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-        style: h1Bold(color: neutral1Color),
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      height: 48 * fem,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          TextSpan(
-            text: 'Claudio Di Maio\n',
-            style: h1Bold(color: neutral1Color),
+          SizedBox(
+            width: 48 * fem,
+            height: 48 * fem,
+            child: const LogoImage(),
           ),
-          TextSpan(
-            text: 'Software Developer',
-            style: h1Light(color: neutral2Color),
+          const Spacer(),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              HoveringText(
+                  text: "SKILLS",
+                  onPressed: () => {
+                        scrollToItem(1),
+                      }),
+              const SpaceWidgets(inWidth: true),
+              HoveringText(
+                  text: "WORKS",
+                  onPressed: () => {
+                        scrollToItem(2),
+                      }),
+              const SpaceWidgets(inWidth: true),
+              HoveringText(
+                  text: "ABOUT",
+                  onPressed: () => {
+                        scrollToItem(3),
+                      }),
+              const SpaceWidgets(inWidth: true),
+              HoveringText(
+                  text: "CONTACT",
+                  onPressed: () => {
+                        scrollToItem(4),
+                      }),
+            ],
           ),
         ],
       ),
-    ),
-  );
+    );
+  }
 }
 
-Widget _arrowDownWidget() {
-  return SizedBox(
-    width: 20 * fem,
-    height: 10 * fem,
-    child: const ArrowDownImage(),
-  );
+class _TitleAndJobWidget extends StatelessWidget {
+  const _TitleAndJobWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.fromLTRB(0 * fem, 249 * fem, 0 * fem, 249 * fem),
+      child: RichText(
+        textAlign: TextAlign.center,
+        text: TextSpan(
+          style: h1Bold(color: neutral1Color),
+          children: [
+            TextSpan(
+              text: 'Claudio Di Maio\n',
+              style: h1Bold(color: neutral1Color),
+            ),
+            TextSpan(
+              text: 'Software Developer',
+              style: h1Light(color: neutral2Color),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _ArrowDownWidget extends StatelessWidget {
+  const _ArrowDownWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 20 * fem,
+      height: 10 * fem,
+      child: const ArrowDownImage(),
+    );
+  }
 }

@@ -6,6 +6,7 @@ import 'package:my_portfolio/pages/skills.dart';
 import 'package:my_portfolio/pages/work.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/utils/media_query.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,23 +31,43 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+final ItemScrollController _scrollController = ItemScrollController();
+
 class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
     setFEMeFFEM(context);
     setScreenWidthHeight(context);
-    return Container( // TODO: Go back to scaffold?
+
+    final List<Widget> items = [
+      getHomePage(),
+      getSkillsPage(),
+      getWorkPage(),
+      getAboutMePage(),
+      // TODO: SectionContainerFill(getFooterPage())?
+      getFooterPage(),
+    ];
+
+    return Container(
+      // TODO: Go back to scaffold?
       decoration: const BoxDecoration(gradient: backgroundColorGradient),
       width: double.infinity,
       height: double.infinity,
-      child: ListView(children: [
-        getHomePage(),
-        getSkillsPage(),
-        getWorkPage(),
-        getAboutMePage(),
-        // TODO: sectionContainerFill(getFooterPage())?
-        getFooterPage(),
-      ]),
+      child: ScrollablePositionedList.builder(
+        itemScrollController: _scrollController,
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return items[index];
+        },
+      ),
     );
   }
+}
+
+void scrollToItem(int index) {
+  _scrollController.scrollTo(
+    index: index,
+    duration: const Duration(milliseconds: 500),
+  );
 }
