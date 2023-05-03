@@ -34,7 +34,6 @@ class MyHomePage extends StatefulWidget {
 final ItemScrollController _scrollController = ItemScrollController();
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     setFEMeFFEM(context);
@@ -49,12 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
       getFooterPage(),
     ];
 
-    return Container(
-      // TODO: Go back to scaffold?
-      decoration: const BoxDecoration(gradient: backgroundColorGradient),
-      width: double.infinity,
-      height: double.infinity,
-      child: ScrollablePositionedList.builder(
+    return Scaffold(
+      backgroundColor: backgroundColor,
+      body: ScrollablePositionedList.builder(
         itemScrollController: _scrollController,
         itemCount: items.length,
         itemBuilder: (context, index) {
