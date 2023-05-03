@@ -35,7 +35,7 @@ List<Widget> _footerWidgets() {
 class _LeftImages extends StatelessWidget {
   final double squareSize;
 
-  const _LeftImages({super.key, required this.squareSize});
+  const _LeftImages({required this.squareSize});
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +100,7 @@ class _LeftImages extends StatelessWidget {
 class _RightText extends StatelessWidget {
   final double squareSize;
 
-  const _RightText({super.key, required this.squareSize});
+  const _RightText({required this.squareSize});
 
   @override
   Widget build(BuildContext context) {

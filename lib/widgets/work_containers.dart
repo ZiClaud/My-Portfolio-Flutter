@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/media_query.dart';
+import 'package:my_portfolio/utils/navigate_to_page.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
 /// Work containers
@@ -29,18 +30,18 @@ class WorkContainerImageText extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         /// Image
-        _workImagePart(image),
+        _WorkImagePart(image: image),
 
         /// Space between image and text
         const SizedBox(width: 32),
 
         /// Text part
-        _workTextPart(
+        _WorkTextPart(
           title: title,
           description: description,
           descriptionBold: descriptionBold,
           category: category,
-          link: link,
+          pageRoute: testPageRoute,
         ),
       ],
     );
@@ -71,87 +72,131 @@ class WorkContainerTextImage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         /// Text part
-        _workTextPart(
+        _WorkTextPart(
           title: title,
           description: description,
           descriptionBold: descriptionBold,
           category: category,
-          link: link,
+          pageRoute: testPageRoute,
         ),
 
         /// Space between image and text
         const SizedBox(width: 32),
 
         /// Image
-        _workImagePart(image),
+        _WorkImagePart(image: image),
       ],
     );
   }
 }
 
-Widget _workImagePart(Widget image) {
-  return SizedBox(
-    width: 600 * fem,
-    height: 500 * fem,
-    child: image,
-  );
+class _WorkImagePart extends StatelessWidget {
+  final Widget image;
+
+  const _WorkImagePart({required this.image});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 600 * fem,
+      height: 500 * fem,
+      child: image,
+    );
+  }
 }
 
-Widget _workTextPart({
-  required String title,
-  required String description,
-  required String descriptionBold,
-  required String category,
-  String? link,
-}) {
-  return SizedBox(
-    width: 600 * fem,
-    // TODO: Change 600 to 550 if we don't want it to be perfectly centered
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _workTextTitle(title),
-        _workTextDescription(description, '$descriptionBold\n'),
-        _workTextCategory(category),
-        MyButton(
-          text: "VIEW WORK",
-          onPressed: () {
-            //TODO: add _navigateTo(page/link);
-          },
-        ),
-      ],
-    ),
-  );
+class _WorkTextPart extends StatelessWidget {
+  final String title;
+  final String description;
+  final String descriptionBold;
+  final String category;
+  final MaterialPageRoute<dynamic> pageRoute;
+
+  const _WorkTextPart({
+    required this.title,
+    required this.description,
+    required this.descriptionBold,
+    required this.category,
+    required this.pageRoute,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 600 * fem,
+      // TODO: Change 600 to 550 if we don't want it to be perfectly centered
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _WorkTextTitle(title: title),
+          _WorkTextDescription(
+              description: description, descriptionBold: '$descriptionBold\n'),
+          _WorkTextCategory(category: category),
+          MyButton(
+            text: "VIEW WORK",
+            onPressed: () {
+//              Navigator.push(context, pageRoute); // TODO: Change/Fix context
+            },
+          ),
+        ],
+      ),
+    );
+  }
 }
 
-Widget _workTextTitle(String title) {
-  return Text(title, style: h5Bold(color: neutral1Color));
+class _WorkTextTitle extends StatelessWidget {
+  final String title;
+
+  const _WorkTextTitle({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(title, style: h5Bold(color: neutral1Color));
+  }
 }
 
-Widget _workTextDescription(String description, String descriptionBold) {
-  return RichText(
-    text: TextSpan(
-      style: h3LightBig(color: neutral1Color),
-      children: [
-        TextSpan(
-          text: description,
-          style: h3Bold(color: neutral2Color),
-        ),
-        TextSpan(
-          text: descriptionBold,
-          style: h3Bold(color: neutral1Color),
-        ),
-      ],
-    ),
-  );
+class _WorkTextDescription extends StatelessWidget {
+  final String description;
+  final String descriptionBold;
+
+  const _WorkTextDescription({
+    required this.description,
+    required this.descriptionBold,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+      text: TextSpan(
+        style: h3LightBig(color: neutral1Color),
+        children: [
+          TextSpan(
+            text: description,
+            style: h3Bold(color: neutral2Color),
+          ),
+          TextSpan(
+            text: descriptionBold,
+            style: h3Bold(color: neutral1Color),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
-Widget _workTextCategory(String category) {
-  return Padding(
-    padding: EdgeInsets.only(left: 5.0 * fem, bottom: 5.0 * fem),
-    child: Text(
-      category,
-      style: body1TextLight(color: neutral1Color),
-    ),
-  );
+class _WorkTextCategory extends StatelessWidget {
+  final String category;
+
+  const _WorkTextCategory({required this.category});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 5.0 * fem, bottom: 5.0 * fem),
+      child: Text(
+        category,
+        style: body1TextLight(color: neutral1Color),
+      ),
+    );
+  }
 }

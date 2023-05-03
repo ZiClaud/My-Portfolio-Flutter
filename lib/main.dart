@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/pages/about_me.dart';
-import 'package:my_portfolio/pages/footer.dart';
-import 'package:my_portfolio/pages/home.dart';
-import 'package:my_portfolio/pages/skills.dart';
-import 'package:my_portfolio/pages/work.dart';
+import 'package:my_portfolio/pages/home/about_me.dart';
+import 'package:my_portfolio/pages/home/footer.dart';
+import 'package:my_portfolio/pages/home/home.dart';
+import 'package:my_portfolio/pages/home/skills.dart';
+import 'package:my_portfolio/pages/home/work.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/utils/media_query.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';

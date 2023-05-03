@@ -3,7 +3,7 @@ import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/media_query.dart';
 
-import '../pages/about_me.dart';
+import '../pages/home/about_me.dart';
 
 class LeftAboutMeText extends StatelessWidget {
   const LeftAboutMeText({
