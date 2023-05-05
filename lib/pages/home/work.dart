@@ -3,7 +3,7 @@ import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/widgets/section_containers.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
-import 'package:my_portfolio/widgets/work_containers.dart';
+import 'package:my_portfolio/widgets/work_section_containers.dart';
 
 Widget getWorkPage() {
   return SectionContainerColumn(widgets: _workWidgets());
@@ -19,17 +19,17 @@ List<Widget> _workWidgets() {
   ];
 }
 
-const Widget _iremi = WorkContainerImageText(
+Widget _iremi = const WorkContainerImageText(
   image: iremiImg,
   title: "Iremi App",
   description:
       "I developed this app entirely on my own, and it offers users a range of breathing exercises that are specifically designed to ",
   descriptionBold: "promote relaxation and mindfulness.",
   category: "Mobile App",
-  link: "link",
+//  pageRoute: '/iremi',
 );
 
-const Widget _jeiom = WorkContainerTextImage(
+Widget _jeiom = const WorkContainerTextImage(
   image: jeiomImg,
   title: "JEIOM App",
   description:
@@ -37,5 +37,5 @@ const Widget _jeiom = WorkContainerTextImage(
   descriptionBold:
       "organize their schedules for the event in a single, user-friendly interface.",
   category: "Mobile App",
-  link: "link",
+  pageRoute: '/jeiom',
 );

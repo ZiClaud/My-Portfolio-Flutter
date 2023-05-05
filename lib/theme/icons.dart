@@ -55,11 +55,14 @@ class WorkImg extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image(
-      image: AssetImage(path),
-      width: 591 * fem,
-      height: 500 * fem,
-      fit: BoxFit.cover,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(30),
+      child: Image(
+        image: AssetImage(path),
+        width: 591 * fem,
+        height: 500 * fem,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }

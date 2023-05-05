@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/media_query.dart';
-import 'package:my_portfolio/utils/navigate_to_page.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
-/// Work containers
+import '../utils/navigate_to_page.dart';
+
+/// Work section containers
 class WorkContainerImageText extends StatelessWidget {
   final Widget image;
   final String title;
   final String description;
   final String descriptionBold;
   final String category;
-  final String? link;
+  final String? pageRoute;
 
   const WorkContainerImageText({
     super.key,
@@ -21,7 +22,7 @@ class WorkContainerImageText extends StatelessWidget {
     required this.description,
     required this.descriptionBold,
     required this.category,
-    this.link,
+    this.pageRoute,
   });
 
   @override
@@ -41,7 +42,7 @@ class WorkContainerImageText extends StatelessWidget {
           description: description,
           descriptionBold: descriptionBold,
           category: category,
-          pageRoute: testPageRoute,
+          pageRoute: pageRoute,
         ),
       ],
     );
@@ -54,7 +55,7 @@ class WorkContainerTextImage extends StatelessWidget {
   final String description;
   final String descriptionBold;
   final String category;
-  final String? link;
+  final String? pageRoute;
 
   const WorkContainerTextImage({
     super.key,
@@ -63,7 +64,7 @@ class WorkContainerTextImage extends StatelessWidget {
     required this.description,
     required this.descriptionBold,
     required this.category,
-    this.link,
+    this.pageRoute,
   });
 
   @override
@@ -77,7 +78,7 @@ class WorkContainerTextImage extends StatelessWidget {
           description: description,
           descriptionBold: descriptionBold,
           category: category,
-          pageRoute: testPageRoute,
+          pageRoute: pageRoute,
         ),
 
         /// Space between image and text
@@ -110,14 +111,14 @@ class _WorkTextPart extends StatelessWidget {
   final String description;
   final String descriptionBold;
   final String category;
-  final MaterialPageRoute<dynamic> pageRoute;
+  final String? pageRoute;
 
   const _WorkTextPart({
     required this.title,
     required this.description,
     required this.descriptionBold,
     required this.category,
-    required this.pageRoute,
+    this.pageRoute,
   });
 
   @override
@@ -132,12 +133,13 @@ class _WorkTextPart extends StatelessWidget {
           _WorkTextDescription(
               description: description, descriptionBold: '$descriptionBold\n'),
           _WorkTextCategory(category: category),
-          MyButton(
-            text: "VIEW WORK",
-            onPressed: () {
-//              Navigator.push(context, pageRoute); // TODO: Change/Fix context
-            },
-          ),
+          if (pageRoute != null)
+            MyButton(
+              text: "VIEW WORK",
+              onPressed: () {
+                navigateToPage(context, pageRoute!);
+              },
+            ),
         ],
       ),
     );
@@ -168,7 +170,6 @@ class _WorkTextDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
-        style: h3LightBig(color: neutral1Color),
         children: [
           TextSpan(
             text: description,

@@ -20,7 +20,6 @@ class TitleBox extends StatelessWidget {
       width: double.infinity,
       child: RichText(
         text: TextSpan(
-          style: h2Light(color: neutral1Color),
           children: [
             TextSpan(
               text: title1,
@@ -55,14 +54,6 @@ TextStyle _safeGoogleFont(String fontFamily,
 }
 
 /// Light
-Text _myText(String text, TextStyle textStyle) {
-  return Text(
-    text,
-    textAlign: TextAlign.center,
-    style: textStyle,
-  );
-}
-
 TextStyle h1Light({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',

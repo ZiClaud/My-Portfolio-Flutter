@@ -80,7 +80,6 @@ class _TitleAndJobWidget extends StatelessWidget {
       child: RichText(
         textAlign: TextAlign.center,
         text: TextSpan(
-          style: h1Bold(color: neutral1Color),
           children: [
             TextSpan(
               text: 'Claudio Di Maio\n',

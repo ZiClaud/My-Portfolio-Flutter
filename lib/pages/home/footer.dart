@@ -114,7 +114,6 @@ class _RightText extends StatelessWidget {
           RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-              style: h1Light(color: whiteColor),
               children: [
                 TextSpan(
                   text: 'Get ',

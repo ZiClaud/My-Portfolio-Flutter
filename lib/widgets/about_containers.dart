@@ -33,7 +33,6 @@ class LeftAboutMeText extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 18.0 * fem),
               child: RichText(
                 text: TextSpan(
-                  style: h3LightBig(color: whiteColor),
                   children: [
                     TextSpan(
                       text:
