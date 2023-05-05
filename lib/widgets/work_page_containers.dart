@@ -29,9 +29,9 @@ class MainWorkPage extends StatelessWidget {
       backgroundColor: backgroundColor,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(top: 16.0),
+          padding: defaultPadding(),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               _WorkTitle(title: title),
@@ -85,21 +85,19 @@ class _ImageCarouselState extends State<_ImageCarousel> {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          OutlinedButton(
-            onPressed: () => _getPrevious(),
-            child: const ArrowLeftImg(),
-          ),
-          widget.images[index],
-          OutlinedButton(
-            onPressed: () => _getNext(),
-            child: const ArrowRightImg(),
-          ),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        OutlinedButton(
+          onPressed: () => _getPrevious(),
+          child: const ArrowLeftImg(),
+        ),
+        widget.images[index],
+        OutlinedButton(
+          onPressed: () => _getNext(),
+          child: const ArrowRightImg(),
+        ),
+      ],
     );
   }
 
@@ -154,8 +152,7 @@ class _WorkDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: defaultPadding(),
+    return SizedBox(
       width: double.infinity,
       child: RichText(
         text: TextSpan(
