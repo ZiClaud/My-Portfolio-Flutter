@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
+import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/media_query.dart';
 
@@ -90,12 +91,12 @@ class _ImageCarouselState extends State<_ImageCarousel> {
         children: [
           OutlinedButton(
             onPressed: () => _getPrevious(),
-            child: const Text("Previous"),
+            child: const ArrowLeftImg(),
           ),
           widget.images[index],
           OutlinedButton(
             onPressed: () => _getNext(),
-            child: const Text("Next"),
+            child: const ArrowRightImg(),
           ),
         ],
       ),

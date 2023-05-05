@@ -194,3 +194,17 @@ class ArrowRightImg extends StatelessWidget {
     );
   }
 }
+
+class ArrowLeftImg extends StatelessWidget {
+  const ArrowLeftImg({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Transform.scale(
+      alignment: Alignment.center,
+      scale: -1.0,
+      child: const ArrowRightImg(),
+    );
+  }
+}
+
