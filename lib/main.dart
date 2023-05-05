@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Claudio Di Maio portfolio",
+      title: "Claudio Di Maio Portfolio",
       initialRoute: '/',
       routes: {
         '/': (context) => const MyHomePage(),
