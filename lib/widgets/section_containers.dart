@@ -53,7 +53,7 @@ class SectionContainerColumn extends StatelessWidget {
 
 Widget sectionContainerRow(List<Widget> widgets,
     {bool isAboutMe = false, bool isFooter = false}) {
-  assert (isAboutMe != isFooter);
+  assert(isAboutMe != isFooter);
   // TODO: Improve this part of the code
   if (isAboutMe) {
     return SectionContainerRow(widgets: widgets, height: 800);
@@ -80,12 +80,12 @@ class SectionContainerRow extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(112 * fem, 0 * fem, 112 * fem, 0 * fem),
       width: double.infinity,
       height: height * fem,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            for (Widget widget in widgets) widget,
-          ],
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          for (Widget widget in widgets) widget,
+        ],
       ),
     );
   }

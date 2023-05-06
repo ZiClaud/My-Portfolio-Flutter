@@ -92,17 +92,19 @@ class AboutMeImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(30),
-      child: path != null ? Image(
-        image: AssetImage(path!),
-        width: 282 * fem,
-        height: 374 * fem,
-        fit: BoxFit.cover,
-      ) : Image.network(
-        url!,
-        width: 282 * fem,
-        height: 374 * fem,
-        fit: BoxFit.cover,
-      ),
+      child: path != null
+          ? Image(
+              image: AssetImage(path!),
+              width: 282 * fem,
+              height: 374 * fem,
+              fit: BoxFit.cover,
+            )
+          : Image.network(
+              url!,
+              width: 282 * fem,
+              height: 374 * fem,
+              fit: BoxFit.cover,
+            ),
     );
   }
 }
