@@ -7,13 +7,12 @@ class IremiPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MainWorkPage(
-      title: 'Iremi App - Page is in work in progress',
-      description1: 'Lorem ipsum dolor sit amet, consectetur',
-      descriptionBold1:
-          ' adipiscing elit. Ultrices lorem non feugiat egestas amet.',
-      description2: 'Lorem ipsum dolor sit amet, consectetur',
-      descriptionBold2:
-          'adipiscing elit. Ultrices lorem non feugiat egestas amet.',
+      title: 'Iremi App',
+      description1: 'Iremi is a mobile app designed to help users',
+      descriptionBold1: 'combat anxiety through guided breathing exercises.',
+      description2:
+          'Using Flutter and Dart, I have created a simple and intuitive app that offers a variety of breathing exercises tailored to the user\'s needs.\nThe app also includes a progress tracker that allows users to monitor their breathing habits and',
+      descriptionBold2: 'track their progress over time.',
       images: [
         WorkPageImage(url: 'https://i.imgur.com/eoEx6Tt.png'),
         WorkPageImage(url: 'https://i.imgur.com/zf0f2OA.png'),
