@@ -60,11 +60,15 @@ class WorkPageImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(30),
-      child: Image.network(
-        url,
+      child: SizedBox(
         width: 650 * fem,
         height: 350 * fem,
-        fit: BoxFit.cover,
+        child: Image.network(
+          url,
+          width: 650 * fem,
+          height: 350 * fem,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }

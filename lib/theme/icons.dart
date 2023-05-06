@@ -49,16 +49,23 @@ class _SkillImgState extends State<SkillImg> {
 
 /// WORKS
 class WorkImg extends StatelessWidget {
-  final String path;
+  final String? path;
+  final String? url;
 
-  const WorkImg({super.key, required this.path});
+  const WorkImg({super.key, this.path, this.url})
+      : assert(path != null || url != null);
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(30),
-      child: Image(
-        image: AssetImage(path),
+      child: path != null ? Image(
+        image: AssetImage(path!),
+        width: 591 * fem,
+        height: 500 * fem,
+        fit: BoxFit.cover,
+      ) : Image.network(
+        url!,
         width: 591 * fem,
         height: 500 * fem,
         fit: BoxFit.cover,
@@ -67,8 +74,8 @@ class WorkImg extends StatelessWidget {
   }
 }
 
-const WorkImg iremiImg = WorkImg(path: _semiInvisiblePath); //TODO: Change
-const WorkImg jeiomImg = WorkImg(path: "../assets/images/jeiom.png");
+const WorkImg iremiImg = WorkImg(url: "https://i.imgur.com/BvJZKA1.png");
+const WorkImg jeiomImg = WorkImg(url: "https://i.imgur.com/nu9WG4d.png");
 
 /// About me section
 class AboutMeImage extends StatelessWidget {

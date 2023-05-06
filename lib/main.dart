@@ -4,6 +4,7 @@ import 'package:my_portfolio/pages/home/footer.dart';
 import 'package:my_portfolio/pages/home/home.dart';
 import 'package:my_portfolio/pages/home/skills.dart';
 import 'package:my_portfolio/pages/home/work.dart';
+import 'package:my_portfolio/pages/works/iremi_work_page.dart';
 import 'package:my_portfolio/pages/works/jeiom_work_page.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/utils/media_query.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const MyHomePage(),
-        '/iremi': (context) => const MyHomePage(), //TODO: Change
+        '/iremi': (context) => const IremiPage(),
         '/jeiom': (context) => const JeiomPage(),
       },
 //      home: MyHomePage(),
