@@ -2,10 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/utils/media_query.dart';
 
 /// Section containers
-class SectionContainerFill extends StatelessWidget {
+class _MainSectionContainer extends StatelessWidget {
   final Widget widget;
 
-  const SectionContainerFill({super.key, required this.widget});
+  const _MainSectionContainer({super.key, required this.widget});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: widget,
+    );
+  }
+}
+
+class _SectionContainerFill extends StatelessWidget {
+  final Widget widget;
+
+  const _SectionContainerFill({super.key, required this.widget});
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +53,7 @@ class SectionContainerColumn extends StatelessWidget {
 
 Widget sectionContainerRow(List<Widget> widgets,
     {bool isAboutMe = false, bool isFooter = false}) {
+  assert (isAboutMe != isFooter);
   // TODO: Improve this part of the code
   if (isAboutMe) {
     return SectionContainerRow(widgets: widgets, height: 996);
