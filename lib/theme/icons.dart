@@ -74,7 +74,7 @@ class WorkImg extends StatelessWidget {
   }
 }
 
-const WorkImg iremiImg = WorkImg(url: "https://i.imgur.com/BvJZKA1.png");
+const WorkImg iremiImg = WorkImg(url: "https://i.imgur.com/eoEx6Tt.png");
 const WorkImg jeiomImg = WorkImg(url: "https://i.imgur.com/nu9WG4d.png");
 
 /// About me section

@@ -15,7 +15,7 @@ class IremiPage extends StatelessWidget {
       descriptionBold2:
           'adipiscing elit. Ultrices lorem non feugiat egestas amet.',
       images: [
-        WorkPageImage(url: 'https://i.imgur.com/BvJZKA1.png'),
+        WorkPageImage(url: 'https://i.imgur.com/eoEx6Tt.png'),
         WorkPageImage(url: 'https://i.imgur.com/zf0f2OA.png'),
         WorkPageImage(url: 'https://i.imgur.com/rzRn7Us.png'),
         WorkPageImage(url: 'https://i.imgur.com/34SF2m0.png'),
