@@ -14,10 +14,10 @@ class IremiPage extends StatelessWidget {
           'Using Flutter and Dart, I have created a simple and intuitive app that offers a variety of breathing exercises tailored to the user\'s needs.\nThe app also includes a progress tracker that allows users to monitor their breathing habits and',
       descriptionBold2: 'track their progress over time.',
       images: [
-        WorkPageImage(url: 'https://i.imgur.com/eoEx6Tt.png'),
-        WorkPageImage(url: 'https://i.imgur.com/zf0f2OA.png'),
-        WorkPageImage(url: 'https://i.imgur.com/rzRn7Us.png'),
-        WorkPageImage(url: 'https://i.imgur.com/34SF2m0.png'),
+        WorkPageImage(url: 'https://i.imgur.com/eoEx6Tth.png?1'),
+        WorkPageImage(url: 'https://i.imgur.com/zf0f2OAh.png'),
+        WorkPageImage(url: 'https://i.imgur.com/rzRn7Ush.png'),
+        WorkPageImage(url: 'https://i.imgur.com/34SF2m0h.png'),
       ],
     );
   }

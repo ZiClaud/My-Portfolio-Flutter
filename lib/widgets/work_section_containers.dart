@@ -126,12 +126,16 @@ class _WorkTextPart extends StatelessWidget {
     return SizedBox(
       width: 600 * fem,
       // TODO: Change 600 to 550 if we don't want it to be perfectly centered
+      height: 450 * fem,
+      // TODO: It's 450 because 500 (like the image) looks bad
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const Spacer(),
           _WorkTextTitle(title: title),
           _WorkTextDescription(
-              description: description, descriptionBold: '$descriptionBold\n'),
+              description: description, descriptionBold: descriptionBold),
+          const Spacer(),
           _WorkTextCategory(category: category),
           if (pageRoute != null)
             MyButton(
@@ -140,6 +144,7 @@ class _WorkTextPart extends StatelessWidget {
                 navigateToPage(context, pageRoute!);
               },
             ),
+          const Spacer(),
         ],
       ),
     );

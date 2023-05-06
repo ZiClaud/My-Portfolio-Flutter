@@ -59,53 +59,50 @@ class WorkImg extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(30),
-      child: path != null ? Image(
-        image: AssetImage(path!),
-        width: 591 * fem,
-        height: 500 * fem,
-        fit: BoxFit.cover,
-      ) : Image.network(
-        url!,
-        width: 591 * fem,
-        height: 500 * fem,
-        fit: BoxFit.cover,
-      ),
+      child: path != null
+          ? Image(
+              image: AssetImage(path!),
+              width: 591 * fem,
+              height: 500 * fem,
+              fit: BoxFit.cover,
+            )
+          : Image.network(
+              url!,
+              width: 591 * fem,
+              height: 500 * fem,
+              fit: BoxFit.cover,
+            ),
     );
   }
 }
 
-const WorkImg iremiImg = WorkImg(url: "https://i.imgur.com/eoEx6Tt.png");
+const WorkImg iremiImg = WorkImg(url: "https://i.imgur.com/eoEx6Tth.png?1");
 const WorkImg jeiomImg = WorkImg(url: "https://i.imgur.com/nu9WG4d.png");
+//const WorkImg websiteImg = WorkImg(url: "https://i.imgur.com/5yosKhp.png");
 
 /// About me section
 class AboutMeImage extends StatelessWidget {
-  final String path;
+  final String? path;
+  final String? url;
 
-  const AboutMeImage({super.key, required this.path});
-
-  @override
-  Widget build(BuildContext context) {
-    return Image(
-      image: AssetImage(path),
-      width: 282 * fem,
-      height: 374 * fem,
-      fit: BoxFit.cover,
-    );
-  }
-}
-
-class AboutMeImageUrl extends StatelessWidget {
-  final String url;
-
-  const AboutMeImageUrl({super.key, required this.url});
+  const AboutMeImage({super.key, this.path, this.url})
+      : assert(path != null || url != null);
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(
-      url,
-      width: 282 * fem,
-      height: 374 * fem,
-      fit: BoxFit.cover,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(30),
+      child: path != null ? Image(
+        image: AssetImage(path!),
+        width: 282 * fem,
+        height: 374 * fem,
+        fit: BoxFit.cover,
+      ) : Image.network(
+        url!,
+        width: 282 * fem,
+        height: 374 * fem,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }

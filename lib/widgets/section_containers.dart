@@ -5,7 +5,7 @@ import 'package:my_portfolio/utils/media_query.dart';
 class _MainSectionContainer extends StatelessWidget {
   final Widget widget;
 
-  const _MainSectionContainer({super.key, required this.widget});
+  const _MainSectionContainer({required this.widget});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class _MainSectionContainer extends StatelessWidget {
 class _SectionContainerFill extends StatelessWidget {
   final Widget widget;
 
-  const _SectionContainerFill({super.key, required this.widget});
+  const _SectionContainerFill({required this.widget});
 
   @override
   Widget build(BuildContext context) {
@@ -56,11 +56,11 @@ Widget sectionContainerRow(List<Widget> widgets,
   assert (isAboutMe != isFooter);
   // TODO: Improve this part of the code
   if (isAboutMe) {
-    return SectionContainerRow(widgets: widgets, height: 996);
+    return SectionContainerRow(widgets: widgets, height: 800);
   } else if (isFooter) {
     return SectionContainerRow(widgets: widgets, height: 425);
   } else {
-    return SectionContainerRow(widgets: widgets, height: 996);
+    return SectionContainerRow(widgets: widgets, height: 800);
   }
 }
 
@@ -80,16 +80,12 @@ class SectionContainerRow extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(112 * fem, 0 * fem, 112 * fem, 0 * fem),
       width: double.infinity,
       height: height * fem,
-      child: SizedBox(
-        width: double.infinity,
-        height: double.infinity,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             for (Widget widget in widgets) widget,
           ],
-        ),
       ),
     );
   }

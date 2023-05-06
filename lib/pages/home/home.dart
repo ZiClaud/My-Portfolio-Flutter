@@ -40,28 +40,32 @@ class _HeaderWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               HoveringText(
-                  text: "SKILLS",
-                  onPressed: () => {
-                        scrollToItem(1),
-                      }),
+                text: "SKILLS",
+                onPressed: () => {
+                  scrollToItem(1),
+                },
+              ),
               const SpaceWidgets(inWidth: true),
               HoveringText(
-                  text: "WORKS",
-                  onPressed: () => {
-                        scrollToItem(2),
-                      }),
+                text: "WORKS",
+                onPressed: () => {
+                  scrollToItem(2),
+                },
+              ),
               const SpaceWidgets(inWidth: true),
               HoveringText(
-                  text: "ABOUT",
-                  onPressed: () => {
-                        scrollToItem(3),
-                      }),
+                text: "ABOUT",
+                onPressed: () => {
+                  scrollToItem(3),
+                },
+              ),
               const SpaceWidgets(inWidth: true),
               HoveringText(
-                  text: "CONTACT",
-                  onPressed: () => {
-                        scrollToItem(4),
-                      }),
+                text: "CONTACT",
+                onPressed: () => {
+                  scrollToItem(4),
+                },
+              ),
             ],
           ),
         ],
@@ -76,7 +80,7 @@ class _TitleAndJobWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(0 * fem, 249 * fem, 0 * fem, 249 * fem),
+      margin: EdgeInsets.fromLTRB(0 * fem, 249 * fem, 0 * fem, 249 * fem), //  TODO: Change and fix for different devices
       child: RichText(
         textAlign: TextAlign.center,
         text: TextSpan(

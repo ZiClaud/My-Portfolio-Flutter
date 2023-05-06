@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/pages/home/home.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/widgets/section_containers.dart';
@@ -16,10 +17,12 @@ List<Widget> _workWidgets() {
     const SpaceWidgets(inHeight: true),
     _jeiom,
     const SpaceWidgets(inHeight: true),
+//    _website,
+//    const SpaceWidgets(inHeight: true),
   ];
 }
 
-Widget _iremi = const WorkContainerImageText(
+const Widget _iremi = WorkContainerImageText(
   image: iremiImg,
   title: "Iremi App",
   description:
@@ -29,7 +32,7 @@ Widget _iremi = const WorkContainerImageText(
   pageRoute: '/iremi',
 );
 
-Widget _jeiom = const WorkContainerTextImage(
+const Widget _jeiom = WorkContainerTextImage(
   image: jeiomImg,
   title: "JEIOM App",
   description:
@@ -39,3 +42,14 @@ Widget _jeiom = const WorkContainerTextImage(
   category: "Mobile App",
   pageRoute: '/jeiom',
 );
+/*
+const Widget _website = WorkContainerImageText(
+  image: websiteImg,
+  title: "This website",
+  description:
+  "This website was developed by me using ",
+  descriptionBold:
+  "Flutter and Dart.",
+  category: "Website",
+);
+*/
