@@ -7,11 +7,6 @@ import 'colors.dart';
 const String _invisiblePath = "../assets/images/invisible.png";
 const String _semiInvisiblePath = "../assets/images/semi_invisible.png";
 
-const Widget _invisibleSkillImg = SkillImg(path: _invisiblePath);
-const Widget _invisibleWorkImg = WorkImg(path: _invisiblePath);
-const Widget _invisibleAboutMeImg = AboutMeImage(path: _invisiblePath);
-Widget _invisibleFooterImg = FooterImg(path: _invisiblePath, onPressed: () {});
-
 /// SKILLS
 class SkillImg extends StatefulWidget {
   final String path;
@@ -75,10 +70,6 @@ class WorkImg extends StatelessWidget {
     );
   }
 }
-
-const WorkImg iremiImg = WorkImg(url: "https://i.imgur.com/eoEx6Tth.png?1");
-const WorkImg jeiomImg = WorkImg(url: "https://i.imgur.com/nu9WG4d.png");
-//const WorkImg websiteImg = WorkImg(url: "https://i.imgur.com/5yosKhp.png");
 
 /// About me section
 class AboutMeImage extends StatelessWidget {

@@ -8,7 +8,7 @@ import '../utils/navigate_to_page.dart';
 
 /// Work section containers
 class WorkContainerImageText extends StatelessWidget {
-  final Widget image;
+  final Widget child;
   final String title;
   final String description;
   final String descriptionBold;
@@ -17,7 +17,7 @@ class WorkContainerImageText extends StatelessWidget {
 
   const WorkContainerImageText({
     super.key,
-    required this.image,
+    required this.child,
     required this.title,
     required this.description,
     required this.descriptionBold,
@@ -31,7 +31,7 @@ class WorkContainerImageText extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         /// Image
-        _WorkImagePart(image: image),
+        _WorkImagePart(image: child),
 
         /// Space between image and text
         const SizedBox(width: 32),
@@ -50,7 +50,7 @@ class WorkContainerImageText extends StatelessWidget {
 }
 
 class WorkContainerTextImage extends StatelessWidget {
-  final Widget image;
+  final Widget child;
   final String title;
   final String description;
   final String descriptionBold;
@@ -59,7 +59,7 @@ class WorkContainerTextImage extends StatelessWidget {
 
   const WorkContainerTextImage({
     super.key,
-    required this.image,
+    required this.child,
     required this.title,
     required this.description,
     required this.descriptionBold,
@@ -85,7 +85,7 @@ class WorkContainerTextImage extends StatelessWidget {
         const SizedBox(width: 32),
 
         /// Image
-        _WorkImagePart(image: image),
+        _WorkImagePart(image: child),
       ],
     );
   }
