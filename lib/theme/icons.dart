@@ -8,6 +8,20 @@ import 'colors.dart';
 const String _invisiblePath = "../assets/images/invisible.png";
 const String _semiInvisiblePath = "../assets/images/semi_invisible.png";
 
+Image _getInvisibleImage() {
+  return const Image(
+    image: AssetImage(_invisiblePath),
+    fit: BoxFit.cover,
+  );
+}
+
+Image getSemiInvisibleImage() {
+  return const Image(
+    image: AssetImage(_semiInvisiblePath),
+    fit: BoxFit.cover,
+  );
+}
+
 /// SKILLS
 class SkillImg extends StatefulWidget {
   final String path;

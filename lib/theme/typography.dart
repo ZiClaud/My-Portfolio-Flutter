@@ -6,11 +6,13 @@ import 'package:my_portfolio/utils/media_query.dart';
 class TitleBox extends StatelessWidget {
   final String title1;
   final String title2;
+  final bool center;
 
   const TitleBox({
     super.key,
     required this.title1,
     required this.title2,
+    this.center = false,
   });
 
   @override
@@ -19,6 +21,7 @@ class TitleBox extends StatelessWidget {
       margin: EdgeInsets.fromLTRB(38 * fem, 0 * fem, 38 * fem, 38 * fem),
       width: double.infinity,
       child: RichText(
+        textAlign: center ? TextAlign.center : TextAlign.start,
         text: TextSpan(
           children: [
             TextSpan(

@@ -59,9 +59,11 @@ class MainWorkPage extends StatelessWidget {
 
 /// Image
 class WorkPageImage extends StatelessWidget {
-  final String url;
+  final String? url;
+  final String urlHD;
 
-  const WorkPageImage({Key? key, required this.url}) : super(key: key);
+  const WorkPageImage({Key? key, this.url, required this.urlHD})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -70,8 +72,9 @@ class WorkPageImage extends StatelessWidget {
       child: SizedBox(
         width: 1024 * fem,
         height: 550 * fem,
-        child: Image.network(
-          url,
+        child: HighDefinitionImage(
+          lowResImageURL: url,
+          highResImageURL: urlHD,
           width: 1024 * fem,
           height: 550 * fem,
           fit: BoxFit.cover,

@@ -15,10 +15,10 @@ class JeiomPage extends StatelessWidget {
       descriptionBold2:
           'adipiscing elit. Ultrices lorem non feugiat egestas amet.',
       images: [
-        WorkPageImage(url: 'https://i.imgur.com/9phy7Yo.png'),
-        WorkPageImage(url: 'https://i.imgur.com/nu9WG4d.png'),
-        WorkPageImage(url: 'https://i.imgur.com/cnQv4yJ.png'),
-        WorkPageImage(url: 'https://i.imgur.com/NiRigYm.png'),
+        WorkPageImage(urlHD: 'https://i.imgur.com/9phy7Yo.png'),
+        WorkPageImage(urlHD: 'https://i.imgur.com/nu9WG4d.png'),
+        WorkPageImage(urlHD: 'https://i.imgur.com/cnQv4yJ.png'),
+        WorkPageImage(urlHD: 'https://i.imgur.com/NiRigYm.png'),
       ],
     );
   }

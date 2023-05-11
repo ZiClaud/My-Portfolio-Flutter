@@ -131,3 +131,57 @@ class SpaceWidgets extends StatelessWidget {
               );
   }
 }
+
+/// Returns an [Image] widget that loads a high-resolution image from the network,
+/// while initially displaying a low-resolution placeholder image.
+///
+/// [lowResImageURL] is the URL for the low-resolution placeholder image.
+/// [highResImageURL] is the URL for the high-resolution image to be loaded.
+/// [width] and [height] are the dimensions for the image widget.
+/// [fit] is the fit type for the image widget.
+class HighDefinitionImage extends StatelessWidget {
+  final String highResImageURL;
+  final String? lowResImageURL;
+  final double width;
+  final double height;
+  final BoxFit fit;
+
+  const HighDefinitionImage({
+    super.key,
+    required this.highResImageURL,
+    this.lowResImageURL,
+    required this.width,
+    required this.height,
+    required this.fit,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Image(
+      loadingBuilder: (BuildContext context, Widget child,
+          ImageChunkEvent? loadingProgress) {
+        if (loadingProgress == null) {
+          return child;
+        } else {
+          return (lowResImageURL != null)
+              ? Image.network(lowResImageURL!)
+              : getSemiInvisibleImage();
+        }
+      },
+      image: NetworkImage(highResImageURL),
+      width: width,
+      height: height,
+      fit: fit,
+      errorBuilder:
+          (BuildContext context, Object exception, StackTrace? stackTrace) {
+        return const Center(
+          child: TitleBox(
+            title1: "Error 404:\n",
+            title2: "image not found",
+            center: true,
+          ),
+        );
+      },
+    );
+  }
+}
