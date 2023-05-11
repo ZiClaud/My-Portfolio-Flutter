@@ -1,4 +1,18 @@
+import 'package:flutter/cupertino.dart';
+import 'package:my_portfolio/theme/colors.dart';
+import 'package:my_portfolio/utils/media_query.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+BorderRadius getContainerRadius() {
+  return BorderRadius.circular(30 * fem);
+}
+
+BoxDecoration getContainerDecorationBorder(){
+  return BoxDecoration(
+  borderRadius: getContainerRadius(),
+  border: Border.all(color: neutral1Color, width: 2),
+  );
+}
 
 Future<void> launchMyUrl(String urlString) async {
   Uri url = Uri.parse(urlString);

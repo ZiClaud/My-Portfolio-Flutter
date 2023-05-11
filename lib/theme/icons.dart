@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/utils/media_query.dart';
+import 'package:my_portfolio/utils/utils.dart';
 
 import 'colors.dart';
 
@@ -53,7 +54,7 @@ class WorkImg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(30),
+      borderRadius: getContainerRadius(),
       child: path != null
           ? Image(
               image: AssetImage(path!),
@@ -82,7 +83,7 @@ class AboutMeImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(30),
+      borderRadius: getContainerRadius(),
       child: path != null
           ? Image(
               image: AssetImage(path!),

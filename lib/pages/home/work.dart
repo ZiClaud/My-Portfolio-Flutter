@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/media_query.dart';
+import 'package:my_portfolio/utils/utils.dart';
 import 'package:my_portfolio/widgets/section_containers.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 import 'package:my_portfolio/widgets/work_section_containers.dart';
@@ -55,13 +55,7 @@ Widget _website = WorkContainerImageText(
   category: "Website",
   child: UnconstrainedBox(
     child: Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-        border: Border.all(
-          color: neutral2Color,
-          width: 2,
-        ),
-      ),
+      decoration: getContainerDecorationBorder(),
       width: 600 * fem,
       height: 325 * fem,
       child: _websiteImg,

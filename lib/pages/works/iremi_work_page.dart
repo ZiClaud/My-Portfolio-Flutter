@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/widgets/work_page_containers.dart';
+import 'package:my_portfolio/widgets/work_page.dart';
 
 class IremiPage extends StatelessWidget {
   const IremiPage({super.key});
@@ -8,6 +8,7 @@ class IremiPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MainWorkPage(
       title: 'Iremi App',
+//      skills: ['Flutter', 'Dart', 'SQLite'],
       description1: 'Iremi is a mobile app designed to help users',
       descriptionBold1: 'combat anxiety through guided breathing exercises.',
       description2:

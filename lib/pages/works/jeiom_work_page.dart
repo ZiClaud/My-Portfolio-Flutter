@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/widgets/work_page_containers.dart';
+import 'package:my_portfolio/widgets/work_page.dart';
 
 class JeiomPage extends StatelessWidget {
   const JeiomPage({super.key});
