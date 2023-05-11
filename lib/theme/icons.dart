@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/utils/utils.dart';
+import 'package:my_portfolio/widgets/widgets.dart';
 
 import 'colors.dart';
 
@@ -59,11 +60,12 @@ class _SkillImgState extends State<SkillImg> {
 
 /// WORKS
 class WorkImg extends StatelessWidget {
-  final String? path;
   final String? url;
+  final String? urlHD;
+  final String? path;
 
-  const WorkImg({super.key, this.path, this.url})
-      : assert(path != null || url != null);
+  const WorkImg({super.key, this.url, this.urlHD, this.path})
+      : assert(path != null || urlHD != null);
 
   @override
   Widget build(BuildContext context) {
@@ -71,17 +73,18 @@ class WorkImg extends StatelessWidget {
       borderRadius: getContainerRadius(),
       child: path != null
           ? Image(
-              image: AssetImage(path!),
-              width: 591 * fem,
-              height: 500 * fem,
-              fit: BoxFit.cover,
-            )
-          : Image.network(
-              url!,
-              width: 591 * fem,
-              height: 500 * fem,
-              fit: BoxFit.cover,
-            ),
+        image: AssetImage(path!),
+        width: 591 * fem,
+        height: 500 * fem,
+        fit: BoxFit.cover,
+      )
+          : HighDefinitionImage(
+        lowResImageURL: url,
+        highResImageURL: urlHD!,
+        width: 591 * fem,
+        height: 500 * fem,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }
@@ -100,17 +103,17 @@ class AboutMeImage extends StatelessWidget {
       borderRadius: getContainerRadius(),
       child: path != null
           ? Image(
-              image: AssetImage(path!),
-              width: 282 * fem,
-              height: 374 * fem,
-              fit: BoxFit.cover,
-            )
+        image: AssetImage(path!),
+        width: 282 * fem,
+        height: 374 * fem,
+        fit: BoxFit.cover,
+      )
           : Image.network(
-              url!,
-              width: 282 * fem,
-              height: 374 * fem,
-              fit: BoxFit.cover,
-            ),
+        url!,
+        width: 282 * fem,
+        height: 374 * fem,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }

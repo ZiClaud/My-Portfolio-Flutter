@@ -7,9 +7,11 @@ import 'package:my_portfolio/widgets/section_containers.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 import 'package:my_portfolio/widgets/work_section_containers.dart';
 
-const WorkImg _iremiImg = WorkImg(url: "https://i.imgur.com/eoEx6Tth.png?1");
-const WorkImg _jeiomImg = WorkImg(url: "https://i.imgur.com/nu9WG4d.png");
-const WorkImg _websiteImg = WorkImg(url: "https://i.imgur.com/5yosKhp.png");
+const WorkImg _iremiImg = WorkImg(
+    url: "https://i.imgur.com/eoEx6Tth.png?1",
+    urlHD: "https://i.imgur.com/eoEx6Tt.png?1");
+const WorkImg _jeiomImg = WorkImg(urlHD: "https://i.imgur.com/nu9WG4d.png");
+const WorkImg _websiteImg = WorkImg(urlHD: "https://i.imgur.com/5yosKhp.png");
 
 Widget getWorkPage() {
   return SectionContainerColumn(widgets: _workWidgets());
