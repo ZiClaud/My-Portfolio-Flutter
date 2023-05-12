@@ -5,6 +5,7 @@ import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
 import '../utils/navigate_to_page.dart';
+// TODO: Move everything to works.dart in basics
 
 /// Work section containers
 class WorkContainerImageText extends StatelessWidget {
@@ -34,7 +35,7 @@ class WorkContainerImageText extends StatelessWidget {
         _WorkImagePart(image: child),
 
         /// Space between image and text
-        const SizedBox(width: 32),
+        const SpaceWidgets(inWidth: true),
 
         /// Text part
         _WorkTextPart(
@@ -82,10 +83,53 @@ class WorkContainerTextImage extends StatelessWidget {
         ),
 
         /// Space between image and text
-        const SizedBox(width: 32),
+        const SpaceWidgets(inWidth: true),
+
 
         /// Image
         _WorkImagePart(image: child),
+      ],
+    );
+  }
+}
+
+class WorkContainerMobile extends StatelessWidget {
+  final Widget child;
+  final String title;
+  final String description;
+  final String descriptionBold;
+  final String category;
+  final String? pageRoute;
+
+  const WorkContainerMobile({
+    super.key,
+    required this.child,
+    required this.title,
+    required this.description,
+    required this.descriptionBold,
+    required this.category,
+    this.pageRoute,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        /// Image
+        _WorkImagePart(image: child),
+
+        /// Space between image and text
+        const SpaceWidgets(inHeight: true),
+
+        /// Text part
+        _WorkTextPart(
+          title: title,
+          description: description,
+          descriptionBold: descriptionBold,
+          category: category,
+          pageRoute: pageRoute,
+        ),
       ],
     );
   }

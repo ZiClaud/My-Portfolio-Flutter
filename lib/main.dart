@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/pages/home/about_me.dart';
-import 'package:my_portfolio/pages/home/footer.dart';
-import 'package:my_portfolio/pages/home/home.dart';
-import 'package:my_portfolio/pages/home/skills.dart';
-import 'package:my_portfolio/pages/home/work.dart';
-import 'package:my_portfolio/pages/works/iremi_work_page.dart';
-import 'package:my_portfolio/pages/works/jeiom_work_page.dart';
+import 'package:my_portfolio/basics/fake_db.dart';
+import 'package:my_portfolio/pages/sections/about_me.dart';
+import 'package:my_portfolio/pages/sections/footer.dart';
+import 'package:my_portfolio/pages/sections/home.dart';
+import 'package:my_portfolio/pages/sections/skills.dart';
+import 'package:my_portfolio/pages/sections/works.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/utils/media_query.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
@@ -24,8 +23,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const MainPage(),
-        '/iremi': (context) => const IremiPage(),
-        '/jeiom': (context) => const JeiomPage(),
+        iremi.pageRoute!: (context) => iremiPage.getWholePage(),
+        jeiom.pageRoute!: (context) => jeiomPage.getWholePage(),
       },
 //      home: MyHomePage(),
     );
@@ -47,7 +46,6 @@ class _MainPageState extends State<MainPage> {
     setIsMobile(context);
     setFEMeFFEM(context);
     setScreenWidthHeight(context);
-    print("Updated stuff");
 
     final List<Widget> items = [
       const HomePage(),
