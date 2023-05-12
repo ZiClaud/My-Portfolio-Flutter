@@ -12,9 +12,15 @@ const Widget aboutMeChessImg = AboutMeImage(
 const Widget aboutMeMusicImg =
     AboutMeImage(url: "https://cdn.fuelrocks.com/1665122987550.jpg");
 
-Widget getAboutMePage() {
-  return sectionContainerRow(_aboutMeWidgets(), isAboutMe: true);
+class AboutMePage extends StatelessWidget {
+  const AboutMePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SectionContainerRow(widgets: _aboutMeWidgets(), height: 800,);
+  }
 }
+
 
 List<Widget> _aboutMeWidgets() {
   return const [

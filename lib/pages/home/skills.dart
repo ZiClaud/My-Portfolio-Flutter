@@ -8,23 +8,30 @@ const Widget _sqlImg = SkillImg(path: "../assets/images/sqlimg.png");
 const Widget _pythonImg = SkillImg(path: "../assets/images/pythonimg.png");
 const Widget _javaImg = SkillImg(path: "../assets/images/javaimg.png");
 
-Widget getSkillsPage() {
-  return Container(
-    padding: EdgeInsets.fromLTRB(112 * fem, 80 * fem, 112 * fem, 130 * fem),
-    width: double.infinity,
-    height: 583.9 * fem,
-    child: SizedBox(
+class SkillsPage extends StatelessWidget {
+  const SkillsPage({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.fromLTRB(112 * fem, 80 * fem, 112 * fem, 130 * fem),
       width: double.infinity,
-      height: double.infinity,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const TitleBox(title1: 'Some of my ', title2: 'Skills'),
-          _skillsBox(),
-        ],
+      height: 583.9 * fem,
+      child: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const TitleBox(title1: 'Some of my ', title2: 'Skills'),
+            _skillsBox(),
+          ],
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 Widget _skillsBox() {

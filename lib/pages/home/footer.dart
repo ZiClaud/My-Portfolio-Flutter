@@ -6,23 +6,14 @@ import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/utils/utils.dart';
 import 'package:my_portfolio/widgets/section_containers.dart';
 
-Widget _gitHubImg({required Function() onPressed}) {
-  String path = "../assets/images/github_img.png";
-  return FooterImg(path: path, onPressed: onPressed);
-}
+class FooterPage extends StatelessWidget {
+  const FooterPage({Key? key}) : super(key: key);
 
-Widget _mailImg({required Function() onPressed}) {
-  String path = "../assets/images/mail_img.png";
-  return FooterImg(path: path, onPressed: onPressed);
-}
-
-Widget _linkedinImg({required Function() onPressed}) {
-  String path = "../assets/images/linkedin_img.png";
-  return FooterImg(path: path, onPressed: onPressed);
-}
-
-Widget getFooterPage() {
-  return sectionContainerRow(_footerWidgets(), isFooter: true);
+  @override
+  Widget build(BuildContext context) {
+    // TODO: SectionContainerFill(sectionContainerRow(...))?
+    return SectionContainerRow(widgets: _footerWidgets(), height: 425);
+  }
 }
 
 List<Widget> _footerWidgets() {
@@ -59,7 +50,8 @@ class _LeftImages extends StatelessWidget {
                       0 * fem, 0 * fem, 93 * fem, 83.25 * fem),
                   width: 100 * fem,
                   height: 100 * fem,
-                  child: _gitHubImg(
+                  child: FooterImg(
+                    path: "../assets/images/github_img.png",
                     onPressed: () {
                       launchMyUrl('https://github.com/ZiClaud');
                     },
@@ -69,7 +61,8 @@ class _LeftImages extends StatelessWidget {
                   /// Position of Linkedin
                   width: 100 * fem,
                   height: 100 * fem,
-                  child: _linkedinImg(
+                  child: FooterImg(
+                    path: "../assets/images/linkedin_img.png",
                     onPressed: () {
                       launchMyUrl(
                           'https://www.linkedin.com/in/claudio-di-maio/');
@@ -84,7 +77,8 @@ class _LeftImages extends StatelessWidget {
             margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 92 * fem, 0 * fem),
             width: 100 * fem,
             height: 100 * fem,
-            child: _mailImg(
+            child: FooterImg(
+              path: "../assets/images/mail_img.png",
               onPressed: () {
                 // TODO: Fix
                 sendEmail("claudiodimaiozc@gmail.com");

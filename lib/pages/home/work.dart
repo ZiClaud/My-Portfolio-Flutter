@@ -13,8 +13,15 @@ const WorkImg _iremiImg = WorkImg(
 const WorkImg _jeiomImg = WorkImg(urlHD: "https://i.imgur.com/nu9WG4d.png");
 const WorkImg _websiteImg = WorkImg(urlHD: "https://i.imgur.com/5yosKhp.png");
 
-Widget getWorkPage() {
-  return SectionContainerColumn(widgets: _workWidgets());
+class WorkPage extends StatelessWidget {
+  const WorkPage({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SectionContainerColumn(widgets: _workWidgets());
+  }
 }
 
 List<Widget> _workWidgets() {

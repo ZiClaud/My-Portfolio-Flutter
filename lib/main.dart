@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: "Claudio Di Maio Portfolio",
       initialRoute: '/',
       routes: {
-        '/': (context) => const MyHomePage(),
+        '/': (context) => const MainPage(),
         '/iremi': (context) => const IremiPage(),
         '/jeiom': (context) => const JeiomPage(),
       },
@@ -32,28 +32,29 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class MainPage extends StatefulWidget {
+  const MainPage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MainPage> createState() => _MainPageState();
 }
 
 final ItemScrollController _scrollController = ItemScrollController();
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
+    setIsMobile(context);
     setFEMeFFEM(context);
     setScreenWidthHeight(context);
+    print("Updated stuff");
 
     final List<Widget> items = [
-      getHomePage(),
-      getSkillsPage(),
-      getWorkPage(),
-      getAboutMePage(),
-      // TODO: SectionContainerFill(getFooterPage())?
-      getFooterPage(),
+      const HomePage(),
+      const SkillsPage(),
+      const WorkPage(),
+      const AboutMePage(),
+      const FooterPage(),
     ];
 
     return Scaffold(

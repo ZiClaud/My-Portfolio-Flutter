@@ -7,8 +7,15 @@ import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/widgets/section_containers.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
-Widget getHomePage() {
-  return SectionContainerColumn(widgets: _homePageWidgets());
+class HomePage extends StatelessWidget {
+  const HomePage({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SectionContainerColumn(widgets: _homePageWidgets());
+  }
 }
 
 List<Widget> _homePageWidgets() {

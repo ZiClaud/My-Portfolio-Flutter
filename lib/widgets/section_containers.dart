@@ -51,19 +51,6 @@ class SectionContainerColumn extends StatelessWidget {
   }
 }
 
-Widget sectionContainerRow(List<Widget> widgets,
-    {bool isAboutMe = false, bool isFooter = false}) {
-  assert(isAboutMe != isFooter);
-  // TODO: Improve this part of the code
-  if (isAboutMe) {
-    return SectionContainerRow(widgets: widgets, height: 800);
-  } else if (isFooter) {
-    return SectionContainerRow(widgets: widgets, height: 425);
-  } else {
-    return SectionContainerRow(widgets: widgets, height: 800);
-  }
-}
-
 class SectionContainerRow extends StatelessWidget {
   final List<Widget> widgets;
   final double height;
