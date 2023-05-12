@@ -73,18 +73,18 @@ class WorkImg extends StatelessWidget {
       borderRadius: getContainerRadius(),
       child: path != null
           ? Image(
-        image: AssetImage(path!),
-        width: 591 * fem,
-        height: 500 * fem,
-        fit: BoxFit.cover,
-      )
+              image: AssetImage(path!),
+              width: 591 * fem,
+              height: 500 * fem,
+              fit: BoxFit.cover,
+            )
           : HighDefinitionImage(
-        lowResImageURL: url,
-        highResImageURL: urlHD!,
-        width: 591 * fem,
-        height: 500 * fem,
-        fit: BoxFit.cover,
-      ),
+              lowResImageURL: url,
+              highResImageURL: urlHD!,
+              width: 591 * fem,
+              height: 500 * fem,
+              fit: BoxFit.cover,
+            ),
     );
   }
 }
@@ -103,17 +103,17 @@ class AboutMeImage extends StatelessWidget {
       borderRadius: getContainerRadius(),
       child: path != null
           ? Image(
-        image: AssetImage(path!),
-        width: 282 * fem,
-        height: 374 * fem,
-        fit: BoxFit.cover,
-      )
+              image: AssetImage(path!),
+              width: 282 * fem,
+              height: 374 * fem,
+              fit: BoxFit.cover,
+            )
           : Image.network(
-        url!,
-        width: 282 * fem,
-        height: 374 * fem,
-        fit: BoxFit.cover,
-      ),
+              url!,
+              width: 282 * fem,
+              height: 374 * fem,
+              fit: BoxFit.cover,
+            ),
     );
   }
 }

@@ -17,10 +17,9 @@ class AboutMePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SectionContainerRow(widgets: _aboutMeWidgets(), height: 800,);
+    return SectionContainerRow(widgets: _aboutMeWidgets(), height: 800);
   }
 }
-
 
 List<Widget> _aboutMeWidgets() {
   return const [

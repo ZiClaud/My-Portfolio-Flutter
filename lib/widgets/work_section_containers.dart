@@ -85,7 +85,6 @@ class WorkContainerTextImage extends StatelessWidget {
         /// Space between image and text
         const SpaceWidgets(inWidth: true),
 
-
         /// Image
         _WorkImagePart(image: child),
       ],

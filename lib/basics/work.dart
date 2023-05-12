@@ -95,7 +95,7 @@ class WorkPage {
     required this.descriptionBold1,
     this.description2,
     this.descriptionBold2,
-    required this.images
+    required this.images,
   });
 
   MainWorkPage getWholePage() {

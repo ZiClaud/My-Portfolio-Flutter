@@ -7,10 +7,10 @@ BorderRadius getContainerRadius() {
   return BorderRadius.circular(30 * fem);
 }
 
-BoxDecoration getContainerDecorationBorder(){
+BoxDecoration getContainerDecorationBorder() {
   return BoxDecoration(
-  borderRadius: getContainerRadius(),
-  border: Border.all(color: neutral1Color, width: 2),
+    borderRadius: getContainerRadius(),
+    border: Border.all(color: neutral1Color, width: 2),
   );
 }
 

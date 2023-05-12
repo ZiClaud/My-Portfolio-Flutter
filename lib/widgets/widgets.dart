@@ -201,12 +201,12 @@ class ResponsiveRowOrColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     return isMobile
         ? Column(
-      crossAxisAlignment: crossAxisAlignment,
-      children: children,
-    )
+            crossAxisAlignment: crossAxisAlignment,
+            children: children,
+          )
         : Row(
-      crossAxisAlignment: crossAxisAlignment,
-      children: children,
-    );
+            crossAxisAlignment: crossAxisAlignment,
+            children: children,
+          );
   }
 }
