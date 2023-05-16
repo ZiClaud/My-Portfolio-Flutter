@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const MainPage(),
-        iremi.pageRoute!: (context) => iremiPage.getWholePage(),
-        jeiom.pageRoute!: (context) => jeiomPage.getWholePage(),
+        iremi.pageRoute!: (context) => iremiPage.getPage(),
+        jeiom.pageRoute!: (context) => jeiomPage.getPage(),
       },
 //      home: MyHomePage(),
     );

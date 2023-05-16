@@ -98,7 +98,7 @@ class WorkPage {
     required this.images,
   });
 
-  MainWorkPage getWholePage() {
+  MainWorkPage getPage() {
     return MainWorkPage(
       title: title,
       skills: skills,
