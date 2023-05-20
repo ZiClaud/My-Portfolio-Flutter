@@ -38,7 +38,6 @@ class MainPage extends StatelessWidget { //TODO: Change to stateful widget?
 
   @override
   Widget build(BuildContext context) {
-    setIsMobile(context);
     setFEMeFFEM(context);
     setScreenWidthHeight(context);
 

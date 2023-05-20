@@ -185,28 +185,3 @@ class HighDefinitionImage extends StatelessWidget {
     );
   }
 }
-
-/// Returns a Row if the device is a PC, a Column if the device is a mobile.
-class ResponsiveRowOrColumn extends StatelessWidget {
-  final CrossAxisAlignment crossAxisAlignment;
-  final List<Widget> children;
-
-  const ResponsiveRowOrColumn({
-    Key? key,
-    this.crossAxisAlignment = CrossAxisAlignment.center,
-    required this.children,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return isMobile
-        ? Column(
-            crossAxisAlignment: crossAxisAlignment,
-            children: children,
-          )
-        : Row(
-            crossAxisAlignment: crossAxisAlignment,
-            children: children,
-          );
-  }
-}

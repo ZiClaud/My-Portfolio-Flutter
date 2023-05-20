@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 
 //TODO: REMOVE
-bool isMobile = false;
 
 double fem = 1;
 double ffem = 1;
-
-void setIsMobile(BuildContext context) {
-  isMobile = MediaQuery.of(context).size.width < 576;
-}
 
 void setFEMeFFEM(BuildContext context) {
   fem = MediaQuery.of(context).size.width / 1536;
