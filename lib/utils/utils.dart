@@ -1,10 +1,20 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:my_portfolio/responsive/responsive.dart';
 import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+/// Default padding for mobile and desktop
+EdgeInsets defaultPadding(BuildContext context) {
+  if (ResponsiveWidget.isMobile(context)) {
+    return const EdgeInsets.symmetric(horizontal: 0);
+  }
+  return const EdgeInsets.symmetric(horizontal: 112);
+}
+
+
 BorderRadius getContainerRadius() {
-  return BorderRadius.circular(30 * fem);
+  return BorderRadius.circular(30);
 }
 
 BoxDecoration getContainerDecorationBorder() {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 
 /// Section containers
 class _MainSectionContainer extends StatelessWidget {
@@ -18,13 +17,15 @@ class _MainSectionContainer extends StatelessWidget {
 
 class _SectionContainerFill extends StatelessWidget {
   final Widget child;
+  final BuildContext context;
 
-  const _SectionContainerFill({required this.child});
+  const _SectionContainerFill({required this.child, required this.context});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(minHeight: getScreenHeight()),
+      constraints:
+          BoxConstraints(minHeight: MediaQuery.of(context).size.height),
       child: child,
     );
   }
@@ -38,7 +39,7 @@ class SectionContainerColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 112 * fem, top: 24 * fem, right: 112 * fem, bottom: 57 * fem),
+      padding: const EdgeInsets.only(left: 112, top: 24, right: 112, bottom: 57),
       // TODO: Change with defaultPadding();
       width: double.infinity,
       child: Column(
@@ -64,9 +65,9 @@ class SectionContainerRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 112 * fem, right: 112 * fem),
+      padding: const EdgeInsets.only(left: 112, right: 112),
       width: double.infinity,
-      height: height * fem,
+      height: height,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

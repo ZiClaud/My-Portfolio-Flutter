@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/utils/utils.dart';
 import 'package:my_portfolio/widgets/section_containers.dart';
 
@@ -31,24 +30,24 @@ class _LeftImages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: squareSize * fem,
-      height: squareSize * fem,
+      width: squareSize,
+      height: squareSize,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             /// Position of mail
-            margin: EdgeInsets.only(bottom: 42 * fem),
+            margin: const EdgeInsets.only(bottom: 42),
             width: double.infinity,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Container(
                   /// Position of Github
-                  margin: EdgeInsets.only(right: 93 * fem, bottom: 83.25 * fem),
-                  width: 100 * fem,
-                  height: 100 * fem,
+                  margin: const EdgeInsets.only(right: 93, bottom: 83.25),
+                  width: 100,
+                  height: 100,
                   child: FooterImg(
                     path: "../assets/images/github_img.png",
                     onPressed: () {
@@ -58,8 +57,8 @@ class _LeftImages extends StatelessWidget {
                 ),
                 SizedBox(
                   /// Position of Linkedin
-                  width: 100 * fem,
-                  height: 100 * fem,
+                  width: 100,
+                  height: 100,
                   child: FooterImg(
                     path: "../assets/images/linkedin_img.png",
                     onPressed: () {
@@ -73,9 +72,9 @@ class _LeftImages extends StatelessWidget {
           ),
           Container(
             /// Position of Mail
-            margin: EdgeInsets.only(right: 92 * fem),
-            width: 100 * fem,
-            height: 100 * fem,
+            margin: const EdgeInsets.only(right: 92),
+            width: 100,
+            height: 100,
             child: FooterImg(
               path: "../assets/images/mail_img.png",
               onPressed: () {
@@ -98,8 +97,8 @@ class _RightText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: squareSize * fem,
-      width: squareSize * fem,
+      height: squareSize,
+      width: squareSize,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,

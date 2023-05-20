@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 
 /// Title
 class TitleBox extends StatelessWidget {
@@ -18,7 +17,7 @@ class TitleBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 38 * fem, right: 38 * fem, bottom: 38 * fem),
+      margin: EdgeInsets.only(left: 38, right: 38, bottom: 38),
       width: double.infinity,
       child: RichText(
         textAlign: center ? TextAlign.center : TextAlign.start,
@@ -60,10 +59,10 @@ TextStyle _safeGoogleFont(String fontFamily,
 TextStyle h1Light({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 56 * ffem,
+    fontSize: 56,
     fontWeight: FontWeight.w300,
-    height: 1.5 * ffem / fem,
-    letterSpacing: -1.12 * fem,
+    height: 1.5,
+    letterSpacing: -1.12,
     color: color,
   );
 }
@@ -71,9 +70,9 @@ TextStyle h1Light({required Color color}) {
 TextStyle h2Light({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 40 * ffem,
+    fontSize: 40,
     fontWeight: FontWeight.w300,
-    height: 1.5 * ffem / fem,
+    height: 1.5,
     color: color,
   );
 }
@@ -81,9 +80,9 @@ TextStyle h2Light({required Color color}) {
 TextStyle h3Light({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 32 * ffem,
+    fontSize: 32,
     fontWeight: FontWeight.w300,
-    height: 1.5 * ffem / fem,
+    height: 1.5,
     color: color,
   );
 }
@@ -91,9 +90,9 @@ TextStyle h3Light({required Color color}) {
 TextStyle h3LightBig({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 32 * ffem,
+    fontSize: 32,
     fontWeight: FontWeight.w400,
-    height: 1.5 * ffem / fem,
+    height: 1.5,
     color: color,
   );
 }
@@ -101,10 +100,10 @@ TextStyle h3LightBig({required Color color}) {
 TextStyle h4Light({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 24 * ffem,
+    fontSize: 24,
     fontWeight: FontWeight.w300,
-    height: 1.5 * ffem / fem,
-    letterSpacing: 1.44 * fem,
+    height: 1.5,
+    letterSpacing: 1.44,
     color: color,
   );
 }
@@ -112,10 +111,10 @@ TextStyle h4Light({required Color color}) {
 TextStyle h5Light({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 16 * ffem,
+    fontSize: 16,
     fontWeight: FontWeight.w300,
-    height: 1.5 * ffem / fem,
-    letterSpacing: 0.64 * fem,
+    height: 1.5,
+    letterSpacing: 0.64,
     color: color,
   );
 }
@@ -123,9 +122,9 @@ TextStyle h5Light({required Color color}) {
 TextStyle body1TextLight({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 18 * ffem,
+    fontSize: 18,
     fontWeight: FontWeight.w300,
-    height: 1.5 * ffem / fem,
+    height: 1.5,
     color: color,
   );
 }
@@ -133,10 +132,10 @@ TextStyle body1TextLight({required Color color}) {
 TextStyle buttonTextLight({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 16 * ffem,
+    fontSize: 16,
     fontWeight: FontWeight.w400,
-    height: 1.5 * ffem / fem,
-    letterSpacing: 0.64 * fem,
+    height: 1.5,
+    letterSpacing: 0.64,
     color: color,
   );
 }
@@ -145,10 +144,10 @@ TextStyle buttonTextLight({required Color color}) {
 TextStyle h1Bold({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 56 * ffem,
+    fontSize: 56,
     fontWeight: FontWeight.w600,
-    height: 1.5 * ffem / fem,
-    letterSpacing: -1.12 * fem,
+    height: 1.5,
+    letterSpacing: -1.12,
     color: color,
   );
 }
@@ -156,9 +155,9 @@ TextStyle h1Bold({required Color color}) {
 TextStyle h2Bold({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 40 * ffem,
+    fontSize: 40,
     fontWeight: FontWeight.w600,
-    height: 1.5 * ffem / fem,
+    height: 1.5,
     color: color,
   );
 }
@@ -166,9 +165,9 @@ TextStyle h2Bold({required Color color}) {
 TextStyle h3Bold({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 32 * ffem,
+    fontSize: 32,
     fontWeight: FontWeight.w600,
-    height: 1.5 * ffem / fem,
+    height: 1.5,
     color: color,
   );
 }
@@ -176,10 +175,10 @@ TextStyle h3Bold({required Color color}) {
 TextStyle h4Bold({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 24 * ffem,
+    fontSize: 24,
     fontWeight: FontWeight.w600,
-    height: 1.5 * ffem / fem,
-    letterSpacing: 1.44 * fem,
+    height: 1.5,
+    letterSpacing: 1.44,
     color: color,
   );
 }
@@ -187,10 +186,10 @@ TextStyle h4Bold({required Color color}) {
 TextStyle h5Bold({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 16 * ffem,
+    fontSize: 16,
     fontWeight: FontWeight.w600,
-    height: 1.5 * ffem / fem,
-    letterSpacing: 0.64 * fem,
+    height: 1.5,
+    letterSpacing: 0.64,
     color: color,
   );
 }
@@ -198,9 +197,9 @@ TextStyle h5Bold({required Color color}) {
 TextStyle body1TextBold({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 18 * ffem,
+    fontSize: 18,
     fontWeight: FontWeight.w600,
-    height: 1.5 * ffem / fem,
+    height: 1.5,
     color: color,
   );
 }
@@ -208,10 +207,10 @@ TextStyle body1TextBold({required Color color}) {
 TextStyle buttonTextBold({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 16 * ffem,
+    fontSize: 16,
     fontWeight: FontWeight.w600,
-    height: 1.5 * ffem / fem,
-    letterSpacing: 0.64 * fem,
+    height: 1.5,
+    letterSpacing: 0.64,
     color: color,
   );
 }
@@ -219,9 +218,9 @@ TextStyle buttonTextBold({required Color color}) {
 TextStyle label({required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 14 * ffem,
+    fontSize: 14,
     fontWeight: FontWeight.w600,
-    height: 1.5 * ffem / fem,
+    height: 1.5,
     color: color,
   );
 }

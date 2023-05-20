@@ -5,6 +5,6 @@ navigateToPage(BuildContext context, String pageRoute) {
 }
 
 navigateToHomePage(BuildContext context) {
-  // TODO: Fix or remove
+  // TODO: Fix or remove - Maybe it's already fixed, needs testing
   //  return Navigator.pushNamed(context, '/');
 }

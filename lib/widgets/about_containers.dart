@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/pages/sections/about_me.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/typography.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 
 class LeftAboutMeText extends StatelessWidget {
   const LeftAboutMeText({
@@ -12,24 +11,24 @@ class LeftAboutMeText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 600 * fem,
+      width: 600,
       height: double.infinity,
       child: Padding(
-        padding: EdgeInsets.only(bottom: 150.0 * fem),
+        padding: const EdgeInsets.only(bottom: 150.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 18.0 * fem),
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
               child: Text(
                 'A BIT ABOUT ME',
                 style: h4Bold(color: neutral1Color),
               ),
             ),
-            Padding(padding: EdgeInsets.only(bottom: 16.0 * fem)),
+            const Padding(padding: EdgeInsets.only(bottom: 16.0)),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 18.0 * fem),
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
               child: RichText(
                 text: TextSpan(
                   children: [
@@ -70,15 +69,15 @@ class RightAboutMeImages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 600 * fem,
+      width: 600,
       height: double.infinity,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            margin: EdgeInsets.only(right: 32 * fem),
-            width: 282 * fem,
-            height: 374 * fem,
+            margin: const EdgeInsets.only(right: 32),
+            width: 282,
+            height: 374,
             child: aboutMeMusicImg,
           ),
           SizedBox(
@@ -88,14 +87,14 @@ class RightAboutMeImages extends StatelessWidget {
               children: [
                 Container(
                   margin:
-                      EdgeInsets.only(bottom: 32 * fem),
-                  width: 282 * fem,
-                  height: 374 * fem,
+                      const EdgeInsets.only(bottom: 32),
+                  width: 282,
+                  height: 374,
                   child: aboutMeDesignImg,
                 ),
-                SizedBox(
-                  width: 282 * fem,
-                  height: 374 * fem,
+                const SizedBox(
+                  width: 282,
+                  height: 374,
                   child: aboutMeChessImg,
                 ),
               ],

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 
 const SkillImg _flutterImg = SkillImg(path: "../assets/images/flutterimg.png");
 const SkillImg _sqlImg = SkillImg(path: "../assets/images/sqlimg.png");
@@ -16,9 +15,9 @@ class SkillsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 112 * fem, top: 80 * fem, right: 112 * fem, bottom: 130 * fem),
+      padding: const EdgeInsets.only(left: 112, top: 80, right: 112, bottom: 130),
       width: double.infinity,
-      height: 583.9 * fem,
+      height: 583.9,
       child: SizedBox(
         width: double.infinity,
         height: double.infinity,
@@ -41,7 +40,7 @@ class _SkillsBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 201.9 * fem,
+      height: 201.9,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

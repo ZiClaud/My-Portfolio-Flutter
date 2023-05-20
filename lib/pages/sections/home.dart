@@ -3,7 +3,6 @@ import 'package:my_portfolio/main.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/widgets/section_containers.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
@@ -33,14 +32,14 @@ class _HeaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 48 * fem,
+      height: 48,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
-            width: 48 * fem,
-            height: 48 * fem,
-            child: const LogoImage(),
+          const SizedBox(
+            width: 48,
+            height: 48,
+            child: LogoImage(),
           ),
           const Spacer(),
           Row(
@@ -87,7 +86,7 @@ class _TitleAndJobWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 249 * fem, bottom: 249 * fem),
+      margin: const EdgeInsets.only(top: 249, bottom: 249),
       //  TODO: Change and fix for different devices
       child: RichText(
         textAlign: TextAlign.center,
@@ -113,10 +112,10 @@ class _ArrowDownWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 20 * fem,
-      height: 10 * fem,
-      child: const ArrowDownImage(),
+    return const SizedBox(
+      width: 20,
+      height: 10,
+      child: ArrowDownImage(),
     );
   }
 }

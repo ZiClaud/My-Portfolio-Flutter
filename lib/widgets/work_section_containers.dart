@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/responsive/responsive.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/typography.dart';
-import 'package:my_portfolio/utils/media_query.dart';
+import 'package:my_portfolio/utils/navigate_to_page.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
-import '../utils/navigate_to_page.dart';
 // TODO: Move everything to works.dart in basics
 
 /// Work section containers
@@ -100,7 +99,6 @@ class _WorkContainerImageText extends StatelessWidget {
   final String? pageRoute;
 
   const _WorkContainerImageText({
-    super.key,
     required this.child,
     required this.title,
     required this.description,
@@ -142,7 +140,6 @@ class _WorkContainerTextImage extends StatelessWidget {
   final String? pageRoute;
 
   const _WorkContainerTextImage({
-    super.key,
     required this.child,
     required this.title,
     required this.description,
@@ -184,7 +181,6 @@ class _WorkContainerMobile extends StatelessWidget {
   final String? pageRoute;
 
   const _WorkContainerMobile({
-    super.key,
     required this.child,
     required this.title,
     required this.description,
@@ -225,8 +221,8 @@ class _WorkImagePart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 600 * fem,
-      height: 500 * fem,
+      width: 600,
+      height: 500,
       child: image,
     );
   }
@@ -250,9 +246,9 @@ class _WorkTextPart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 600 * fem,
+      width: 600,
       // TODO: Change 600 to 550 if we don't want it to be perfectly centered
-      height: 450 * fem,
+      height: 450,
       // TODO: It's 450 because 500 (like the image) looks bad
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -324,7 +320,7 @@ class _WorkTextCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 5.0 * fem, bottom: 5.0 * fem),
+      padding: EdgeInsets.only(left: 5.0, bottom: 5.0),
       child: Text(
         category,
         style: body1TextLight(color: neutral1Color),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 
 /// WIDGETS
 
@@ -39,18 +38,18 @@ class _MyButtonState extends State<MyButton> {
         child: Container(
           decoration: BoxDecoration(
             border: Border.all(color: neutral2Color),
-            borderRadius: BorderRadius.circular(100 * fem),
+            borderRadius: BorderRadius.circular(100),
             color: buttonColor,
           ),
           child: Padding(
-            padding: EdgeInsets.symmetric(
-                vertical: 8.0 * fem, horizontal: 16.0 * fem),
+            padding: const EdgeInsets.symmetric(
+                vertical: 8.0, horizontal: 16.0),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(widget.text, style: buttonTextLight(color: neutral1Color)),
-                Padding(padding: EdgeInsets.only(left: 8.0 * fem * fem)),
+                const Padding(padding: EdgeInsets.only(left: 8.0)),
                 const ArrowRightImg(),
               ],
             ),
@@ -118,16 +117,16 @@ class SpaceWidgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return (inHeight)
-        ? SizedBox(
-            height: 32 * fem,
+        ? const SizedBox(
+            height: 32,
           )
         : (inWidth)
-            ? SizedBox(
-                width: 32 * fem,
+            ? const SizedBox(
+                width: 32,
               )
-            : SizedBox(
-                height: 32 * fem,
-                width: 32 * fem,
+            : const SizedBox(
+                height: 32,
+                width: 32,
               );
   }
 }

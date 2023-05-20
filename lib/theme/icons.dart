@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/utils/utils.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
@@ -74,15 +73,15 @@ class WorkImg extends StatelessWidget {
       child: path != null
           ? Image(
               image: AssetImage(path!),
-              width: 591 * fem,
-              height: 500 * fem,
+              width: 591,
+              height: 500,
               fit: BoxFit.cover,
             )
           : HighDefinitionImage(
               lowResImageURL: url,
               highResImageURL: urlHD!,
-              width: 591 * fem,
-              height: 500 * fem,
+              width: 591,
+              height: 500,
               fit: BoxFit.cover,
             ),
     );
@@ -104,14 +103,14 @@ class AboutMeImage extends StatelessWidget {
       child: path != null
           ? Image(
               image: AssetImage(path!),
-              width: 282 * fem,
-              height: 374 * fem,
+              width: 282,
+              height: 374,
               fit: BoxFit.cover,
             )
           : Image.network(
               url!,
-              width: 282 * fem,
-              height: 374 * fem,
+              width: 282,
+              height: 374,
               fit: BoxFit.cover,
             ),
     );
@@ -180,8 +179,8 @@ class ArrowDownImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.network(
       "https://cdn-icons-png.flaticon.com/512/5093/5093064.png",
-      width: 20 * fem,
-      height: 10 * fem,
+      width: 20,
+      height: 10,
       color: Colors.white,
     );
   }
@@ -196,8 +195,8 @@ class ArrowRightImg extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.network(
       "https://cdn.iconscout.com/icon/free/png-256/right-arrow-1780566-1514442.png",
-      width: 13 * fem,
-      height: 20 * fem,
+      width: 13,
+      height: 20,
       color: Colors.white,
       alignment: Alignment.center,
       fit: BoxFit.cover,

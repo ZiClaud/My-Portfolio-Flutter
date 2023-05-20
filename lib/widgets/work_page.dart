@@ -2,7 +2,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/typography.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/utils/utils.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
@@ -33,7 +32,7 @@ class MainWorkPage extends StatelessWidget {
       backgroundColor: backgroundColor,
       body: SafeArea(
         child: Padding(
-          padding: defaultPadding(),
+          padding: defaultPadding(context),
           child: ListView(
 //            mainAxisAlignment: MainAxisAlignment.spaceAround,
 //            crossAxisAlignment: CrossAxisAlignment.center,
@@ -70,13 +69,13 @@ class WorkPageImage extends StatelessWidget {
     return ClipRRect(
       borderRadius: getContainerRadius(),
       child: SizedBox(
-        width: 1024 * fem,
-        height: 550 * fem,
+        width: 1024,
+        height: 550,
         child: HighDefinitionImage(
           lowResImageURL: url,
           highResImageURL: urlHD,
-          width: 1024 * fem,
-          height: 550 * fem,
+          width: 1024,
+          height: 550,
           fit: BoxFit.cover,
         ),
       ),
@@ -93,7 +92,7 @@ class _ImageCarousel extends StatelessWidget { // TODO: Check if it's still lagg
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
-      options: CarouselOptions(height: 550 * fem),
+      options: CarouselOptions(height: 550),
       items: images
           .map(
             (item) => Container(
