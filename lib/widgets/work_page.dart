@@ -1,6 +1,6 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/utils/utils.dart';
@@ -85,55 +85,24 @@ class WorkPageImage extends StatelessWidget {
 }
 
 /// Carousel
-class _ImageCarousel extends StatefulWidget {
+class _ImageCarousel extends StatelessWidget { // TODO: Check if it's still laggy
   final List<WorkPageImage> images;
 
   const _ImageCarousel({Key? key, required this.images}) : super(key: key);
 
   @override
-  State<_ImageCarousel> createState() => _ImageCarouselState();
-}
-
-class _ImageCarouselState extends State<_ImageCarousel> {
-  int index = 0;
-
-  @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        OutlinedButton(
-          onPressed: () => _getPrevious(),
-          child: const ArrowLeftImg(),
-        ),
-        Container(
-          decoration: getContainerDecorationBorder(),
-          child: widget.images[index],
-        ),
-        OutlinedButton(
-          onPressed: () => _getNext(),
-          child: const ArrowRightImg(),
-        ),
-      ],
+    return CarouselSlider(
+      options: CarouselOptions(height: 550 * fem),
+      items: images
+          .map(
+            (item) => Container(
+              decoration: getContainerDecorationBorder(),
+              child: item,
+            ),
+          )
+          .toList(),
     );
-  }
-
-  _getPrevious() {
-    return setState(() {
-      index = index - 1;
-      if (index < 0) {
-        index = widget.images.length - 1;
-      }
-    });
-  }
-
-  _getNext() {
-    return setState(() {
-      index = index + 1;
-      if (index >= widget.images.length) {
-        index = 0;
-      }
-    });
   }
 }
 

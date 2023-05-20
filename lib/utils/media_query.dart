@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//TODO: REMOVE
 bool isMobile = false;
 
 double fem = 1;

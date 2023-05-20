@@ -7,7 +7,7 @@ import 'package:my_portfolio/pages/sections/skills.dart';
 import 'package:my_portfolio/pages/sections/works.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/utils/media_query.dart';
-import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+//import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-final ItemScrollController _scrollController = ItemScrollController();
+//final ItemScrollController _scrollController = ItemScrollController();
 
 class MainPage extends StatelessWidget { //TODO: Change to stateful widget?
   const MainPage({Key? key}) : super(key: key);
@@ -53,8 +53,8 @@ class MainPage extends StatelessWidget { //TODO: Change to stateful widget?
     return Scaffold(
       backgroundColor: backgroundColor,
       body: SafeArea(
-        child: ScrollablePositionedList.builder(
-          itemScrollController: _scrollController,
+        child: ListView.builder(
+//          itemScrollController: _scrollController,
           itemCount: items.length,
           itemBuilder: (context, index) {
             return items[index];
@@ -66,8 +66,10 @@ class MainPage extends StatelessWidget { //TODO: Change to stateful widget?
 }
 
 void scrollToItem(int index) {
+  /*
   _scrollController.scrollTo(
     index: index,
     duration: const Duration(milliseconds: 500),
   );
+  */
 }
