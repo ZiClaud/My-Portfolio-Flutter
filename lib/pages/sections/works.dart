@@ -12,7 +12,7 @@ class WorkPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SectionContainerColumn(widgets: _workWidgets());
+    return SectionContainerColumn(children: _workWidgets());
   }
 }
 

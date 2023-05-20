@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SectionContainerColumn(widgets: _homePageWidgets());
+    return SectionContainerColumn(children: _homePageWidgets());
   }
 }
 

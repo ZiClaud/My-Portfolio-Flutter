@@ -17,23 +17,23 @@ class _MainSectionContainer extends StatelessWidget {
 }
 
 class _SectionContainerFill extends StatelessWidget {
-  final Widget widget;
+  final Widget child;
 
-  const _SectionContainerFill({required this.widget});
+  const _SectionContainerFill({required this.child});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       constraints: BoxConstraints(minHeight: getScreenHeight()),
-      child: widget,
+      child: child,
     );
   }
 }
 
 class SectionContainerColumn extends StatelessWidget {
-  final List<Widget> widgets;
+  final List<Widget> children;
 
-  const SectionContainerColumn({super.key, required this.widgets});
+  const SectionContainerColumn({super.key, required this.children});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class SectionContainerColumn extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          for (Widget widget in widgets) widget,
+          for (Widget child in children) child,
         ],
       ),
     );
@@ -52,12 +52,12 @@ class SectionContainerColumn extends StatelessWidget {
 }
 
 class SectionContainerRow extends StatelessWidget {
-  final List<Widget> widgets;
+  final List<Widget> children;
   final double height;
 
   const SectionContainerRow({
     super.key,
-    required this.widgets,
+    required this.children,
     required this.height,
   });
 
@@ -71,7 +71,7 @@ class SectionContainerRow extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          for (Widget widget in widgets) widget,
+          for (Widget child in children) child,
         ],
       ),
     );
