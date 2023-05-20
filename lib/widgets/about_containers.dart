@@ -76,7 +76,7 @@ class RightAboutMeImages extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 32 * fem, 0 * fem),
+            margin: EdgeInsets.only(right: 32 * fem),
             width: 282 * fem,
             height: 374 * fem,
             child: aboutMeMusicImg,
@@ -88,7 +88,7 @@ class RightAboutMeImages extends StatelessWidget {
               children: [
                 Container(
                   margin:
-                      EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 32 * fem),
+                      EdgeInsets.only(bottom: 32 * fem),
                   width: 282 * fem,
                   height: 374 * fem,
                   child: aboutMeDesignImg,

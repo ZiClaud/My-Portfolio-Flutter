@@ -31,28 +31,23 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
-
-  @override
-  State<MainPage> createState() => _MainPageState();
-}
-
 final ItemScrollController _scrollController = ItemScrollController();
 
-class _MainPageState extends State<MainPage> {
+class MainPage extends StatelessWidget { //TODO: Change to stateful widget?
+  const MainPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     setIsMobile(context);
     setFEMeFFEM(context);
     setScreenWidthHeight(context);
 
-    final List<Widget> items = [
-      const HomePage(),
-      const SkillsPage(),
-      const WorkPage(),
-      const AboutMePage(),
-      const FooterPage(),
+    const List<Widget> items = [
+      HomePage(),
+      SkillsPage(),
+      WorkPage(),
+      AboutMePage(),
+      FooterPage(),
     ];
 
     return Scaffold(

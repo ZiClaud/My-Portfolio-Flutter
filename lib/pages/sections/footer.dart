@@ -39,15 +39,14 @@ class _LeftImages extends StatelessWidget {
         children: [
           Container(
             /// Position of mail
-            margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 42 * fem),
+            margin: EdgeInsets.only(bottom: 42 * fem),
             width: double.infinity,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Container(
                   /// Position of Github
-                  margin: EdgeInsets.fromLTRB(
-                      0 * fem, 0 * fem, 93 * fem, 83.25 * fem),
+                  margin: EdgeInsets.only(right: 93 * fem, bottom: 83.25 * fem),
                   width: 100 * fem,
                   height: 100 * fem,
                   child: FooterImg(
@@ -74,7 +73,7 @@ class _LeftImages extends StatelessWidget {
           ),
           Container(
             /// Position of Mail
-            margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 92 * fem, 0 * fem),
+            margin: EdgeInsets.only(right: 92 * fem),
             width: 100 * fem,
             height: 100 * fem,
             child: FooterImg(

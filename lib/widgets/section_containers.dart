@@ -38,7 +38,7 @@ class SectionContainerColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(112 * fem, 24 * fem, 112 * fem, 57 * fem),
+      padding: EdgeInsets.only(left: 112 * fem, top: 24 * fem, right: 112 * fem, bottom: 57 * fem),
       // TODO: Change with defaultPadding();
       width: double.infinity,
       child: Column(
@@ -64,7 +64,7 @@ class SectionContainerRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(112 * fem, 0 * fem, 112 * fem, 0 * fem),
+      padding: EdgeInsets.only(left: 112 * fem, right: 112 * fem),
       width: double.infinity,
       height: height * fem,
       child: Row(

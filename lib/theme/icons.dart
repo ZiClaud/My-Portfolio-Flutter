@@ -159,14 +159,9 @@ class _FooterImgState extends State<FooterImg> {
 }
 
 /// Other icons - arrows and logos
-class LogoImage extends StatefulWidget {
+class LogoImage extends StatelessWidget {
   const LogoImage({Key? key}) : super(key: key);
 
-  @override
-  State<LogoImage> createState() => _LogoImageState();
-}
-
-class _LogoImageState extends State<LogoImage> {
   @override
   Widget build(BuildContext context) {
     return const Image(

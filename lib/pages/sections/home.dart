@@ -87,7 +87,7 @@ class _TitleAndJobWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(0 * fem, 249 * fem, 0 * fem, 249 * fem),
+      margin: EdgeInsets.only(top: 249 * fem, bottom: 249 * fem),
       //  TODO: Change and fix for different devices
       child: RichText(
         textAlign: TextAlign.center,

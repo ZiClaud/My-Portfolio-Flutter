@@ -16,7 +16,7 @@ class SkillsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(112 * fem, 80 * fem, 112 * fem, 130 * fem),
+      padding: EdgeInsets.only(left: 112 * fem, top: 80 * fem, right: 112 * fem, bottom: 130 * fem),
       width: double.infinity,
       height: 583.9 * fem,
       child: SizedBox(
