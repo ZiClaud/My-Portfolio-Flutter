@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/basics/fake_db.dart';
+import 'package:my_portfolio/basics/work.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/widgets/section_containers.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
@@ -16,13 +17,13 @@ class WorkPage extends StatelessWidget {
 }
 
 List<Widget> _workWidgets() {
-  return [
-    const TitleBox(title1: 'My best ', title2: 'Works'),
-    iremi.getContainer(isImageFirst: true),
-    const SpaceWidgets(inHeight: true),
-    jeiom.getContainer(isImageLast: true),
-    const SpaceWidgets(inHeight: true),
-//    website.getContainer(isImageFirst: true),
-//    const SpaceWidgets(inHeight: true),
+  return const [
+    TitleBox(title1: 'My best ', title2: 'Works'),
+    WorkContainer(work: iremi, isImageFirst: true),
+    SpaceWidgets(inHeight: true),
+    WorkContainer(work: jeiom, isImageLast: true),
+    SpaceWidgets(inHeight: true),
+//    WorkContainer(work: website, isImageFirst: true),
+//    SpaceWidgets(inHeight: true),
   ];
 }

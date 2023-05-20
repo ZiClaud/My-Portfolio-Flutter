@@ -24,59 +24,6 @@ class Work {
     this.urlHD,
     this.path,
   }) : assert(path != null || urlHD != null);
-
-  Widget getContainer({isImageFirst = false, isImageLast = false}) {
-    assert(isImageFirst != isImageLast);
-    if (isMobile) {
-      return _getContainerMobile();
-    }
-    return isImageFirst ? _getContainerImageText() : _getContainerTextImage();
-  }
-
-  WorkContainerImageText _getContainerImageText() {
-    return WorkContainerImageText(
-      title: title,
-      description: description,
-      descriptionBold: descriptionBold,
-      category: category,
-      pageRoute: pageRoute,
-      child: WorkImg(
-        url: url,
-        urlHD: urlHD,
-        path: path,
-      ),
-    );
-  }
-
-  WorkContainerTextImage _getContainerTextImage() {
-    return WorkContainerTextImage(
-      title: title,
-      description: description,
-      descriptionBold: descriptionBold,
-      category: category,
-      pageRoute: pageRoute,
-      child: WorkImg(
-        url: url,
-        urlHD: urlHD,
-        path: path,
-      ),
-    );
-  }
-
-  WorkContainerMobile _getContainerMobile() {
-    return WorkContainerMobile(
-      title: title,
-      description: description,
-      descriptionBold: descriptionBold,
-      category: category,
-      pageRoute: pageRoute,
-      child: WorkImg(
-        url: url,
-        urlHD: urlHD,
-        path: path,
-      ),
-    );
-  }
 }
 
 class WorkPage {
@@ -107,6 +54,73 @@ class WorkPage {
       description2: description2,
       descriptionBold2: descriptionBold2,
       images: images,
+    );
+  }
+}
+
+class WorkContainer extends StatelessWidget {
+  final Work work;
+  final bool isImageFirst;
+  final bool isImageLast;
+
+  const WorkContainer(
+      {super.key,
+      required this.work,
+      this.isImageFirst = false,
+      this.isImageLast = false})
+      : assert(isImageFirst != isImageLast);
+
+  @override
+  Widget build(BuildContext context) {
+    return isMobile
+        ? _getContainerMobile()
+        : isImageFirst
+            ? _getContainerImageText()
+            : _getContainerTextImage();
+  }
+
+  WorkContainerImageText _getContainerImageText() {
+    return WorkContainerImageText(
+      title: work.title,
+      description: work.description,
+      descriptionBold: work.descriptionBold,
+      category: work.category,
+      pageRoute: work.pageRoute,
+      child: WorkImg(
+        url: work.url,
+        urlHD: work.urlHD,
+        path: work.path,
+      ),
+    );
+  }
+
+  WorkContainerTextImage _getContainerTextImage() {
+    return WorkContainerTextImage(
+      title: work.title,
+      description: work.description,
+      descriptionBold: work.descriptionBold,
+      category: work.category,
+      pageRoute: work.pageRoute,
+      child: WorkImg(
+        url: work.url,
+        urlHD: work.urlHD,
+        path: work.path,
+      ),
+    );
+  }
+
+  WorkContainerMobile _getContainerMobile() {
+    return WorkContainerMobile(
+      title: work.title,
+      description: work.description,
+      descriptionBold: work.descriptionBold,
+      category: work.category,
+      pageRoute: work.pageRoute,
+      child: WorkImg(
+        url: work.url,
+        urlHD: work.urlHD,
+        path: work.path,
+      ),
     );
   }
 }
