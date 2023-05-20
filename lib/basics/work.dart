@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 import 'package:my_portfolio/theme/icons.dart';
-import 'package:my_portfolio/utils/media_query.dart';
 import 'package:my_portfolio/widgets/work_page.dart';
 import 'package:my_portfolio/widgets/work_section_containers.dart';
 
@@ -72,55 +71,30 @@ class WorkContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return isMobile
-        ? _getContainerMobile()
-        : isImageFirst
-            ? _getContainerImageText()
-            : _getContainerTextImage();
-  }
-
-  WorkContainerImageText _getContainerImageText() {
-    return WorkContainerImageText(
-      title: work.title,
-      description: work.description,
-      descriptionBold: work.descriptionBold,
-      category: work.category,
-      pageRoute: work.pageRoute,
-      child: WorkImg(
-        url: work.url,
-        urlHD: work.urlHD,
-        path: work.path,
-      ),
-    );
-  }
-
-  WorkContainerTextImage _getContainerTextImage() {
-    return WorkContainerTextImage(
-      title: work.title,
-      description: work.description,
-      descriptionBold: work.descriptionBold,
-      category: work.category,
-      pageRoute: work.pageRoute,
-      child: WorkImg(
-        url: work.url,
-        urlHD: work.urlHD,
-        path: work.path,
-      ),
-    );
-  }
-
-  WorkContainerMobile _getContainerMobile() {
-    return WorkContainerMobile(
-      title: work.title,
-      description: work.description,
-      descriptionBold: work.descriptionBold,
-      category: work.category,
-      pageRoute: work.pageRoute,
-      child: WorkImg(
-        url: work.url,
-        urlHD: work.urlHD,
-        path: work.path,
-      ),
-    );
+    return isImageFirst
+        ? WorkContainerImageText(
+            title: work.title,
+            description: work.description,
+            descriptionBold: work.descriptionBold,
+            category: work.category,
+            pageRoute: work.pageRoute,
+            child: WorkImg(
+              url: work.url,
+              urlHD: work.urlHD,
+              path: work.path,
+            ),
+          )
+        : WorkContainerTextImage(
+            title: work.title,
+            description: work.description,
+            descriptionBold: work.descriptionBold,
+            category: work.category,
+            pageRoute: work.pageRoute,
+            child: WorkImg(
+              url: work.url,
+              urlHD: work.urlHD,
+              path: work.path,
+            ),
+          );
   }
 }

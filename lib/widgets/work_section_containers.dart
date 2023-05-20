@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/responsive/responsive.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/media_query.dart';
@@ -28,6 +29,88 @@ class WorkContainerImageText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return ResponsiveWidget(
+      desktop: _WorkContainerImageText(
+        title: title,
+        description: description,
+        descriptionBold: descriptionBold,
+        category: category,
+        pageRoute: pageRoute,
+        child: child,
+      ),
+      mobile: _WorkContainerMobile(
+        title: title,
+        description: description,
+        descriptionBold: descriptionBold,
+        category: category,
+        pageRoute: pageRoute,
+        child: child,
+      ),
+    );
+  }
+}
+
+class WorkContainerTextImage extends StatelessWidget {
+  final Widget child;
+  final String title;
+  final String description;
+  final String descriptionBold;
+  final String category;
+  final String? pageRoute;
+
+  const WorkContainerTextImage({
+    super.key,
+    required this.child,
+    required this.title,
+    required this.description,
+    required this.descriptionBold,
+    required this.category,
+    this.pageRoute,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ResponsiveWidget(
+      desktop: _WorkContainerTextImage(
+        title: title,
+        description: description,
+        descriptionBold: descriptionBold,
+        category: category,
+        pageRoute: pageRoute,
+        child: child,
+      ),
+      mobile: _WorkContainerMobile(
+        title: title,
+        description: description,
+        descriptionBold: descriptionBold,
+        category: category,
+        pageRoute: pageRoute,
+        child: child,
+      ),
+    );
+  }
+}
+
+class _WorkContainerImageText extends StatelessWidget {
+  final Widget child;
+  final String title;
+  final String description;
+  final String descriptionBold;
+  final String category;
+  final String? pageRoute;
+
+  const _WorkContainerImageText({
+    super.key,
+    required this.child,
+    required this.title,
+    required this.description,
+    required this.descriptionBold,
+    required this.category,
+    this.pageRoute,
+  });
+
+  @override
+  Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -50,7 +133,7 @@ class WorkContainerImageText extends StatelessWidget {
   }
 }
 
-class WorkContainerTextImage extends StatelessWidget {
+class _WorkContainerTextImage extends StatelessWidget {
   final Widget child;
   final String title;
   final String description;
@@ -58,7 +141,7 @@ class WorkContainerTextImage extends StatelessWidget {
   final String category;
   final String? pageRoute;
 
-  const WorkContainerTextImage({
+  const _WorkContainerTextImage({
     super.key,
     required this.child,
     required this.title,
@@ -92,7 +175,7 @@ class WorkContainerTextImage extends StatelessWidget {
   }
 }
 
-class WorkContainerMobile extends StatelessWidget {
+class _WorkContainerMobile extends StatelessWidget {
   final Widget child;
   final String title;
   final String description;
@@ -100,7 +183,7 @@ class WorkContainerMobile extends StatelessWidget {
   final String category;
   final String? pageRoute;
 
-  const WorkContainerMobile({
+  const _WorkContainerMobile({
     super.key,
     required this.child,
     required this.title,

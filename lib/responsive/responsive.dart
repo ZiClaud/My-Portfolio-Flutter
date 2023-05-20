@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// TODO: Use on widgets
+// TODO: Use on widgets that need to be responsive
 class ResponsiveWidget extends StatelessWidget {
   final Widget mobile;
   final Widget desktop;
