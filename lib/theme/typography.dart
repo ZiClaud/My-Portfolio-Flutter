@@ -21,7 +21,9 @@ class TitleBox extends StatelessWidget {
       margin: const EdgeInsets.only(left: 38, right: 38, bottom: 38),
       width: double.infinity,
       child: RichText(
-        textAlign: center ? TextAlign.center : TextAlign.start,
+        textAlign: (center || ResponsiveWidget.isMobile(context))
+            ? TextAlign.center
+            : TextAlign.start,
         text: TextSpan(
           children: [
             TextSpan(
