@@ -3,6 +3,7 @@ import 'package:my_portfolio/main.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/utils/utils.dart';
 import 'package:my_portfolio/widgets/section_containers.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
@@ -86,7 +87,7 @@ class _TitleAndJobWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 249, bottom: 249),
+      margin: defaultPadding(context, horizontal: 0, top: 249, bottom: 249),
       //  TODO: Change and fix for different devices
       child: RichText(
         textAlign: TextAlign.center,

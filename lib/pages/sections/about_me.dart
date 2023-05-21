@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/responsive/responsive.dart';
 import 'package:my_portfolio/theme/icons.dart';
+import 'package:my_portfolio/utils/utils.dart';
 import 'package:my_portfolio/widgets/about_containers.dart';
-import 'package:my_portfolio/widgets/section_containers.dart';
 
 const AboutMeImage aboutMeDesignImg = AboutMeImage(
     url:
@@ -17,7 +18,41 @@ class AboutMePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SectionContainerRow(height: 800, children: _aboutMeWidgets());
+    return _SectionContainerRowAboutMe(
+        height: 800, children: _aboutMeWidgets());
+  }
+}
+
+class _SectionContainerRowAboutMe extends StatelessWidget {
+  final List<Widget> children;
+  final double height;
+
+  const _SectionContainerRowAboutMe({
+    required this.children,
+    required this.height,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: defaultPadding(context),
+      width: double.infinity,
+      height: height,
+      child: ResponsiveWidget(
+        desktop: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            for (Widget child in children) child,
+          ],
+        ),
+        mobile: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [children.first],  // TODO: add images?
+        ),
+      ),
+    );
   }
 }
 

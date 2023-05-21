@@ -194,6 +194,12 @@ class _WorkContainerMobile extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        /// Title and category
+        _WorkTitleAndCategoryMobile(
+          title: title,
+          category: category,
+        ),
+
         /// Image
         _WorkImagePart(image: child),
 
@@ -201,13 +207,39 @@ class _WorkContainerMobile extends StatelessWidget {
         const SpaceWidgets(inHeight: true),
 
         /// Text part
-        _WorkTextPart(
-          title: title,
+        _WorkTextPartMobile(
           description: description,
           descriptionBold: descriptionBold,
-          category: category,
           pageRoute: pageRoute,
         ),
+      ],
+    );
+  }
+}
+
+class _WorkTitleAndCategoryMobile extends StatelessWidget {
+  final String title;
+  final String category;
+
+  const _WorkTitleAndCategoryMobile({
+    required this.title,
+    required this.category,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Spacer(),
+        const Spacer(),
+
+        /// Title
+        _WorkTextTitle(title: title),
+        const Spacer(),
+
+        /// Category
+        _WorkTextCategory(category: category),
       ],
     );
   }
@@ -259,6 +291,44 @@ class _WorkTextPart extends StatelessWidget {
               description: description, descriptionBold: descriptionBold),
           const Spacer(),
           _WorkTextCategory(category: category),
+          if (pageRoute != null)
+            MyButton(
+              text: "VIEW WORK",
+              onPressed: () {
+                navigateToPage(context, pageRoute!);
+              },
+            ),
+          const Spacer(),
+        ],
+      ),
+    );
+  }
+}
+
+class _WorkTextPartMobile extends StatelessWidget {
+  final String description;
+  final String descriptionBold;
+  final String? pageRoute;
+
+  const _WorkTextPartMobile({
+    required this.description,
+    required this.descriptionBold,
+    this.pageRoute,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 600,
+      // TODO: Change 600 to 550 if we don't want it to be perfectly centered
+      height: 450,
+      // TODO: It's 450 because 500 (like the image) looks bad
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Spacer(),
+          _WorkTextDescription(
+              description: description, descriptionBold: descriptionBold),
           if (pageRoute != null)
             MyButton(
               text: "VIEW WORK",

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/utils/utils.dart';
 
 /// Section containers
 class _MainSectionContainer extends StatelessWidget {
@@ -39,8 +40,7 @@ class SectionContainerColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 112, top: 24, right: 112, bottom: 57),
-      // TODO: Change with defaultPadding();
+      padding: defaultPadding(context, top: 24, bottom: 57),
       width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -52,12 +52,11 @@ class SectionContainerColumn extends StatelessWidget {
   }
 }
 
-class SectionContainerRow extends StatelessWidget {
+class _SectionContainerRow extends StatelessWidget {
   final List<Widget> children;
   final double height;
 
-  const SectionContainerRow({
-    super.key,
+  const _SectionContainerRow({
     required this.children,
     required this.height,
   });
@@ -65,7 +64,7 @@ class SectionContainerRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 112, right: 112),
+      padding: defaultPadding(context),
       width: double.infinity,
       height: height,
       child: Row(

@@ -6,11 +6,18 @@ import 'package:my_portfolio/theme/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 /// Default padding for mobile and desktop
-EdgeInsets defaultPadding(BuildContext context) {
+EdgeInsets defaultPadding(BuildContext context,
+    {double horizontal = 112, double top = 0.0, double bottom = 0.0}) {
   if (ResponsiveWidget.isMobile(context)) {
-    return const EdgeInsets.symmetric(horizontal: 0);
+    return EdgeInsets.only(
+        left: horizontal / 20,
+        right: horizontal / 20,
+        top: top / 2,
+        bottom: bottom / 2);
+  } else {
+    return EdgeInsets.only(
+        left: horizontal, right: horizontal, top: top, bottom: bottom);
   }
-  return const EdgeInsets.symmetric(horizontal: 112);
 }
 
 BorderRadius getContainerRadius() {
