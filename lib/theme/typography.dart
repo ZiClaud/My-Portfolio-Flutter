@@ -17,7 +17,7 @@ class TitleBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 38, right: 38, bottom: 38),
+      margin: const EdgeInsets.only(left: 38, right: 38, bottom: 38),
       width: double.infinity,
       child: RichText(
         textAlign: center ? TextAlign.center : TextAlign.start,

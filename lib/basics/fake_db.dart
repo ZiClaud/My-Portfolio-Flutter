@@ -1,5 +1,5 @@
 import 'package:my_portfolio/basics/work.dart';
-import 'package:my_portfolio/widgets/work_page.dart';
+import 'package:my_portfolio/pages/work_page.dart';
 
 const Work iremi = Work(
   title: "Iremi App",

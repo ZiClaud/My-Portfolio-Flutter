@@ -78,8 +78,11 @@ class _LeftImages extends StatelessWidget {
             child: FooterImg(
               path: "../assets/images/mail_img.png",
               onPressed: () {
-                // TODO: Fix
-                sendEmail("claudiodimaiozc@gmail.com");
+                try {
+                  sendEmail("claudiodimaiozc@gmail.com");
+                } catch (e) {
+                  //TODO: showDialog
+                }
               },
             ),
           ),

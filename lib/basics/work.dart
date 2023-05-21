@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:my_portfolio/theme/icons.dart';
-import 'package:my_portfolio/widgets/work_page.dart';
+import 'package:my_portfolio/pages/work_page.dart';
 import 'package:my_portfolio/widgets/work_section_containers.dart';
 
 class Work {
