@@ -33,6 +33,12 @@ BoxDecoration getContainerDecorationBorder() {
 
 Future<void> launchMyUrl(String urlString) async {
   Uri url = Uri.parse(urlString);
+
+  if (!await canLaunchUrl(url)){
+    print('Could not launch $url');
+    throw Exception('Could not launch $url');
+  }
+
   if (!await launchUrl(url)) {
     print('Could not launch $url');
     throw Exception('Could not launch $url');
@@ -46,12 +52,7 @@ void sendEmail(String recipient) async {
 //    subject: 'mailto example subject',
 //    body: 'mailto example body',
   );
-  Uri url = Uri(path: '$mailtoLink');
-
-  if (!await launchUrl(url)) {
-    print('Could not launch $mailtoLink');
-    throw Exception('Could not launch $mailtoLink');
-  }
+  launchMyUrl('$mailtoLink');
 }
 
 /*
