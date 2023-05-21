@@ -91,16 +91,20 @@ class _ImageCarousel extends StatelessWidget { // TODO: Check if it's still lagg
 
   @override
   Widget build(BuildContext context) {
-    return CarouselSlider(
-      options: CarouselOptions(height: 550),
-      items: images
-          .map(
-            (item) => Container(
-              decoration: getContainerDecorationBorder(),
-              child: item,
-            ),
-          )
-          .toList(),
+    return SizedBox(
+      width: 1024,
+      height: 550,
+      child: CarouselSlider(
+        options: CarouselOptions(autoPlay: true),
+        items: images
+            .map(
+              (item) => Container(
+                decoration: getContainerDecorationBorder(),
+                child: item,
+              ),
+            )
+            .toList(),
+      ),
     );
   }
 }
