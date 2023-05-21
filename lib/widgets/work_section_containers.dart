@@ -3,7 +3,7 @@ import 'package:my_portfolio/responsive/responsive.dart';
 import 'package:my_portfolio/responsive/responsive_widgets.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/typography.dart';
-import 'package:my_portfolio/utils/navigate_to_page.dart';
+import 'package:my_portfolio/utils/navigation.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
 // TODO: Move everything to works.dart in basics

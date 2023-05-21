@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/main.dart';
 import 'package:my_portfolio/responsive/responsive.dart';
 import 'package:my_portfolio/responsive/responsive_hero.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/utils/navigation.dart';
 import 'package:my_portfolio/utils/utils.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 

@@ -48,15 +48,10 @@ void sendEmail(String recipient) async {
   );
   Uri url = Uri(path: '$mailtoLink');
 
-  if (await canLaunchUrl(url)) {
-    await launchUrl(url);
-  } else {
+  if (!await launchUrl(url)) {
     print('Could not launch $mailtoLink');
     throw Exception('Could not launch $mailtoLink');
   }
-
-  // Launch the mail app with the email details
-  await launchUrl(url);
 }
 
 /*

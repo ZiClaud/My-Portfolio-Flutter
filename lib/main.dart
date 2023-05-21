@@ -6,6 +6,7 @@ import 'package:my_portfolio/pages/sections/home.dart';
 import 'package:my_portfolio/pages/sections/skills.dart';
 import 'package:my_portfolio/pages/sections/works.dart';
 import 'package:my_portfolio/theme/colors.dart';
+import 'package:my_portfolio/utils/navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,17 +48,8 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       body: SafeArea(
-        child: ListView.builder(
-          itemCount: items.length,
-          itemBuilder: (context, index) {
-            return items[index];
-          },
-        ),
+        child: ScrollablePage(children: items),
       ),
     );
   }
-}
-
-void scrollToItem(int index) {
-  // TODO: Fix
 }
