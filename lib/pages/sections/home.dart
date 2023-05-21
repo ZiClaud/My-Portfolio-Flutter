@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/main.dart';
+import 'package:my_portfolio/responsive/responsive.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
@@ -20,7 +21,7 @@ class HomePage extends StatelessWidget {
 
 List<Widget> _homePageWidgets() {
   return const [
-    _HeaderWidget(),
+     _HeaderWidget(),
     _TitleAndJobWidget(),
     _ArrowDownWidget(),
   ];
@@ -31,7 +32,7 @@ class _HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return (ResponsiveWidget.isMobile(context)) ? Container() :  SizedBox(
       width: double.infinity,
       height: 48,
       child: Row(

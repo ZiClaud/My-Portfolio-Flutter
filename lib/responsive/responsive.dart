@@ -25,6 +25,9 @@ class ResponsiveWidget extends StatelessWidget {
   static bool isDesktop(BuildContext context) =>
       MediaQuery.of(context).size.width >= 576;
 
+  static double getWidth(BuildContext context) =>
+      MediaQuery.of(context).size.width;
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(

@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/pages/sections/about_me.dart';
+import 'package:my_portfolio/responsive/responsive.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/typography.dart';
 
-class LeftAboutMeText extends StatelessWidget {
-  const LeftAboutMeText({
+class AboutMeText extends StatelessWidget {
+  const AboutMeText({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 600,
-      height: double.infinity,
+      width: ResponsiveWidget.isDesktop(context) ? 600 : ResponsiveWidget.getWidth(context) * 0.9,
+      height: ResponsiveWidget.isDesktop(context) ? double.infinity : null,
       child: Padding(
         padding: const EdgeInsets.only(bottom: 150.0),
         child: Column(
@@ -61,8 +62,8 @@ class LeftAboutMeText extends StatelessWidget {
   }
 }
 
-class RightAboutMeImages extends StatelessWidget {
-  const RightAboutMeImages({
+class AboutMeImages extends StatelessWidget {
+  const AboutMeImages({
     super.key,
   });
 
@@ -86,8 +87,7 @@ class RightAboutMeImages extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  margin:
-                      const EdgeInsets.only(bottom: 32),
+                  margin: const EdgeInsets.only(bottom: 32),
                   width: 282,
                   height: 374,
                   child: aboutMeDesignImg,

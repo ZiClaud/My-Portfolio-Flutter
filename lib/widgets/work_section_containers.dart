@@ -318,27 +318,21 @@ class _WorkTextPartMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 600,
-      // TODO: Change 600 to 550 if we don't want it to be perfectly centered
-      height: 450,
-      // TODO: It's 450 because 500 (like the image) looks bad
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Spacer(),
-          _WorkTextDescription(
-              description: description, descriptionBold: descriptionBold),
-          if (pageRoute != null)
-            MyButton(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _WorkTextDescription(
+            description: description, descriptionBold: descriptionBold),
+        if (pageRoute != null)
+          Center(
+            child: MyButton(
               text: "VIEW WORK",
               onPressed: () {
                 navigateToPage(context, pageRoute!);
               },
             ),
-          const Spacer(),
-        ],
-      ),
+          ),
+      ],
     );
   }
 }

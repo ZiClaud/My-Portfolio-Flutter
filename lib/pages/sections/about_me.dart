@@ -58,7 +58,7 @@ class _SectionContainerRowAboutMe extends StatelessWidget {
 
 List<Widget> _aboutMeWidgets() {
   return const [
-    LeftAboutMeText(),
-    RightAboutMeImages(),
+    AboutMeText(),
+    AboutMeImages(),
   ];
 }
