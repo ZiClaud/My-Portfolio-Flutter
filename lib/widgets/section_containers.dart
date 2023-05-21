@@ -18,9 +18,8 @@ class _MainSectionContainer extends StatelessWidget {
 
 class _SectionContainerFill extends StatelessWidget {
   final Widget child;
-  final BuildContext context;
 
-  const _SectionContainerFill({required this.child, required this.context});
+  const _SectionContainerFill({required this.child});
 
   @override
   Widget build(BuildContext context) {

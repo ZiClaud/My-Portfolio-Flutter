@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/main.dart';
 import 'package:my_portfolio/responsive/responsive.dart';
+import 'package:my_portfolio/responsive/responsive_hero.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/utils.dart';
-import 'package:my_portfolio/widgets/section_containers.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,16 +15,46 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SectionContainerColumn(children: _homePageWidgets());
+    return ResponsiveHero(children: _homePageWidgets());
   }
 }
 
 List<Widget> _homePageWidgets() {
   return const [
-     _HeaderWidget(),
+    _Header(),
+    _SpacerIfMobile(),
     _TitleAndJobWidget(),
+    _SpacerIfMobile(),
     _ArrowDownWidget(),
   ];
+}
+
+class _SpacerIfMobile extends StatelessWidget {
+  const _SpacerIfMobile({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return (ResponsiveWidget.isMobile(context))
+        ? const Spacer()
+        : const SizedBox();
+  }
+}
+
+class _Header extends StatelessWidget {
+  const _Header({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return (ResponsiveWidget.isMobile(context))
+        ? Row(children: const [
+            SizedBox(
+              width: 48,
+              height: 48,
+              child: LogoImage(),
+            ),
+          ])
+        : const _HeaderWidget();
+  }
 }
 
 class _HeaderWidget extends StatelessWidget {
@@ -32,7 +62,7 @@ class _HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return (ResponsiveWidget.isMobile(context)) ? Container() :  SizedBox(
+    return SizedBox(
       width: double.infinity,
       height: 48,
       child: Row(
