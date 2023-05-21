@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/responsive/responsive.dart';
+import 'package:my_portfolio/responsive/responsive_widgets.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/navigate_to_page.dart';
@@ -252,7 +253,7 @@ class _WorkImagePart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return ResponsiveBox(
       width: 600,
       height: 500,
       child: image,
@@ -318,21 +319,23 @@ class _WorkTextPartMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _WorkTextDescription(
-            description: description, descriptionBold: descriptionBold),
-        if (pageRoute != null)
-          Center(
-            child: MyButton(
-              text: "VIEW WORK",
-              onPressed: () {
-                navigateToPage(context, pageRoute!);
-              },
+    return ResponsiveBox(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _WorkTextDescription(
+              description: description, descriptionBold: descriptionBold),
+          if (pageRoute != null)
+            Center(
+              child: MyButton(
+                text: "VIEW WORK",
+                onPressed: () {
+                  navigateToPage(context, pageRoute!);
+                },
+              ),
             ),
-          ),
-      ],
+        ],
+      ),
     );
   }
 }

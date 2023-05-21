@@ -38,9 +38,6 @@ class SkillsPage extends StatelessWidget {
 class _SkillsBox extends StatelessWidget {
   const _SkillsBox({Key? key}) : super(key: key);
 
-  final Padding _padding =
-      const Padding(padding: EdgeInsets.symmetric(horizontal: 75));
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -58,16 +55,11 @@ class _SkillsBox extends StatelessWidget {
         ],
       ) : ListView(
         scrollDirection: Axis.horizontal,
-        children: [
-          _padding,
+        children: const [
           _flutterImg,
-          _padding,
           _sqlImg,
-          _padding,
           _pythonImg,
-          _padding,
           _javaImg,
-          _padding,
           // TODO: Firebase?
         ],
       ),
