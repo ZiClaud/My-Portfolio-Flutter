@@ -23,7 +23,7 @@ class LeftAboutMeText extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
               child: Text(
                 'A BIT ABOUT ME',
-                style: h4Bold(color: neutral1Color),
+                style: h4Bold(context, color: neutral1Color),
               ),
             ),
             const Padding(padding: EdgeInsets.only(bottom: 16.0)),
@@ -35,20 +35,20 @@ class LeftAboutMeText extends StatelessWidget {
                     TextSpan(
                       text:
                           'As a software developer, I am driven to create digital experiences that are both ',
-                      style: h3Light(color: neutral2Color),
+                      style: h3Light(context, color: neutral2Color),
                     ),
                     TextSpan(
                       text: 'visually striking and intuitive to navigate. ',
-                      style: h3Bold(color: neutral1Color),
+                      style: h3Bold(context, color: neutral1Color),
                     ),
                     TextSpan(
                       text:
                           'Besides programming, I am also deeply interested in ',
-                      style: h3Light(color: neutral2Color),
+                      style: h3Light(context, color: neutral2Color),
                     ),
                     TextSpan(
                       text: 'design, music, and chess.',
-                      style: h3Bold(color: neutral1Color),
+                      style: h3Bold(context, color: neutral1Color),
                     ),
                   ],
                 ),

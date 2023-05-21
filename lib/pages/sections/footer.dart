@@ -151,11 +151,11 @@ class _ContactText extends StatelessWidget {
               children: [
                 TextSpan(
                   text: 'Get ',
-                  style: h1Light(color: neutral2Color),
+                  style: h1Light(context, color: neutral2Color),
                 ),
                 TextSpan(
                   text: 'in Touch.',
-                  style: h1Bold(color: neutral1Color),
+                  style: h1Bold(context, color: neutral1Color),
                 ),
               ],
             ),
@@ -163,7 +163,7 @@ class _ContactText extends StatelessWidget {
           Text(
             'So that we can start working together!',
             textAlign: TextAlign.center,
-            style: body1TextLight(color: neutral1Color),
+            style: body1TextLight(context, color: neutral1Color),
           ),
         ],
       ),

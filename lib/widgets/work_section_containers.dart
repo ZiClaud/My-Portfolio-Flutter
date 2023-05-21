@@ -350,7 +350,7 @@ class _WorkTextTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(title, style: h5Bold(color: neutral1Color));
+    return Text(title, style: h5Bold(context, color: neutral1Color));
   }
 }
 
@@ -370,11 +370,11 @@ class _WorkTextDescription extends StatelessWidget {
         children: [
           TextSpan(
             text: description,
-            style: h3Bold(color: neutral2Color),
+            style: h3Bold(context, color: neutral2Color),
           ),
           TextSpan(
             text: descriptionBold,
-            style: h3Bold(color: neutral1Color),
+            style: h3Bold(context, color: neutral1Color),
           ),
         ],
       ),
@@ -390,10 +390,10 @@ class _WorkTextCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 5.0, bottom: 5.0),
+      padding: const EdgeInsets.only(left: 5.0, bottom: 5.0),
       child: Text(
         category,
-        style: body1TextLight(color: neutral1Color),
+        style: body1TextLight(context, color: neutral1Color),
       ),
     );
   }

@@ -118,7 +118,7 @@ class _WorkTitle extends StatelessWidget {
       child: Center(
         child: Text(
           title,
-          style: h2Bold(color: neutral1Color),
+          style: h2Bold(context, color: neutral1Color),
         ),
       ),
     );
@@ -144,7 +144,7 @@ class _WorkSkills extends StatelessWidget {
                 (skill) => Chip(
                   label: Text(
                     skill,
-                    style: h5Bold(color: backgroundColor),
+                    style: h5Bold(context, color: backgroundColor),
                   ),
                   backgroundColor: neutral2Color,
                 ),
@@ -178,19 +178,19 @@ class _WorkDescription extends StatelessWidget {
           children: [
             TextSpan(
               text: '$description1 ',
-              style: h3Light(color: neutral2Color),
+              style: h3Light(context, color: neutral2Color),
             ),
             TextSpan(
               text: '$descriptionBold1 ',
-              style: h3Bold(color: neutral1Color),
+              style: h3Bold(context, color: neutral1Color),
             ),
             TextSpan(
               text: '$description2 ',
-              style: h3Light(color: neutral2Color),
+              style: h3Light(context, color: neutral2Color),
             ),
             TextSpan(
               text: descriptionBold2,
-              style: h3Bold(color: neutral1Color),
+              style: h3Bold(context, color: neutral1Color),
             ),
           ],
         ),

@@ -42,13 +42,14 @@ class _MyButtonState extends State<MyButton> {
             color: buttonColor,
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-                vertical: 8.0, horizontal: 16.0),
+            padding:
+                const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(widget.text, style: buttonTextLight(color: neutral1Color)),
+                Text(widget.text,
+                    style: buttonTextLight(context, color: neutral1Color)),
                 const Padding(padding: EdgeInsets.only(left: 8.0)),
                 const ArrowRightImg(),
               ],
@@ -95,6 +96,7 @@ class _HoveringTextState extends State<HoveringText> {
         child: Text(
           widget.text,
           style: label(
+            context,
             color: isHovering ? primaryColor : neutral1Color,
           ),
         ),

@@ -95,11 +95,11 @@ class _TitleAndJobWidget extends StatelessWidget {
           children: [
             TextSpan(
               text: 'Claudio Di Maio\n',
-              style: h1Bold(color: neutral1Color),
+              style: h1Bold(context, color: neutral1Color),
             ),
             TextSpan(
               text: 'Software Developer',
-              style: h1Light(color: neutral2Color),
+              style: h1Light(context, color: neutral2Color),
             ),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/responsive/responsive.dart';
 import 'package:my_portfolio/theme/colors.dart';
 
 /// Title
@@ -25,16 +26,40 @@ class TitleBox extends StatelessWidget {
           children: [
             TextSpan(
               text: title1,
-              style: h2Light(color: neutral2Color),
+              style: h2Light(context, color: neutral2Color),
             ),
             TextSpan(
               text: title2,
-              style: h2Bold(color: neutral1Color),
+              style: h2Bold(context, color: neutral1Color),
             ),
           ],
         ),
       ),
     );
+  }
+}
+
+enum Sizes {
+  h1(56.0, 40.0),
+  h2(40.0, 36.0),
+  h3(32.0, 28.0),
+  h4(24.0, 22.0),
+  h5(16.0, 16.0),
+  body1(18.0, 16.0),
+  button(16.0, 14.0),
+  label(14.0, 12.0);
+
+  final double desktop;
+  final double mobile;
+
+  const Sizes(this.desktop, this.mobile);
+
+  double get(BuildContext context) {
+    if (ResponsiveWidget.isDesktop(context)) {
+      return desktop;
+    } else {
+      return mobile;
+    }
   }
 }
 
@@ -56,10 +81,10 @@ TextStyle _safeGoogleFont(String fontFamily,
 }
 
 /// Light
-TextStyle h1Light({required Color color}) {
+TextStyle h1Light(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 56,
+    fontSize: Sizes.h1.get(context),
     fontWeight: FontWeight.w300,
     height: 1.5,
     letterSpacing: -1.12,
@@ -67,40 +92,40 @@ TextStyle h1Light({required Color color}) {
   );
 }
 
-TextStyle h2Light({required Color color}) {
+TextStyle h2Light(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 40,
+    fontSize: Sizes.h2.get(context),
     fontWeight: FontWeight.w300,
     height: 1.5,
     color: color,
   );
 }
 
-TextStyle h3Light({required Color color}) {
+TextStyle h3Light(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 32,
+    fontSize: Sizes.h3.get(context),
     fontWeight: FontWeight.w300,
     height: 1.5,
     color: color,
   );
 }
 
-TextStyle h3LightBig({required Color color}) {
+TextStyle h3LightBig(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 32,
+    fontSize: Sizes.h3.get(context),
     fontWeight: FontWeight.w400,
     height: 1.5,
     color: color,
   );
 }
 
-TextStyle h4Light({required Color color}) {
+TextStyle h4Light(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 24,
+    fontSize: Sizes.h4.get(context),
     fontWeight: FontWeight.w300,
     height: 1.5,
     letterSpacing: 1.44,
@@ -108,10 +133,10 @@ TextStyle h4Light({required Color color}) {
   );
 }
 
-TextStyle h5Light({required Color color}) {
+TextStyle h5Light(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 16,
+    fontSize: Sizes.h5.get(context),
     fontWeight: FontWeight.w300,
     height: 1.5,
     letterSpacing: 0.64,
@@ -119,20 +144,20 @@ TextStyle h5Light({required Color color}) {
   );
 }
 
-TextStyle body1TextLight({required Color color}) {
+TextStyle body1TextLight(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 18,
+    fontSize: Sizes.body1.get(context),
     fontWeight: FontWeight.w300,
     height: 1.5,
     color: color,
   );
 }
 
-TextStyle buttonTextLight({required Color color}) {
+TextStyle buttonTextLight(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 16,
+    fontSize: Sizes.button.get(context),
     fontWeight: FontWeight.w400,
     height: 1.5,
     letterSpacing: 0.64,
@@ -141,10 +166,10 @@ TextStyle buttonTextLight({required Color color}) {
 }
 
 /// Bold
-TextStyle h1Bold({required Color color}) {
+TextStyle h1Bold(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 56,
+    fontSize: Sizes.h1.get(context),
     fontWeight: FontWeight.w600,
     height: 1.5,
     letterSpacing: -1.12,
@@ -152,30 +177,30 @@ TextStyle h1Bold({required Color color}) {
   );
 }
 
-TextStyle h2Bold({required Color color}) {
+TextStyle h2Bold(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 40,
+    fontSize: Sizes.h2.get(context),
     fontWeight: FontWeight.w600,
     height: 1.5,
     color: color,
   );
 }
 
-TextStyle h3Bold({required Color color}) {
+TextStyle h3Bold(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 32,
+    fontSize: Sizes.h3.get(context),
     fontWeight: FontWeight.w600,
     height: 1.5,
     color: color,
   );
 }
 
-TextStyle h4Bold({required Color color}) {
+TextStyle h4Bold(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 24,
+    fontSize: Sizes.h4.get(context),
     fontWeight: FontWeight.w600,
     height: 1.5,
     letterSpacing: 1.44,
@@ -183,10 +208,10 @@ TextStyle h4Bold({required Color color}) {
   );
 }
 
-TextStyle h5Bold({required Color color}) {
+TextStyle h5Bold(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 16,
+    fontSize: Sizes.h5.get(context),
     fontWeight: FontWeight.w600,
     height: 1.5,
     letterSpacing: 0.64,
@@ -194,20 +219,20 @@ TextStyle h5Bold({required Color color}) {
   );
 }
 
-TextStyle body1TextBold({required Color color}) {
+TextStyle body1TextBold(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 18,
+    fontSize: Sizes.body1.get(context),
     fontWeight: FontWeight.w600,
     height: 1.5,
     color: color,
   );
 }
 
-TextStyle buttonTextBold({required Color color}) {
+TextStyle buttonTextBold(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 16,
+    fontSize: Sizes.button.get(context),
     fontWeight: FontWeight.w600,
     height: 1.5,
     letterSpacing: 0.64,
@@ -215,10 +240,10 @@ TextStyle buttonTextBold({required Color color}) {
   );
 }
 
-TextStyle label({required Color color}) {
+TextStyle label(BuildContext context, {required Color color}) {
   return _safeGoogleFont(
     'Work Sans',
-    fontSize: 14,
+    fontSize: Sizes.label.get(context),
     fontWeight: FontWeight.w600,
     height: 1.5,
     color: color,
