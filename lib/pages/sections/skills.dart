@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/responsive/responsive.dart';
 import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/utils.dart';
@@ -37,12 +38,15 @@ class SkillsPage extends StatelessWidget {
 class _SkillsBox extends StatelessWidget {
   const _SkillsBox({Key? key}) : super(key: key);
 
+  final Padding _padding =
+      const Padding(padding: EdgeInsets.symmetric(horizontal: 75));
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
+      width: ResponsiveWidget.getWidth(context),
       height: 201.9,
-      child: Row(
+      child: ResponsiveWidget.isDesktop(context) ? Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: const [
@@ -50,6 +54,20 @@ class _SkillsBox extends StatelessWidget {
           _sqlImg,
           _pythonImg,
           _javaImg,
+          // TODO: Firebase?
+        ],
+      ) : ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          _padding,
+          _flutterImg,
+          _padding,
+          _sqlImg,
+          _padding,
+          _pythonImg,
+          _padding,
+          _javaImg,
+          _padding,
           // TODO: Firebase?
         ],
       ),
