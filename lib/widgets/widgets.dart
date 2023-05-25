@@ -118,11 +118,11 @@ class SpaceWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return (inHeight)
+    return (inHeight && !inWidth)
         ? const SizedBox(
             height: 32,
           )
-        : (inWidth)
+        : (inWidth && !inHeight)
             ? const SizedBox(
                 width: 32,
               )

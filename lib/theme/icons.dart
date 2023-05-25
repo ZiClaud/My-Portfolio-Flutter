@@ -164,7 +164,7 @@ class LogoImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Image(
-      image: AssetImage("../assets/images/ZC_Logo_white.png"),
+      image: AssetImage("../assets/images/ZC_LW.png"),
       fit: BoxFit.contain,
     );
   }

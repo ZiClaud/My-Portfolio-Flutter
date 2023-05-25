@@ -30,14 +30,14 @@ dev_dependencies:
 flutter_launcher_icons:
   web:
     generate: true
-    image_path: "assets/images/ZC_Logo_white.png"
+    image_path: "assets/images/ZC_LW.png"
     background_color: "#010208"
     theme_color: "#010208"
 
 # ON CHANGE: flutter pub run flutter_native_splash:create
 flutter_native_splash:
   color: "#010208"
-  image: "assets/images/ZC_Logo_white.png"
+  image: "assets/images/ZC_LW.png"
 
 flutter:
   uses-material-design: true

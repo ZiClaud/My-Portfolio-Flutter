@@ -46,7 +46,7 @@ class _Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return (ResponsiveWidget.isMobile(context))
-        ? Row(children: const [
+        ? const Row(children: [
             SizedBox(
               width: 48,
               height: 48,
