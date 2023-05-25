@@ -159,13 +159,19 @@ class _FooterImgState extends State<FooterImg> {
 
 /// Other icons - arrows and logos
 class LogoImage extends StatelessWidget {
-  const LogoImage({Key? key}) : super(key: key);
+  final double width;
+  final double height;
+  const LogoImage({Key? key, this.width = 48, this.height = 48}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Image(
-      image: AssetImage("../assets/images/ZC_LW.png"),
-      fit: BoxFit.contain,
+    return SizedBox(
+      width: width,
+      height: height,
+      child: const Image(
+        image: AssetImage("../assets/images/ZC_LW.png"),
+        fit: BoxFit.contain,
+      ),
     );
   }
 }

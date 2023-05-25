@@ -46,13 +46,7 @@ class _Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return (ResponsiveWidget.isMobile(context))
-        ? const Row(children: [
-            SizedBox(
-              width: 48,
-              height: 48,
-              child: LogoImage(),
-            ),
-          ])
+        ? const Row(children: [LogoImage()])
         : const _HeaderWidget();
   }
 }
@@ -68,11 +62,7 @@ class _HeaderWidget extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SizedBox(
-            width: 48,
-            height: 48,
-            child: LogoImage(),
-          ),
+          const LogoImage(),
           const Spacer(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,

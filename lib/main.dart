@@ -7,6 +7,7 @@ import 'package:my_portfolio/pages/sections/skills.dart';
 import 'package:my_portfolio/pages/sections/works.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/utils/navigation.dart';
+import 'package:my_portfolio/widgets/header.dart';
 
 void main() {
   runApp(const MyApp());
