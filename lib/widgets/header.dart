@@ -5,42 +5,53 @@ import 'package:my_portfolio/theme/icons.dart';
 import 'package:my_portfolio/utils/navigation.dart';
 import 'package:my_portfolio/widgets/widgets.dart';
 
-List<Widget> _menuItems(context) {
-  return ResponsiveWidget.isDesktop(context) ? _menuDesktop() : _mobileMenu();
+class TheHeader extends StatelessWidget {
+  const TheHeader({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const ResponsiveWidget(
+        mobile: _MobileHeader(), desktop: _DesktopHeader());
+  }
+}
+
+List<Widget> _menu() {
+  return [
+    HoveringText(
+      text: "SKILLS",
+      onPressed: () => {
+        scrollToItem(1),
+      },
+    ),
+    HoveringText(
+      text: "WORKS",
+      onPressed: () => {
+        scrollToItem(2),
+      },
+    ),
+    HoveringText(
+      text: "ABOUT",
+      onPressed: () => {
+        scrollToItem(3),
+      },
+    ),
+    HoveringText(
+      text: "CONTACT",
+      onPressed: () => {
+        scrollToItem(4),
+      },
+    ),
+  ];
 }
 
 List<Widget> _menuDesktop() {
-  return [
-  HoveringText(
-    text: "SKILLS",
-    onPressed: () => {
-      scrollToItem(1),
-    },
-  ),
-//  const SpaceWidgets(inWidth: true),
-  HoveringText(
-    text: "WORKS",
-    onPressed: () => {
-      scrollToItem(2),
-    },
-  ),
-//  const SpaceWidgets(inWidth: true),
-  HoveringText(
-    text: "ABOUT",
-    onPressed: () => {
-      scrollToItem(3),
-    },
-  ),
-//  const SpaceWidgets(inWidth: true),
-  HoveringText(
-    text: "CONTACT",
-    onPressed: () => {
-      scrollToItem(4),
-    },
-  ),
-];
+  List<Widget> ris = [];
+  for (final item in _menu()) {
+    ris.add(item);
+    ris.add(const SpaceWidgets(inWidth: true));
+  }
+  return ris;
 }
-
 
 List<Widget> _mobileMenu() {
   return [
@@ -56,65 +67,17 @@ List<Widget> _mobileMenu() {
         ),
         color: backgroundColor,
         itemBuilder: (BuildContext context) => <PopupMenuEntry<Widget>>[
-          for (final item in _menuDesktop())
+          for (final item in _menu())
             PopupMenuItem<Widget>(
+              onTap: () => {
+                //TODO: Make the popup disappear
+              },
               child: item,
             ),
         ],
       ),
     ),
   ];
-}
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Header(child: SizedBox()),
-    );
-  }
-}
-
-class Header extends StatelessWidget {
-  final Widget? child;
-
-  const Header({Key? key, required this.child}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: backgroundColor,
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            title: const LogoImage(),
-            backgroundColor: Colors.transparent,
-            actions: _menuItems(context),
-          ),
-          SliverToBoxAdapter(
-            child: child ?? const SizedBox(),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _Header extends StatelessWidget {
-  const _Header({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return (ResponsiveWidget.isDesktop(context))
-        ? const _DesktopHeader()
-        : const _MobileHeader();
-  }
 }
 
 class _MobileHeader extends StatelessWidget {
@@ -143,7 +106,7 @@ class _DesktopHeader extends StatelessWidget {
           const Spacer(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: _menuItems(context),
+            children: _menuDesktop(),
           ),
         ],
       ),
