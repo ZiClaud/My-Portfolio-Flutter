@@ -169,7 +169,7 @@ class LogoImage extends StatelessWidget {
       width: width,
       height: height,
       child: const Image(
-        image: AssetImage("../assets/images/ZC_LW.png"),
+        image: AssetImage("../assets/images/ZC_Logo.png"),
         fit: BoxFit.contain,
       ),
     );
