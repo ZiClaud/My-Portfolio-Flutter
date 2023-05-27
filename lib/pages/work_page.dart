@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/responsive/responsive.dart';
 import 'package:my_portfolio/theme/colors.dart';
 import 'package:my_portfolio/theme/typography.dart';
 import 'package:my_portfolio/utils/utils.dart';
@@ -48,6 +49,7 @@ class MainWorkPage extends StatelessWidget {
                 description2: description2 ?? '',
                 descriptionBold2: descriptionBold2 ?? '',
               ),
+              const Padding(padding: EdgeInsets.only(bottom: 125)),
             ],
           ),
         ),
@@ -84,17 +86,16 @@ class WorkPageImage extends StatelessWidget {
 }
 
 /// Carousel
-class _ImageCarousel extends StatelessWidget { // TODO: Check if it's still laggy
+class _ImageCarousel extends StatelessWidget {
+  // TODO: Check if it's still laggy
   final List<WorkPageImage> images;
 
   const _ImageCarousel({Key? key, required this.images}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 1024,
-      height: 550,
-      child: CarouselSlider(
+    return ResponsiveWidget(
+      mobile: CarouselSlider(
         options: CarouselOptions(autoPlay: true),
         items: images
             .map(
@@ -104,6 +105,21 @@ class _ImageCarousel extends StatelessWidget { // TODO: Check if it's still lagg
               ),
             )
             .toList(),
+      ),
+      desktop: SizedBox(
+        width: 1024,
+        height: 550,
+        child: CarouselSlider(
+          options: CarouselOptions(autoPlay: true),
+          items: images
+              .map(
+                (item) => Container(
+                  decoration: getContainerDecorationBorder(),
+                  child: item,
+                ),
+              )
+              .toList(),
+        ),
       ),
     );
   }
