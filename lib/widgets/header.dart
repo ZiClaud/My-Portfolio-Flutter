@@ -58,23 +58,26 @@ List<Widget> _mobileMenu() {
     const LogoImage(),
     const Spacer(),
     SizedBox(
-      width: 48,
       height: 48,
-      child: PopupMenuButton<Widget>(
+      child: DropdownButton<Widget>(
+        underline: const SizedBox(),
+        dropdownColor: backgroundColor,
         icon: const Icon(
           Icons.menu,
           color: neutral1Color,
         ),
-        color: backgroundColor,
-        itemBuilder: (BuildContext context) => <PopupMenuEntry<Widget>>[
-          for (final item in _menu())
-            PopupMenuItem<Widget>(
-              onTap: () => {
-                //TODO: Make the popup disappear
-              },
-              child: item,
-            ),
-        ],
+        items: _menu().map((item) {
+          return DropdownMenuItem<Widget>(
+            value: item,
+            child: item,
+          );
+        }).toList(),
+        onChanged: (selectedItem) {
+          //TODO: Clean this part of the code
+          if (selectedItem is HoveringText) {
+            (selectedItem).onPressed();
+          }
+        },
       ),
     ),
   ];
