@@ -1,6 +1,15 @@
 import 'package:my_portfolio/utils/utils.dart';
 
-/// Testing
+/// Logo
+const String logoPath = "../assets/images/ZC_Logo.png";
+
+/// Arrows
+const String arrowDown =
+    "https://cdn-icons-png.flaticon.com/512/5093/5093064.png";
+const String arrowRight =
+    "https://cdn.iconscout.com/icon/free/png-256/right-arrow-1780566-1514442.png";
+
+/// Pixels - White and Transparent
 const String invisiblePath = "../assets/images/invisible.png";
 const String semiInvisiblePath = "../assets/images/semi_invisible.png";
 
@@ -19,15 +28,14 @@ const String aboutMeChessImgUrl =
 const String aboutMeMusicImgUrl = "https://cdn.fuelrocks.com/1665122987550.jpg";
 
 /// Footer
-String gitHubPath = "../assets/images/github_img.png";
-void Function() gitHubPressed =
-    () => launchMyUrl('https://github.com/ZiClaud');
+const String gitHubPath = "../assets/images/github_img.png";
+void Function() gitHubPressed = () => launchMyUrl('https://github.com/ZiClaud');
 
-String linkedinPath = "../assets/images/linkedin_img.png";
+const String linkedinPath = "../assets/images/linkedin_img.png";
 void Function() linkedinPressed =
     () => launchMyUrl('https://www.linkedin.com/in/claudio-di-maio/');
 
-String mailPath = "../assets/images/mail_img.png";
+const String mailPath = "../assets/images/mail_img.png";
 void Function() mailPressed = () => sendEmail("claudiodimaiozc@gmail.com");
 /*
       try {

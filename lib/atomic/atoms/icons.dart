@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/data/images.dart';
 
-Image getInvisibleImage() {
-  return const Image(
-    image: AssetImage(invisiblePath),
-    fit: BoxFit.cover,
-  );
+class InvisibleImage extends StatelessWidget {
+  const InvisibleImage({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Image(
+      image: AssetImage(invisiblePath),
+      fit: BoxFit.cover,
+    );
+  }
 }
 
 Image getSemiInvisibleImage() {
@@ -29,7 +36,7 @@ class LogoImage extends StatelessWidget {
       width: width,
       height: height,
       child: const Image(
-        image: AssetImage("../assets/images/ZC_Logo.png"),
+        image: AssetImage(logoPath),
         fit: BoxFit.contain,
       ),
     );
@@ -44,7 +51,7 @@ class ArrowDownImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.network(
-      "https://cdn-icons-png.flaticon.com/512/5093/5093064.png",
+      arrowDown,
       width: 20,
       height: 10,
       color: Colors.white,
@@ -60,7 +67,7 @@ class ArrowRightImg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.network(
-      "https://cdn.iconscout.com/icon/free/png-256/right-arrow-1780566-1514442.png",
+      arrowRight,
       width: 13,
       height: 20,
       color: Colors.white,

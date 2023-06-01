@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/atomic/atoms/icons/icons.dart';
+import 'package:my_portfolio/atomic/atoms/icons.dart';
 import 'package:my_portfolio/atomic/atoms/typography.dart';
 
 /// Returns an [Image] widget that loads a high-resolution image from the network,

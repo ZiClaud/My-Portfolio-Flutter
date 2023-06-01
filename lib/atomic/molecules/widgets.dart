@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/atomic/atoms/icons/icons.dart';
+import 'package:my_portfolio/atomic/atoms/icons.dart';
 import 'package:my_portfolio/atomic/atoms/typography.dart';
 
 /// WIDGETS
