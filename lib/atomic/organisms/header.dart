@@ -5,6 +5,7 @@ import 'package:my_portfolio/atomic/atoms/icons.dart';
 import 'package:my_portfolio/atomic/atoms/padding.dart';
 import 'package:my_portfolio/atomic/atoms/responsive.dart';
 import 'package:my_portfolio/atomic/molecules/button/clickable_text.dart';
+import 'package:my_portfolio/atomic/molecules/button/switch_language.dart';
 import 'package:my_portfolio/utils/navigation.dart';
 
 class TheHeader extends StatelessWidget {
@@ -58,6 +59,7 @@ List<Widget> _menuDesktop() {
 List<Widget> _mobileMenu() {
   return [
     const LogoImage(),
+    const SwitchLanguageBt(),
     const Spacer(),
     SizedBox(
       height: 48,
@@ -110,16 +112,7 @@ class _DesktopHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const LogoImage(),
-          ElevatedButton(
-            onPressed: () {
-              if (context.locale == const Locale('en', 'US')) {
-                context.setLocale(const Locale('it', 'IT'));
-              } else {
-                context.setLocale(const Locale('en', 'US'));
-              }
-            },
-            child: Text(tr('switch_locale')),
-          ),
+          const SwitchLanguageBt(),
           const Spacer(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,

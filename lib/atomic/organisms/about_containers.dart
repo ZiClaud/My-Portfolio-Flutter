@@ -38,15 +38,15 @@ class AboutMeText extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: tr("about_description1"),
+                      text: "${tr("about_description1")} ",
                       style: h3Light(context, color: neutral2Color),
                     ),
                     TextSpan(
-                      text: tr("about_description2"),
+                      text: "${tr("about_description2")} ",
                       style: h3Bold(context, color: neutral1Color),
                     ),
                     TextSpan(
-                      text: tr("about_description3"),
+                      text: "${tr("about_description3")} ",
                       style: h3Light(context, color: neutral2Color),
                     ),
                     TextSpan(
