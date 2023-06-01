@@ -23,25 +23,25 @@ List<Widget> _menu() {
     HoveringText(
       text: tr("skills"),
       onPressed: () => {
-        scrollToItem(1),
+        ScrollablePage.scrollToItem(1),
       },
     ),
     HoveringText(
       text: tr("works"),
       onPressed: () => {
-        scrollToItem(2),
+        ScrollablePage.scrollToItem(2),
       },
     ),
     HoveringText(
       text: tr("about"),
       onPressed: () => {
-        scrollToItem(3),
+        ScrollablePage.scrollToItem(3),
       },
     ),
     HoveringText(
       text: tr("contact"),
       onPressed: () => {
-        scrollToItem(4),
+        ScrollablePage.scrollToItem(4),
       },
     ),
   ];

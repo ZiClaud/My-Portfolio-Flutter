@@ -21,6 +21,7 @@ class _SwitchLanguageBtState extends State<SwitchLanguageBt> {
         }
 
         // TODO: Refresh whole page
+        Navigator.pushNamed(context, '/');
 
       },
       icon: Icon(

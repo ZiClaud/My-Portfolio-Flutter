@@ -2,26 +2,41 @@ import 'package:flutter/material.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 /// Scroll
-final ItemScrollController itemScrollController = ItemScrollController();
-
-class ScrollablePage extends StatelessWidget {
+class ScrollablePage extends StatefulWidget {
   final List<Widget> children;
 
   const ScrollablePage({Key? key, required this.children}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return ScrollablePositionedList.builder(
-      itemCount: children.length,
-      itemBuilder: (context, index) => children[index],
-      itemScrollController: itemScrollController,
-    );
+  _ScrollablePageState createState() => _ScrollablePageState();
+
+  static void scrollToItem(int index) {
+    _ScrollablePageState.scrollToItem(index);
   }
 }
 
-void scrollToItem(int index) {
-  itemScrollController.scrollTo(
-      index: index, duration: const Duration(seconds: 1));
+class _ScrollablePageState extends State<ScrollablePage> {
+  static late ItemScrollController itemScrollController;
+
+  @override
+  void initState() {
+    super.initState();
+    itemScrollController = ItemScrollController();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ScrollablePositionedList.builder(
+      itemCount: widget.children.length,
+      itemBuilder: (context, index) => widget.children[index],
+      itemScrollController: itemScrollController,
+    );
+  }
+
+  static void scrollToItem(int index) {
+    itemScrollController.scrollTo(
+        index: index, duration: const Duration(seconds: 1));
+  }
 }
 
 /// New page
