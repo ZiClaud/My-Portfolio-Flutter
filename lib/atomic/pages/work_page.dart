@@ -5,7 +5,7 @@ import 'package:my_portfolio/atomic/atoms/padding.dart';
 import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/atomic/molecules/button/button.dart';
 import 'package:my_portfolio/atomic/molecules/image_container/hd_image.dart';
-import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/atoms/responsive.dart';
 import 'package:my_portfolio/utils/utils.dart';
 
 /// Whole Work Page

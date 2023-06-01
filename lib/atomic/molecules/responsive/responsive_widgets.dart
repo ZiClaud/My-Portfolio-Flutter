@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/atoms/responsive.dart';
 
 /// Responsive box
 class ResponsiveBox extends StatelessWidget {
@@ -28,17 +28,5 @@ class ResponsiveBox extends StatelessWidget {
           : null,
       child: child,
     );
-  }
-}
-
-/// Center if mobile
-class _CenterIfMobile extends StatelessWidget {
-  final Widget child;
-
-  const _CenterIfMobile({Key? key, required this.child}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ResponsiveWidget.isMobile(context) ? Center(child: child) : child;
   }
 }

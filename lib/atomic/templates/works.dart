@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/padding.dart';
 import 'package:my_portfolio/atomic/atoms/typography.dart';
-import 'package:my_portfolio/atomic/organisms/section_containers.dart';
 import 'package:my_portfolio/data/basics/work_container.dart';
 import 'package:my_portfolio/data/fake_db.dart';
+import 'package:my_portfolio/utils/utils.dart';
 
 class WorkPage extends StatelessWidget {
   const WorkPage({
@@ -12,7 +12,7 @@ class WorkPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SectionContainerColumn(children: _workWidgets());
+    return _WorkSectionContainerColumn(children: _workWidgets());
   }
 }
 
@@ -26,4 +26,24 @@ List<Widget> _workWidgets() {
 //    WorkContainer(work: website, isImageFirst: true),
 //    SpaceWidgets(inHeight: true),
   ];
+}
+
+class _WorkSectionContainerColumn extends StatelessWidget {
+  final List<Widget> children;
+
+  const _WorkSectionContainerColumn({required this.children});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: defaultPadding(context, top: 24, bottom: 57),
+      width: double.infinity,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          for (Widget child in children) child,
+        ],
+      ),
+    );
+  }
 }

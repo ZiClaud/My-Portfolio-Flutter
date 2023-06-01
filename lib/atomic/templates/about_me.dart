@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/atoms/responsive.dart';
 import 'package:my_portfolio/atomic/molecules/responsive/responsive_widgets.dart';
 import 'package:my_portfolio/atomic/organisms/about_containers.dart';
 import 'package:my_portfolio/utils/utils.dart';
