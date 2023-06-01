@@ -7,7 +7,7 @@ class AboutMeImage extends StatelessWidget {
   final String? url;
 
   const AboutMeImage({super.key, this.path, this.url})
-      : assert(path != null || url != null);
+      : assert((path != null || url != null) && (path == null || url == null));
 
   @override
   Widget build(BuildContext context) {

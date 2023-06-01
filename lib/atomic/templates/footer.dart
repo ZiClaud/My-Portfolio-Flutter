@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
 import 'package:my_portfolio/atomic/atoms/typography.dart';
+import 'package:my_portfolio/atomic/atoms/responsive.dart';
 import 'package:my_portfolio/atomic/molecules/image_container/footer_image_container.dart';
-import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
 import 'package:my_portfolio/data/images.dart';
 import 'package:my_portfolio/utils/utils.dart';
 

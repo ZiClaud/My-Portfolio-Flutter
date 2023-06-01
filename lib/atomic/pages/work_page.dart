@@ -2,10 +2,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
 import 'package:my_portfolio/atomic/atoms/padding.dart';
+import 'package:my_portfolio/atomic/atoms/responsive.dart';
 import 'package:my_portfolio/atomic/atoms/typography.dart';
-import 'package:my_portfolio/atomic/molecules/button/button.dart';
 import 'package:my_portfolio/atomic/molecules/image_container/hd_image.dart';
-import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
 import 'package:my_portfolio/utils/utils.dart';
 
 /// Whole Work Page
@@ -52,10 +51,6 @@ class MainWorkPage extends StatelessWidget {
                 descriptionBold2: descriptionBold2 ?? '',
               ),
               const Padding(padding: EdgeInsets.only(bottom: 125)),
-              MyButton(
-                text: 'Back',
-                onPressed: () => Navigator.pop(context),
-              ),
             ],
           ),
         ),

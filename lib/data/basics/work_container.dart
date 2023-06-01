@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/atomic/molecules/image_container/work_image_container.dart';
+import 'package:my_portfolio/atomic/organisms/work_image_container.dart';
 import 'package:my_portfolio/atomic/organisms/work_section_containers.dart';
 import 'package:my_portfolio/data/basics/work.dart';
 

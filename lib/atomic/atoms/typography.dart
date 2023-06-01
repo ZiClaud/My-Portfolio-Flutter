@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
-import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/atoms/responsive.dart';
 
 /// Title
 class TitleBox extends StatelessWidget {

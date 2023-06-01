@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mailto/mailto.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
-import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/atoms/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 /// Default padding for mobile and desktop
