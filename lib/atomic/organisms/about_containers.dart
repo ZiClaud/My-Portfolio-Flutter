@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/pages/sections/about_me.dart';
-import 'package:my_portfolio/responsive/responsive.dart';
-import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/atomic/atoms/colors.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
+import 'package:my_portfolio/atomic/molecules/image_container/about_me_image_container.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/data/images.dart';
 
 class AboutMeText extends StatelessWidget {
   const AboutMeText({
@@ -12,7 +13,9 @@ class AboutMeText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: ResponsiveWidget.isDesktop(context) ? 600 : ResponsiveWidget.getWidth(context) * 0.9,
+      width: ResponsiveWidget.isDesktop(context)
+          ? 600
+          : ResponsiveWidget.getWidth(context) * 0.9,
       height: ResponsiveWidget.isDesktop(context) ? double.infinity : null,
       child: Padding(
         padding: const EdgeInsets.only(bottom: 150.0),
@@ -79,7 +82,7 @@ class AboutMeImages extends StatelessWidget {
             margin: const EdgeInsets.only(right: 32),
             width: 282,
             height: 374,
-            child: aboutMeMusicImg,
+            child: const AboutMeImage(url: aboutMeMusicImgUrl),
           ),
           SizedBox(
             height: double.infinity,
@@ -90,12 +93,12 @@ class AboutMeImages extends StatelessWidget {
                   margin: const EdgeInsets.only(bottom: 32),
                   width: 282,
                   height: 374,
-                  child: aboutMeDesignImg,
+                  child: const AboutMeImage(url: aboutMeDesignImgUrl),
                 ),
                 const SizedBox(
                   width: 282,
                   height: 374,
-                  child: aboutMeChessImg,
+                  child: AboutMeImage(url: aboutMeChessImgUrl),
                 ),
               ],
             ),

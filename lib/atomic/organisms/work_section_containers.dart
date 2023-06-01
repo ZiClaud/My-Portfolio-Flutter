@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/responsive/responsive.dart';
-import 'package:my_portfolio/responsive/responsive_widgets.dart';
-import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/atomic/atoms/colors.dart';
+import 'package:my_portfolio/atomic/atoms/padding.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
+import 'package:my_portfolio/atomic/molecules/button/button.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive_widgets.dart';
 import 'package:my_portfolio/utils/navigation.dart';
-import 'package:my_portfolio/widgets/widgets.dart';
-
-// TODO: Move everything to works.dart in basics
 
 /// Work section containers
 class WorkContainerImageText extends StatelessWidget {
@@ -280,9 +279,7 @@ class _WorkTextPart extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 600,
-      // TODO: Change 600 to 550 if we don't want it to be perfectly centered
       height: 450,
-      // TODO: It's 450 because 500 (like the image) looks bad
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

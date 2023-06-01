@@ -1,7 +1,8 @@
-import 'package:my_portfolio/basics/work.dart';
-import 'package:my_portfolio/pages/work_page.dart';
+import 'package:my_portfolio/atomic/pages/work_page.dart';
+import 'package:my_portfolio/data/basics/work.dart';
+import 'package:my_portfolio/data/basics/work_page.dart';
 
-const Work iremi = Work(
+const WorkData iremi = WorkData(
   title: "Iremi App",
   description:
       "I developed this app entirely on my own, and it offers users a range of breathing exercises that are specifically designed to ",
@@ -12,7 +13,7 @@ const Work iremi = Work(
   urlHD: "https://i.imgur.com/eoEx6Tt.png?1",
 );
 
-const Work jeiom = Work(
+const WorkData jeiom = WorkData(
   title: "JEIOM App",
   description:
       "I was part of a team that developed this app for the JEIOM 2023 event. Our goal was to create a platform that would enable users to ",
@@ -23,7 +24,7 @@ const Work jeiom = Work(
   urlHD: "https://i.imgur.com/nu9WG4d.png",
 );
 
-const Work website = Work(
+const WorkData website = WorkData(
   title: "This website",
   description: "This website was developed by me using ",
   descriptionBold: "Flutter and Dart.",
@@ -31,7 +32,7 @@ const Work website = Work(
   urlHD: "https://i.imgur.com/5yosKhp.png",
 );
 
-const WorkPage iremiPage = WorkPage(
+const WorkPageData iremiPage = WorkPageData(
   title: 'Iremi App',
 //      skills: ['Flutter', 'Dart', 'SQLite'],
   description1: 'Iremi is a mobile app designed to help users',
@@ -55,7 +56,7 @@ const WorkPage iremiPage = WorkPage(
   ],
 );
 
-const WorkPage jeiomPage = WorkPage(
+const WorkPageData jeiomPage = WorkPageData(
   title: 'JEIOM App - Page is in work in progress',
   description1: 'Lorem ipsum dolor sit amet, consectetur',
   descriptionBold1:

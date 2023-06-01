@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/responsive/responsive.dart';
-import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/icons.dart';
-import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/atomic/atoms/colors.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
+import 'package:my_portfolio/atomic/molecules/image_container/footer_image_container.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/data/images.dart';
 import 'package:my_portfolio/utils/utils.dart';
 
 class FooterPage extends StatelessWidget {
@@ -76,61 +77,23 @@ class _ContactImages extends StatelessWidget {
           Positioned(
             left: 51,
             top: 44,
-            child: _gitHub,
+            child: FooterImg(path: gitHubPath, onPressed: gitHubPressed),
           ),
           Positioned(
             left: 199,
             top: 116,
-            child: _linkedin,
+            child: FooterImg(path: linkedinPath, onPressed: linkedinPressed),
           ),
           Positioned(
             left: 85,
             top: 226,
-            child: _mail,
+            child: FooterImg(path: mailPath, onPressed: mailPressed),
           ),
         ],
       ),
     );
   }
 }
-
-// TODO: Change/Fix
-Widget _gitHub = SizedBox(
-  width: 100,
-  height: 100,
-  child: FooterImg(
-    path: "../assets/images/github_img.png",
-    onPressed: () {
-      launchMyUrl('https://github.com/ZiClaud');
-    },
-  ),
-);
-
-Widget _linkedin = SizedBox(
-  width: 100,
-  height: 100,
-  child: FooterImg(
-    path: "../assets/images/linkedin_img.png",
-    onPressed: () {
-      launchMyUrl('https://www.linkedin.com/in/claudio-di-maio/');
-    },
-  ),
-);
-
-Widget _mail = SizedBox(
-  width: 100,
-  height: 100,
-  child: FooterImg(
-    path: "../assets/images/mail_img.png",
-    onPressed: () {
-      try {
-        sendEmail("claudiodimaiozc@gmail.com");
-      } catch (e) {
-        //TODO: showDialog
-      }
-    },
-  ),
-);
 
 class _ContactText extends StatelessWidget {
   final double squareSize;

@@ -25,11 +25,6 @@ void scrollToItem(int index) {
 }
 
 /// New page
-navigateToPage(BuildContext context, String pageRoute) {
+Future navigateToPage(BuildContext context, String pageRoute) {
   return Navigator.pushNamed(context, pageRoute);
-}
-
-navigateToHomePage(BuildContext context) {
-  // TODO: Fix or remove - Maybe it's already fixed, needs testing
-  //  return Navigator.pushNamed(context, '/');
 }

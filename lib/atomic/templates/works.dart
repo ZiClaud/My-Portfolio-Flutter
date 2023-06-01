@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/basics/fake_db.dart';
-import 'package:my_portfolio/basics/work.dart';
-import 'package:my_portfolio/theme/typography.dart';
-import 'package:my_portfolio/widgets/section_containers.dart';
-import 'package:my_portfolio/widgets/widgets.dart';
+import 'package:my_portfolio/atomic/atoms/padding.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
+import 'package:my_portfolio/atomic/organisms/section_containers.dart';
+import 'package:my_portfolio/data/basics/work_container.dart';
+import 'package:my_portfolio/data/fake_db.dart';
 
 class WorkPage extends StatelessWidget {
   const WorkPage({
@@ -19,9 +19,9 @@ class WorkPage extends StatelessWidget {
 List<Widget> _workWidgets() {
   return const [
     TitleBox(title1: 'My best ', title2: 'Works'),
-    WorkContainer(work: iremi, isImageFirst: true),
+    WorkContainerData(work: iremi, isImageFirst: true),
     SpaceWidgets(inHeight: true),
-    WorkContainer(work: jeiom, isImageLast: true),
+    WorkContainerData(work: jeiom, isImageLast: true),
     SpaceWidgets(inHeight: true),
 //    WorkContainer(work: website, isImageFirst: true),
 //    SpaceWidgets(inHeight: true),

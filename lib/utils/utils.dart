@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mailto/mailto.dart';
-import 'package:my_portfolio/responsive/responsive.dart';
-import 'package:my_portfolio/theme/colors.dart';
+import 'package:my_portfolio/atomic/atoms/colors.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 /// Default padding for mobile and desktop
@@ -34,7 +34,7 @@ BoxDecoration getContainerDecorationBorder() {
 Future<void> launchMyUrl(String urlString) async {
   Uri url = Uri.parse(urlString);
 
-  if (!await canLaunchUrl(url)){
+  if (!await canLaunchUrl(url)) {
     print('Could not launch $url');
     throw Exception('Could not launch $url');
   }
