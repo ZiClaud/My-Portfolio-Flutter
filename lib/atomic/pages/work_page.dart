@@ -1,10 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/responsive/responsive.dart';
-import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/atoms/colors.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/utils/utils.dart';
-import 'package:my_portfolio/widgets/widgets.dart';
+import 'package:my_portfolio/atomic/molecules/widgets.dart';
 
 /// Whole Work Page
 class MainWorkPage extends StatelessWidget {

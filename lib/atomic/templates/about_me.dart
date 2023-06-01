@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/responsive/responsive.dart';
-import 'package:my_portfolio/responsive/responsive_widgets.dart';
-import 'package:my_portfolio/theme/icons.dart';
+import 'package:my_portfolio/atomic/atoms/icons/icons.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive_widgets.dart';
+import 'package:my_portfolio/atomic/organisms/about_containers.dart';
+import 'package:my_portfolio/data/images.dart';
 import 'package:my_portfolio/utils/utils.dart';
-import 'package:my_portfolio/widgets/about_containers.dart';
 
-const AboutMeImage aboutMeDesignImg = AboutMeImage(url: "https://assets.telegraphindia.com/telegraph/2022/Feb/1644870612_design.jpg");
-const AboutMeImage aboutMeChessImg = AboutMeImage(url: "https://media.cnn.com/api/v1/images/stellar/prod/230104173032-02-chess-stock.jpg?c=original");
-const AboutMeImage aboutMeMusicImg = AboutMeImage(url: "https://cdn.fuelrocks.com/1665122987550.jpg");
+const AboutMeImage aboutMeDesignImg = AboutMeImage(url: aboutMeDesignImgPath);
+const AboutMeImage aboutMeChessImg = AboutMeImage(url: aboutMeChessImgPath);
+const AboutMeImage aboutMeMusicImg = AboutMeImage(url: aboutMeMusicImgPath);
 
 class AboutMePage extends StatelessWidget {
   const AboutMePage({Key? key}) : super(key: key);

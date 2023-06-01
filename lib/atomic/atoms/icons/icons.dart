@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/atomic/atoms/colors.dart';
+import 'package:my_portfolio/data/images.dart';
 import 'package:my_portfolio/utils/utils.dart';
-import 'package:my_portfolio/widgets/widgets.dart';
+import 'package:my_portfolio/atomic/molecules/widgets.dart';
 
-import 'colors.dart';
-
-/// Testing
-const String _invisiblePath = "../assets/images/invisible.png";
-const String _semiInvisiblePath = "../assets/images/semi_invisible.png";
-
-Image _getInvisibleImage() {
+Image getInvisibleImage() {
   return const Image(
-    image: AssetImage(_invisiblePath),
+    image: AssetImage(invisiblePath),
     fit: BoxFit.cover,
   );
 }
 
 Image getSemiInvisibleImage() {
   return const Image(
-    image: AssetImage(_semiInvisiblePath),
+    image: AssetImage(semiInvisiblePath),
     fit: BoxFit.cover,
   );
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/pages/sections/about_me.dart';
-import 'package:my_portfolio/responsive/responsive.dart';
-import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/atomic/templates/about_me.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/atoms/colors.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
 
 class AboutMeText extends StatelessWidget {
   const AboutMeText({

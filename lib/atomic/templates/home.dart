@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/responsive/responsive.dart';
-import 'package:my_portfolio/responsive/responsive_hero.dart';
-import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/icons.dart';
-import 'package:my_portfolio/theme/typography.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive_hero.dart';
+import 'package:my_portfolio/atomic/atoms/colors.dart';
+import 'package:my_portfolio/atomic/atoms/icons/icons.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/utils/utils.dart';
-import 'package:my_portfolio/widgets/header.dart';
+import 'package:my_portfolio/atomic/organisms/header.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

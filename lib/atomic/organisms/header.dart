@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/responsive/responsive.dart';
-import 'package:my_portfolio/theme/colors.dart';
-import 'package:my_portfolio/theme/icons.dart';
+import 'package:my_portfolio/atomic/atoms/colors.dart';
+import 'package:my_portfolio/atomic/atoms/icons/icons.dart';
+import 'package:my_portfolio/atomic/molecules/button/clickable_text.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/molecules/widgets.dart';
 import 'package:my_portfolio/utils/navigation.dart';
-import 'package:my_portfolio/widgets/widgets.dart';
 
 class TheHeader extends StatelessWidget {
   const TheHeader({Key? key}) : super(key: key);
@@ -76,6 +77,8 @@ List<Widget> _mobileMenu() {
           //TODO: Clean this part of the code
           if (selectedItem is HoveringText) {
             (selectedItem).onPressed();
+          } else {
+            throw Exception("Not HoveringText");
           }
         },
       ),

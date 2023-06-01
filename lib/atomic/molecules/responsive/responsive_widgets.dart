@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/responsive/responsive.dart';
+import 'package:my_portfolio/atomic/molecules/responsive/responsive.dart';
 
 /// Responsive box
 class ResponsiveBox extends StatelessWidget {
