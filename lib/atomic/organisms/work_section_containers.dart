@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
 import 'package:my_portfolio/atomic/atoms/padding.dart';
@@ -291,7 +292,7 @@ class _WorkTextPart extends StatelessWidget {
           _WorkTextCategory(category: category),
           if (pageRoute != null)
             MyButton(
-              text: "VIEW WORK",
+              text: tr('view_work'),
               onPressed: () {
                 navigateToPage(context, pageRoute!);
               },

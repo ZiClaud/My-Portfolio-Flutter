@@ -4,9 +4,8 @@ import 'package:my_portfolio/data/basics/work_page.dart';
 
 const WorkData iremi = WorkData(
   title: "Iremi App",
-  description:
-      "I developed this app entirely on my own, and it offers users a range of breathing exercises that are specifically designed to ",
-  descriptionBold: "promote relaxation and mindfulness.",
+  description: "iremi_description1",
+  descriptionBold: "iremi_description2",
   category: "Mobile App",
   pageRoute: '/iremi',
   url: "https://i.imgur.com/eoEx6Tth.png?1",
@@ -15,10 +14,8 @@ const WorkData iremi = WorkData(
 
 const WorkData jeiom = WorkData(
   title: "JEIOM App",
-  description:
-      "I was part of a team that developed this app for the JEIOM 2023 event. Our goal was to create a platform that would enable users to ",
-  descriptionBold:
-      "organize their schedules for the event in a single, user-friendly interface.",
+  description: "jeiom_description1",
+  descriptionBold: "jeiom_description2",
   category: "Mobile App",
   pageRoute: '/jeiom',
   urlHD: "https://i.imgur.com/nu9WG4d.png",

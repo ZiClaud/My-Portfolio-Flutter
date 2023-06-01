@@ -27,7 +27,7 @@ class TitleBox extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-              text: title1,
+              text: "$title1 ",
               style: h2Light(context, color: neutral2Color),
             ),
             TextSpan(

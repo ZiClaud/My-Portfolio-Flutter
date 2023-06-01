@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/atomic/atoms/responsive.dart';
@@ -16,14 +17,14 @@ class SkillsPage extends StatelessWidget {
       padding: defaultPadding(context, top: 80, bottom: 130),
       width: double.infinity,
       height: 583.9,
-      child: const SizedBox(
+      child: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TitleBox(title1: 'Some of my ', title2: 'Skills'),
-            _SkillsBox(),
+            TitleBox(title1: tr("skills_title1"), title2: tr("skills_title2")),
+            const _SkillsBox(),
           ],
         ),
       ),

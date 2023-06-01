@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
 import 'package:my_portfolio/atomic/atoms/icons.dart';
@@ -19,25 +20,25 @@ class TheHeader extends StatelessWidget {
 List<Widget> _menu() {
   return [
     HoveringText(
-      text: "SKILLS",
+      text: tr("skills"),
       onPressed: () => {
         scrollToItem(1),
       },
     ),
     HoveringText(
-      text: "WORKS",
+      text: tr("works"),
       onPressed: () => {
         scrollToItem(2),
       },
     ),
     HoveringText(
-      text: "ABOUT",
+      text: tr("about"),
       onPressed: () => {
         scrollToItem(3),
       },
     ),
     HoveringText(
-      text: "CONTACT",
+      text: tr("contact"),
       onPressed: () => {
         scrollToItem(4),
       },
@@ -109,6 +110,16 @@ class _DesktopHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const LogoImage(),
+          ElevatedButton(
+            onPressed: () {
+              if (context.locale == const Locale('en', 'US')) {
+                context.setLocale(const Locale('it', 'IT'));
+              } else {
+                context.setLocale(const Locale('en', 'US'));
+              }
+            },
+            child: Text(tr('switch_locale')),
+          ),
           const Spacer(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,

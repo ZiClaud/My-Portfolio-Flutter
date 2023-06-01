@@ -1,7 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
-import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/atomic/atoms/responsive.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/atomic/molecules/image_container/footer_image_container.dart';
 import 'package:my_portfolio/data/images.dart';
 import 'package:my_portfolio/utils/utils.dart';
@@ -113,18 +114,18 @@ class _ContactText extends StatelessWidget {
             text: TextSpan(
               children: [
                 TextSpan(
-                  text: 'Get ',
+                  text: "${tr("get_in_touch1")} ",
                   style: h1Light(context, color: neutral2Color),
                 ),
                 TextSpan(
-                  text: 'in Touch.',
+                  text: tr("get_in_touch2"),
                   style: h1Bold(context, color: neutral1Color),
                 ),
               ],
             ),
           ),
           Text(
-            'So that we can start working together!',
+            tr("get_in_touch3"),
             textAlign: TextAlign.center,
             style: body1TextLight(context, color: neutral1Color),
           ),

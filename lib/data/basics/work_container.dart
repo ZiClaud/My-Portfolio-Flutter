@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/organisms/work_image_container.dart';
 import 'package:my_portfolio/atomic/organisms/work_section_containers.dart';
@@ -20,8 +21,8 @@ class WorkContainerData extends StatelessWidget {
     return isImageFirst
         ? WorkContainerImageText(
             title: work.title,
-            description: work.description,
-            descriptionBold: work.descriptionBold,
+            description: tr(work.description),
+            descriptionBold: tr(work.descriptionBold),
             category: work.category,
             pageRoute: work.pageRoute,
             child: WorkImg(
@@ -32,8 +33,8 @@ class WorkContainerData extends StatelessWidget {
           )
         : WorkContainerTextImage(
             title: work.title,
-            description: work.description,
-            descriptionBold: work.descriptionBold,
+            description: tr(work.description),
+            descriptionBold: tr(work.descriptionBold),
             category: work.category,
             pageRoute: work.pageRoute,
             child: WorkImg(

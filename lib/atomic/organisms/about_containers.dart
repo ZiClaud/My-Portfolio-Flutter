@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
 import 'package:my_portfolio/atomic/atoms/typography.dart';
@@ -26,7 +27,7 @@ class AboutMeText extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
               child: Text(
-                'A BIT ABOUT ME',
+                tr("about_title"),
                 style: h4Bold(context, color: neutral1Color),
               ),
             ),
@@ -37,21 +38,19 @@ class AboutMeText extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text:
-                          'As a software developer, I am driven to create digital experiences that are both ',
+                      text: tr("about_description1"),
                       style: h3Light(context, color: neutral2Color),
                     ),
                     TextSpan(
-                      text: 'visually striking and intuitive to navigate. ',
+                      text: tr("about_description2"),
                       style: h3Bold(context, color: neutral1Color),
                     ),
                     TextSpan(
-                      text:
-                          'Besides programming, I am also deeply interested in ',
+                      text: tr("about_description3"),
                       style: h3Light(context, color: neutral2Color),
                     ),
                     TextSpan(
-                      text: 'design, music, and chess.',
+                      text: tr("about_description4"),
                       style: h3Bold(context, color: neutral1Color),
                     ),
                   ],

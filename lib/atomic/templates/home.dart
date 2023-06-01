@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
 import 'package:my_portfolio/atomic/atoms/icons.dart';
@@ -50,11 +51,11 @@ class _TitleAndJobWidget extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-              text: 'Claudio Di Maio\n',
+              text: "Claudio Di Maio\n",
               style: h1Bold(context, color: neutral1Color),
             ),
             TextSpan(
-              text: 'Software Developer',
+              text: tr("job"),
               style: h1Light(context, color: neutral2Color),
             ),
           ],
