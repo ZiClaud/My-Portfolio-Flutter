@@ -327,7 +327,7 @@ class _WorkTextPartMobile extends StatelessWidget {
           if (page != null)
             Center(
               child: MyTextButton(
-                text: "VIEW WORK",
+                text: "view_work",
                 onPressed: () {
                   navigateToPage(context, page!.getPage());
                 },
