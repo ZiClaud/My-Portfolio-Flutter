@@ -1,11 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
 import 'package:my_portfolio/atomic/atoms/padding.dart';
 import 'package:my_portfolio/atomic/atoms/responsive.dart';
 import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/atomic/molecules/button/icon_button.dart';
-import 'package:my_portfolio/atomic/molecules/button/text_button.dart';
 import 'package:my_portfolio/atomic/molecules/image_container/hd_image.dart';
 import 'package:my_portfolio/data/basics/work_page.dart';
 import 'package:my_portfolio/utils/navigation.dart';
@@ -43,12 +43,13 @@ class MainWorkPage extends StatelessWidget {
               _ImageCarousel(images: pageData.images),
               const SpaceWidgets(inHeight: true),
               _WorkDescription(
-                description1: pageData.description1,
-                descriptionBold1: pageData.descriptionBold1,
-                description2: pageData.description2 ?? '',
-                descriptionBold2: pageData.descriptionBold2 ?? '',
+                description1: tr(pageData.description1),
+                descriptionBold1: tr(pageData.descriptionBold1),
+                description2: tr(pageData.description2 ?? ''),
+                descriptionBold2: tr(pageData.descriptionBold2 ?? ''),
               ),
               const Padding(padding: EdgeInsets.only(bottom: 125)),
+              // TODO: Add link that takes to the github/playstore
             ],
           ),
         ),
@@ -62,7 +63,8 @@ class _WorkBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MyIconButton(icon: Icons.arrow_back, onPressed: () => navigateToHome(context));
+    return MyIconButton(
+        icon: Icons.arrow_back, onPressed: () => navigateToHome(context));
   }
 }
 

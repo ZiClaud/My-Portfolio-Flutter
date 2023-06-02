@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/utils/navigation.dart';
 
 class SwitchLanguageBt extends StatefulWidget {
@@ -25,11 +26,12 @@ class _SwitchLanguageBtState extends State<SwitchLanguageBt> {
               .then((_) => navigateToHome(context));
         }
       },
-      icon: Icon(
-        context.locale == const Locale('en', 'US')
-            ? Icons.translate
-            : Icons.local_pizza,
-        color: neutral1Color,
+      icon: Text(
+        context.locale == const Locale('it', 'IT') ? "IT" : "EN",
+        style: h5Bold(
+          context,
+          color: neutral1Color,
+        ),
       ),
     );
   }

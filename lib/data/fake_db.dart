@@ -31,12 +31,11 @@ const WorkData website = WorkData(
 
 const WorkPageData iremiPage = WorkPageData(
   title: 'Iremi App',
-//      skills: ['Flutter', 'Dart', 'SQLite'],
-  description1: 'Iremi is a mobile app designed to help users',
-  descriptionBold1: 'combat anxiety through guided breathing exercises.',
-  description2:
-      'Using Flutter and Dart, I have created a simple and intuitive app that offers a variety of breathing exercises tailored to the user\'s needs.\nThe app also includes a progress tracker that allows users to monitor their breathing habits and',
-  descriptionBold2: 'track their progress over time.',
+  skills: ['Flutter', 'Dart', 'SQLite'],
+  description1: 'iremi_page_description1',
+  descriptionBold1: 'iremi_page_description2',
+  description2: 'iremi_page_description3',
+  descriptionBold2: 'iremi_page_description4',
   images: [
     WorkPageImage(
         url: 'https://i.imgur.com/eoEx6Tth.png?1',
@@ -54,12 +53,12 @@ const WorkPageData iremiPage = WorkPageData(
 );
 
 const WorkPageData jeiomPage = WorkPageData(
-  title: 'JEIOM App - Page is in work in progress',
-  description1: 'Lorem ipsum dolor sit amet, consectetur',
-  descriptionBold1:
-      ' adipiscing elit. Ultrices lorem non feugiat egestas amet.',
-  description2: 'Lorem ipsum dolor sit amet, consectetur',
-  descriptionBold2: 'adipiscing elit. Ultrices lorem non feugiat egestas amet.',
+  title: 'JEIOM Website',
+  skills: ['NodeJS', 'React', 'TailwindCSS'],
+  description1: 'lorem1',
+  descriptionBold1: 'lorem2',
+  description2: 'lorem3',
+  descriptionBold2: 'lorem4',
   images: [
     WorkPageImage(urlHD: 'https://i.imgur.com/9phy7Yo.png'),
     WorkPageImage(urlHD: 'https://i.imgur.com/nu9WG4d.png'),

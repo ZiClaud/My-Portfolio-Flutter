@@ -22,5 +22,13 @@
   "iremi_description1": "Ho sviluppato questa app interamente da solo, e offre agli utenti una serie di esercizi di respirazione appositamente progettati per ",
   "iremi_description2": "promuovere il rilassamento e la consapevolezza.",
   "jeiom_description1": "Ho fatto parte di un team che ha sviluppato questa app per l'evento JEIOM 2023. Il nostro obiettivo era creare una piattaforma che consentisse agli utenti di ",
-  "jeiom_description2": "organizzare i loro programmi per l'evento in un'interfaccia unica e user-friendly."
+  "jeiom_description2": "organizzare i loro programmi per l'evento in un'interfaccia unica e user-friendly.",
+  "iremi_page_description1": "Iremi è un'app mobile progettata per aiutare gli utenti",
+  "iremi_page_description2": "a combattere l'ansia attraverso esercizi di respirazione guidata.",
+  "iremi_page_description3": "Utilizzando Flutter e Dart, ho creato un'app semplice e intuitiva che offre una varietà di esercizi di respirazione personalizzati alle esigenze dell'utente.\nL'app include anche un tracker che permette agli utenti di monitorare le proprie abitudini di respirazione e",
+  "iremi_page_description4": "tracciare i loro progressi nel tempo.",
+  "lorem1": "Lorem ipsum dolor sit amet, consectetur",
+  "lorem2": "adipiscing elit. Ultrices lorem non feugiat egestas amet.",
+  "lorem3": "Lorem ipsum dolor sit amet, consectetur",
+  "lorem4": "adipiscing elit. Ultrices lorem non feugiat egestas amet."
 }
