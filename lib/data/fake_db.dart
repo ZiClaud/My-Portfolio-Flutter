@@ -13,10 +13,10 @@ const WorkData iremi = WorkData(
 );
 
 const WorkData jeiom = WorkData(
-  title: "JEIOM App",
+  title: "JEIOM Website",
   description: "jeiom_description1",
   descriptionBold: "jeiom_description2",
-  category: "Mobile App",
+  category: "Website",
   pageData: jeiomPage,
   urlHD: "https://i.imgur.com/nu9WG4d.png",
 );
