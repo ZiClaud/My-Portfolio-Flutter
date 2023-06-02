@@ -2,10 +2,11 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
 import 'package:my_portfolio/atomic/atoms/padding.dart';
-import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/atomic/atoms/responsive.dart';
-import 'package:my_portfolio/atomic/molecules/button/button.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
+import 'package:my_portfolio/atomic/molecules/button/text_button.dart';
 import 'package:my_portfolio/atomic/molecules/responsive/responsive_widgets.dart';
+import 'package:my_portfolio/data/basics/work_page.dart';
 import 'package:my_portfolio/utils/navigation.dart';
 
 /// Work section containers
@@ -15,7 +16,7 @@ class WorkContainerImageText extends StatelessWidget {
   final String description;
   final String descriptionBold;
   final String category;
-  final String? pageRoute;
+  final WorkPageData? page;
 
   const WorkContainerImageText({
     super.key,
@@ -24,7 +25,7 @@ class WorkContainerImageText extends StatelessWidget {
     required this.description,
     required this.descriptionBold,
     required this.category,
-    this.pageRoute,
+    this.page,
   });
 
   @override
@@ -35,7 +36,7 @@ class WorkContainerImageText extends StatelessWidget {
         description: description,
         descriptionBold: descriptionBold,
         category: category,
-        pageRoute: pageRoute,
+        page: page,
         child: child,
       ),
       mobile: _WorkContainerMobile(
@@ -43,7 +44,7 @@ class WorkContainerImageText extends StatelessWidget {
         description: description,
         descriptionBold: descriptionBold,
         category: category,
-        pageRoute: pageRoute,
+        page: page,
         child: child,
       ),
     );
@@ -56,7 +57,7 @@ class WorkContainerTextImage extends StatelessWidget {
   final String description;
   final String descriptionBold;
   final String category;
-  final String? pageRoute;
+  final WorkPageData? page;
 
   const WorkContainerTextImage({
     super.key,
@@ -65,7 +66,7 @@ class WorkContainerTextImage extends StatelessWidget {
     required this.description,
     required this.descriptionBold,
     required this.category,
-    this.pageRoute,
+    this.page,
   });
 
   @override
@@ -76,7 +77,7 @@ class WorkContainerTextImage extends StatelessWidget {
         description: description,
         descriptionBold: descriptionBold,
         category: category,
-        pageRoute: pageRoute,
+        page: page,
         child: child,
       ),
       mobile: _WorkContainerMobile(
@@ -84,7 +85,7 @@ class WorkContainerTextImage extends StatelessWidget {
         description: description,
         descriptionBold: descriptionBold,
         category: category,
-        pageRoute: pageRoute,
+        page: page,
         child: child,
       ),
     );
@@ -97,7 +98,7 @@ class _WorkContainerImageText extends StatelessWidget {
   final String description;
   final String descriptionBold;
   final String category;
-  final String? pageRoute;
+  final WorkPageData? page;
 
   const _WorkContainerImageText({
     required this.child,
@@ -105,7 +106,7 @@ class _WorkContainerImageText extends StatelessWidget {
     required this.description,
     required this.descriptionBold,
     required this.category,
-    this.pageRoute,
+    this.page,
   });
 
   @override
@@ -125,7 +126,7 @@ class _WorkContainerImageText extends StatelessWidget {
           description: description,
           descriptionBold: descriptionBold,
           category: category,
-          pageRoute: pageRoute,
+          page: page,
         ),
       ],
     );
@@ -138,7 +139,7 @@ class _WorkContainerTextImage extends StatelessWidget {
   final String description;
   final String descriptionBold;
   final String category;
-  final String? pageRoute;
+  final WorkPageData? page;
 
   const _WorkContainerTextImage({
     required this.child,
@@ -146,7 +147,7 @@ class _WorkContainerTextImage extends StatelessWidget {
     required this.description,
     required this.descriptionBold,
     required this.category,
-    this.pageRoute,
+    this.page,
   });
 
   @override
@@ -160,7 +161,7 @@ class _WorkContainerTextImage extends StatelessWidget {
           description: description,
           descriptionBold: descriptionBold,
           category: category,
-          pageRoute: pageRoute,
+          page: page,
         ),
 
         /// Space between image and text
@@ -179,7 +180,7 @@ class _WorkContainerMobile extends StatelessWidget {
   final String description;
   final String descriptionBold;
   final String category;
-  final String? pageRoute;
+  final WorkPageData? page;
 
   const _WorkContainerMobile({
     required this.child,
@@ -187,7 +188,7 @@ class _WorkContainerMobile extends StatelessWidget {
     required this.description,
     required this.descriptionBold,
     required this.category,
-    this.pageRoute,
+    this.page,
   });
 
   @override
@@ -211,7 +212,7 @@ class _WorkContainerMobile extends StatelessWidget {
         _WorkTextPartMobile(
           description: description,
           descriptionBold: descriptionBold,
-          pageRoute: pageRoute,
+          page: page,
         ),
       ],
     );
@@ -266,14 +267,14 @@ class _WorkTextPart extends StatelessWidget {
   final String description;
   final String descriptionBold;
   final String category;
-  final String? pageRoute;
+  final WorkPageData? page;
 
   const _WorkTextPart({
     required this.title,
     required this.description,
     required this.descriptionBold,
     required this.category,
-    this.pageRoute,
+    this.page,
   });
 
   @override
@@ -290,11 +291,11 @@ class _WorkTextPart extends StatelessWidget {
               description: description, descriptionBold: descriptionBold),
           const Spacer(),
           _WorkTextCategory(category: category),
-          if (pageRoute != null)
-            MyButton(
+          if (page != null)
+            MyTextButton(
               text: tr('view_work'),
               onPressed: () {
-                navigateToPage(context, pageRoute!);
+                navigateToPage(context, page!.getPage());
               },
             ),
           const Spacer(),
@@ -307,12 +308,12 @@ class _WorkTextPart extends StatelessWidget {
 class _WorkTextPartMobile extends StatelessWidget {
   final String description;
   final String descriptionBold;
-  final String? pageRoute;
+  final WorkPageData? page;
 
   const _WorkTextPartMobile({
     required this.description,
     required this.descriptionBold,
-    this.pageRoute,
+    this.page,
   });
 
   @override
@@ -323,12 +324,12 @@ class _WorkTextPartMobile extends StatelessWidget {
         children: [
           _WorkTextDescription(
               description: description, descriptionBold: descriptionBold),
-          if (pageRoute != null)
+          if (page != null)
             Center(
-              child: MyButton(
+              child: MyTextButton(
                 text: "VIEW WORK",
                 onPressed: () {
-                  navigateToPage(context, pageRoute!);
+                  navigateToPage(context, page!.getPage());
                 },
               ),
             ),

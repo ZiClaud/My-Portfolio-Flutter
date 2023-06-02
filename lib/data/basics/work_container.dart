@@ -24,7 +24,7 @@ class WorkContainerData extends StatelessWidget {
             description: tr(work.description),
             descriptionBold: tr(work.descriptionBold),
             category: work.category,
-            pageRoute: work.pageRoute,
+            page: work.pageData,
             child: WorkImg(
               url: work.url,
               urlHD: work.urlHD,
@@ -36,7 +36,7 @@ class WorkContainerData extends StatelessWidget {
             description: tr(work.description),
             descriptionBold: tr(work.descriptionBold),
             category: work.category,
-            pageRoute: work.pageRoute,
+            page: work.pageData,
             child: WorkImg(
               url: work.url,
               urlHD: work.urlHD,

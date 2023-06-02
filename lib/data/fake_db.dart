@@ -7,7 +7,7 @@ const WorkData iremi = WorkData(
   description: "iremi_description1",
   descriptionBold: "iremi_description2",
   category: "Mobile App",
-  pageRoute: '/iremi',
+  pageData: iremiPage,
   url: "https://i.imgur.com/eoEx6Tth.png?1",
   urlHD: "https://i.imgur.com/eoEx6Tt.png?1",
 );
@@ -17,7 +17,7 @@ const WorkData jeiom = WorkData(
   description: "jeiom_description1",
   descriptionBold: "jeiom_description2",
   category: "Mobile App",
-  pageRoute: '/jeiom',
+  pageData: jeiomPage,
   urlHD: "https://i.imgur.com/nu9WG4d.png",
 );
 

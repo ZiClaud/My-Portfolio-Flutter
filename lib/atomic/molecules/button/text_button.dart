@@ -4,17 +4,17 @@ import 'package:my_portfolio/atomic/atoms/icons.dart';
 import 'package:my_portfolio/atomic/atoms/typography.dart';
 
 /// Button
-class MyButton extends StatefulWidget {
+class MyTextButton extends StatefulWidget {
   final String text;
   final Function() onPressed;
 
-  const MyButton({super.key, required this.text, required this.onPressed});
+  const MyTextButton({super.key, required this.text, required this.onPressed});
 
   @override
-  State<MyButton> createState() => _MyButtonState();
+  State<MyTextButton> createState() => _MyTextButtonState();
 }
 
-class _MyButtonState extends State<MyButton> {
+class _MyTextButtonState extends State<MyTextButton> {
   Color buttonColor = Colors.transparent;
 
   @override

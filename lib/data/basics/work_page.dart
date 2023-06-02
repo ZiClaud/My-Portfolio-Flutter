@@ -20,14 +20,6 @@ class WorkPageData {
   });
 
   MainWorkPage getPage() {
-    return MainWorkPage(
-      title: title,
-      skills: skills,
-      description1: description1,
-      descriptionBold1: descriptionBold1,
-      description2: description2,
-      descriptionBold2: descriptionBold2,
-      images: images,
-    );
+    return MainWorkPage(pageData: this);
   }
 }

@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
+import 'package:my_portfolio/utils/navigation.dart';
 
 class SwitchLanguageBt extends StatefulWidget {
   const SwitchLanguageBt({Key? key}) : super(key: key);
@@ -15,14 +16,14 @@ class _SwitchLanguageBtState extends State<SwitchLanguageBt> {
     return IconButton(
       onPressed: () {
         if (context.locale == const Locale('en', 'US')) {
-          context.setLocale(const Locale('it', 'IT'));
+          context
+              .setLocale(const Locale('it', 'IT'))
+              .then((_) => navigateToHome(context));
         } else {
-          context.setLocale(const Locale('en', 'US'));
+          context
+              .setLocale(const Locale('en', 'US'))
+              .then((_) => navigateToHome(context));
         }
-
-        // TODO: Refresh whole page
-        Navigator.pushNamed(context, '/');
-
       },
       icon: Icon(
         context.locale == const Locale('en', 'US')

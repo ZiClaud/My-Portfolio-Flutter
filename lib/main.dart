@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/pages/main_page.dart';
-import 'package:my_portfolio/data/fake_db.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,13 +26,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const MainPage(),
-        iremi.pageRoute!: (context) => iremiPage.getPage(),
-        jeiom.pageRoute!: (context) => jeiomPage.getPage(),
-      },
-//      home: MainPage(),
+      home: const MainPage(),
     );
   }
 }

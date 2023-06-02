@@ -4,29 +4,18 @@ import 'package:my_portfolio/atomic/atoms/colors.dart';
 import 'package:my_portfolio/atomic/atoms/padding.dart';
 import 'package:my_portfolio/atomic/atoms/responsive.dart';
 import 'package:my_portfolio/atomic/atoms/typography.dart';
+import 'package:my_portfolio/atomic/molecules/button/icon_button.dart';
+import 'package:my_portfolio/atomic/molecules/button/text_button.dart';
 import 'package:my_portfolio/atomic/molecules/image_container/hd_image.dart';
+import 'package:my_portfolio/data/basics/work_page.dart';
+import 'package:my_portfolio/utils/navigation.dart';
 import 'package:my_portfolio/utils/utils.dart';
 
 /// Whole Work Page
 class MainWorkPage extends StatelessWidget {
-  final String title;
-  final List<String>? skills;
-  final String description1;
-  final String descriptionBold1;
-  final String? description2;
-  final String? descriptionBold2;
-  final List<WorkPageImage> images;
+  final WorkPageData pageData;
 
-  const MainWorkPage(
-      {Key? key,
-      required this.title,
-      this.skills,
-      required this.description1,
-      required this.descriptionBold1,
-      this.description2,
-      this.descriptionBold2,
-      required this.images})
-      : super(key: key);
+  const MainWorkPage({super.key, required this.pageData});
 
   @override
   Widget build(BuildContext context) {
@@ -39,16 +28,25 @@ class MainWorkPage extends StatelessWidget {
 //            mainAxisAlignment: MainAxisAlignment.spaceAround,
 //            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              _WorkTitle(title: title),
-              _WorkSkills(skills: skills ?? []),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const _WorkBackButton(),
+                  const Spacer(),
+                  _WorkTitle(title: pageData.title),
+                  const Spacer(),
+                  const SpaceWidgets(),
+                ],
+              ),
+              _WorkSkills(skills: pageData.skills ?? []),
               const SpaceWidgets(inHeight: true),
-              _ImageCarousel(images: images),
+              _ImageCarousel(images: pageData.images),
               const SpaceWidgets(inHeight: true),
               _WorkDescription(
-                description1: description1,
-                descriptionBold1: descriptionBold1,
-                description2: description2 ?? '',
-                descriptionBold2: descriptionBold2 ?? '',
+                description1: pageData.description1,
+                descriptionBold1: pageData.descriptionBold1,
+                description2: pageData.description2 ?? '',
+                descriptionBold2: pageData.descriptionBold2 ?? '',
               ),
               const Padding(padding: EdgeInsets.only(bottom: 125)),
             ],
@@ -56,6 +54,15 @@ class MainWorkPage extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class _WorkBackButton extends StatelessWidget {
+  const _WorkBackButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MyIconButton(icon: Icons.arrow_back, onPressed: () => navigateToHome(context));
   }
 }
 
@@ -134,13 +141,10 @@ class _WorkTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: Center(
-        child: Text(
-          title,
-          style: h2Bold(context, color: neutral1Color),
-        ),
+    return Center(
+      child: Text(
+        title,
+        style: h2Bold(context, color: neutral1Color),
       ),
     );
   }

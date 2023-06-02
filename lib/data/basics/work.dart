@@ -1,9 +1,11 @@
+import 'package:my_portfolio/data/basics/work_page.dart';
+
 class WorkData {
   final String title;
   final String description;
   final String descriptionBold;
   final String category;
-  final String? pageRoute; //TODO: It needs to start with / or be null
+  final WorkPageData? pageData;
   final String? url;
   final String? urlHD;
   final String? path;
@@ -13,7 +15,7 @@ class WorkData {
     required this.description,
     required this.descriptionBold,
     required this.category,
-    this.pageRoute,
+    this.pageData,
     this.url,
     this.urlHD,
     this.path,

@@ -20,10 +20,10 @@ class WorkPage extends StatelessWidget {
 List<Widget> _workWidgets() {
   return [
     TitleBox(title1: tr("works_title1"), title2: tr("works_title2")),
-    WorkContainerData(work: iremi, isImageFirst: true),
-    SpaceWidgets(inHeight: true),
-    WorkContainerData(work: jeiom, isImageLast: true),
-    SpaceWidgets(inHeight: true),
+    const WorkContainerData(work: iremi, isImageFirst: true),
+    const SpaceWidgets(inHeight: true),
+    const WorkContainerData(work: jeiom, isImageLast: true),
+    const SpaceWidgets(inHeight: true),
 //    WorkContainer(work: website, isImageFirst: true),
 //    SpaceWidgets(inHeight: true),
   ];
