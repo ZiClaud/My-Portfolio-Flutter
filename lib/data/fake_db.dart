@@ -53,12 +53,12 @@ const WorkPageData iremiPage = WorkPageData(
 );
 
 const WorkPageData jeiomPage = WorkPageData(
-  title: 'JEIOM Website',
-  skills: ['NodeJS', 'React', 'TailwindCSS'],
-  description1: 'lorem1',
-  descriptionBold1: 'lorem2',
-  description2: 'lorem3',
-  descriptionBold2: 'lorem4',
+  title: 'JEIOM23 Website',
+  skills: ['React', 'TailwindCSS', 'NodeJS'],
+  description1: 'jeiom_page_description1',
+  descriptionBold1: 'jeiom_page_description2',
+  description2: 'jeiom_page_description3',
+  descriptionBold2: 'jeiom_page_description4',
   images: [
     WorkPageImage(urlHD: 'https://i.imgur.com/9phy7Yo.png'),
     WorkPageImage(urlHD: 'https://i.imgur.com/nu9WG4d.png'),
