@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
-import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/atomic/atoms/responsive.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/atomic/molecules/image_container/about_me_image_container.dart';
 import 'package:my_portfolio/data/images.dart';
 

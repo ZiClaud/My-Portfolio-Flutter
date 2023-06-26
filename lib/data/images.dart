@@ -14,10 +14,10 @@ const String invisiblePath = "../assets/images/invisible.png";
 const String semiInvisiblePath = "../assets/images/semi_invisible.png";
 
 /// Skills
-const flutterImgPath = "../assets/images/flutterimg.png";
-const sqlImgPath = "../assets/images/sqlimg.png";
-const pythonImgPath = "../assets/images/pythonimg.png";
-const javaImgPath = "../assets/images/javaimg.png";
+const flutterImgPath = "../assets/images/flutter.svg";
+const sqlImgPath = "../assets/images/dart.svg";
+const pythonImgPath = "../assets/images/react.svg";
+const javaImgPath = "../assets/images/java.svg";
 // TODO: Firebase?
 
 /// About me

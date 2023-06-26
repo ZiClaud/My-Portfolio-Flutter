@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 /// SKILLS
 class SkillImg extends StatefulWidget {
@@ -11,7 +12,7 @@ class SkillImg extends StatefulWidget {
 }
 
 class _SkillImgState extends State<SkillImg> {
-  Color? color = Colors.white;
+  Color? color = const Color(0xFFFFFFFF);
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +24,15 @@ class _SkillImgState extends State<SkillImg> {
       },
       onExit: (_) {
         setState(() {
-          color = Colors.white;
+          color = const Color(0xFFFFFFFF);
         });
       },
-      child: Image(
-        image: AssetImage(widget.path),
+      child: SvgPicture.asset(
+        widget.path,
         fit: BoxFit.cover,
         color: color,
+        width: 200,
+        height: 200,
       ),
     );
   }

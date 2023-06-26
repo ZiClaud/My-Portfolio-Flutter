@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/atomic/atoms/responsive.dart';
+import 'package:my_portfolio/atomic/atoms/typography.dart';
 import 'package:my_portfolio/atomic/molecules/image_container/skills_image_container.dart';
 import 'package:my_portfolio/data/images.dart';
 import 'package:my_portfolio/utils/utils.dart';
@@ -41,11 +41,11 @@ class _SkillsBox extends StatelessWidget {
       width: ResponsiveWidget.getWidth(context),
       height: 200,
       child: ResponsiveWidget.isDesktop(context)
-          ? const Row(
+          ? Row(
               //TODO: Change this code -> On ovverride make it listview
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
+              children: const [
                 SkillImg(path: flutterImgPath),
                 SkillImg(path: sqlImgPath),
                 SkillImg(path: pythonImgPath),
