@@ -28,14 +28,14 @@ const String aboutMeChessImgUrl =
 const String aboutMeMusicImgUrl = "https://cdn.fuelrocks.com/1665122987550.jpg";
 
 /// Footer
-const String gitHubPath = "../assets/images/github_img.png";
+const String gitHubPath = "../assets/images/github_img.svg";
 void Function() gitHubPressed = () => launchMyUrl('https://github.com/ZiClaud');
 
-const String linkedinPath = "../assets/images/linkedin_img.png";
+const String linkedinPath = "../assets/images/linkedin_img.svg";
 void Function() linkedinPressed =
     () => launchMyUrl('https://www.linkedin.com/in/claudio-di-maio/');
 
-const String mailPath = "../assets/images/mail_img.png";
+const String mailPath = "../assets/images/mail_img.svg";
 void Function() mailPressed = () => sendEmail("claudiodimaiozc@gmail.com");
 /*
       try {

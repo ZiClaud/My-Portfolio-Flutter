@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_portfolio/atomic/atoms/colors.dart';
 
 /// Footer Icons
@@ -34,10 +35,12 @@ class _FooterImgState extends State<FooterImg> {
         child: TextButton(
           onPressed: widget.onPressed,
           style: TextButton.styleFrom(padding: EdgeInsets.zero),
-          child: Image(
-            image: AssetImage(widget.path),
+          child: SvgPicture.asset(
+            widget.path,
             fit: BoxFit.cover,
             color: color,
+            width: 100,
+            height: 100,
           ),
         ),
       ),
