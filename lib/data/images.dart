@@ -4,8 +4,7 @@ import 'package:my_portfolio/utils/utils.dart';
 const String logoPath = "../assets/images/ZC_Logo.png";
 
 /// Arrows
-const String arrowDown =
-    "https://cdn-icons-png.flaticon.com/512/5093/5093064.png";
+const String arrowDown = "../assets/images/arrow_down.svg";
 const String arrowRight = "../assets/images/arrow_right.svg";
 
 /// Pixels - White and Transparent
@@ -36,10 +35,3 @@ void Function() linkedinPressed =
 
 const String mailPath = "../assets/images/mail_img.svg";
 void Function() mailPressed = () => sendEmail("claudiodimaiozc@gmail.com");
-/*
-      try {
-        sendEmail("claudiodimaiozc@gmail.com");
-      } catch (e) {
-        //TODO: showDialog
-      }
- */

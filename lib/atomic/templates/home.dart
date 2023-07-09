@@ -70,10 +70,6 @@ class _ArrowDownWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
-      width: 20,
-      height: 10,
-      child: ArrowDownImage(),
-    );
+    return const ArrowDownImage();
   }
 }

@@ -45,17 +45,14 @@ class LogoImage extends StatelessWidget {
 }
 
 class ArrowDownImage extends StatelessWidget {
-  const ArrowDownImage({
-    super.key,
-  });
+  const ArrowDownImage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(
+    return SvgPicture.asset(
       arrowDown,
-      width: 20,
-      height: 10,
-      color: Colors.white,
+      width: 50,
+      height: 50,
     );
   }
 }
@@ -69,7 +66,6 @@ class ArrowRightImg extends StatelessWidget {
       arrowRight,
       width: 20,
       height: 20,
-      color: Colors.white,
       alignment: Alignment.center,
       fit: BoxFit.cover,
     );
