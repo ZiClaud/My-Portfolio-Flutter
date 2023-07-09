@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/data/images.dart';
 
 class InvisibleImage extends StatelessWidget {
@@ -60,15 +61,13 @@ class ArrowDownImage extends StatelessWidget {
 }
 
 class ArrowRightImg extends StatelessWidget {
-  const ArrowRightImg({
-    super.key,
-  });
+  const ArrowRightImg({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(
+    return SvgPicture.asset(
       arrowRight,
-      width: 13,
+      width: 20,
       height: 20,
       color: Colors.white,
       alignment: Alignment.center,

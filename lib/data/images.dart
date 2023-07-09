@@ -6,8 +6,7 @@ const String logoPath = "../assets/images/ZC_Logo.png";
 /// Arrows
 const String arrowDown =
     "https://cdn-icons-png.flaticon.com/512/5093/5093064.png";
-const String arrowRight =
-    "https://cdn.iconscout.com/icon/free/png-256/right-arrow-1780566-1514442.png";
+const String arrowRight = "../assets/images/arrow_right.svg";
 
 /// Pixels - White and Transparent
 const String invisiblePath = "../assets/images/invisible.png";
