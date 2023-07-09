@@ -12,7 +12,6 @@ class FooterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: SectionContainerFill(sectionContainerRow(...))?
     return _SectionContainerRowFooter(height: 425, children: _footerWidgets());
   }
 }
