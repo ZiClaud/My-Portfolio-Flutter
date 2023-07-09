@@ -41,11 +41,11 @@ class _SkillsBox extends StatelessWidget {
       width: ResponsiveWidget.getWidth(context),
       height: 200,
       child: ResponsiveWidget.isDesktop(context)
-          ? Row(
+          ? const Row(
               //TODO: Change this code -> On ovverride make it listview
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
+              children: [
                 SkillImg(path: flutterImgPath),
                 SkillImg(path: sqlImgPath),
                 SkillImg(path: pythonImgPath),

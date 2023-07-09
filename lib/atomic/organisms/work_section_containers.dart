@@ -113,6 +113,7 @@ class _WorkContainerImageText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         /// Image
         _WorkImagePart(image: child),
@@ -154,6 +155,7 @@ class _WorkContainerTextImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         /// Text part
         _WorkTextPart(
